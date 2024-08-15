@@ -1,0 +1,59 @@
+<div class="buy">
+
+
+    <img src="assets/img/Compras/HeaderCompras.png" draggable="false" alt="" class="headers">
+
+
+
+       
+
+    <div class="custom-container">
+
+
+<div>
+        <div class="country-flags">
+    
+                    <div class="row custom-row">
+  <div class="col-lg-6 col-md-4 col-lg-3">
+                        @for (country of countries; track $index) {
+                          
+                                <div class="col-lg-12">  
+                                    <img [src]="country.img" (click)="openLink(country.link)" draggable="false" class="country-img" alt="">
+                                </div>
+                              
+                         
+        
+                             } 
+
+</div>
+<div class="col-lg-6 col-md-4 col-lg-3">
+                        @for (country2 of countries2; track $index) {
+                                
+                                    <div class="col-lg-12">  
+                                        <img [src]="country2.img" (click)="openLink(country2.link)" draggable="false" class="country-img" alt="">
+                                    </div>
+                                  
+                           
+            
+                                 }      
+</div>
+                </div>
+                
+
+        </div>
+</div>
+
+    </div>
+<div>
+       <img src="assets/img/Compras/Hoja1.png" draggable="false" style="width: 10%; float: right; margin-top:-300px; flex: 1px;" alt="">
+        <img src="assets/img/Compras/Hoja2.png" draggable="false" style="width: 15%; float: left; margin-top:-100px;  flex: 1px;" alt="">
+</div>
+<app-footer></app-footer>     
+</div>
+
+
+
+
+
+
+

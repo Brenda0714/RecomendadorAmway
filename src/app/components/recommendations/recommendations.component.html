@@ -1,0 +1,2306 @@
+<div>
+
+    <img src="assets/img/headerResult1_2.png" draggable="false" style="width: 100%;" alt="">
+
+    <div class="container" style="padding-bottom: 2rem;">
+        <div class="name-section">
+            <div class="cart-name">
+                @if (clientName) {
+                <span class="g-title">¡Hola {{ clientName }}!</span>
+                } @else {
+                <span class="g-title">Contesta el questionario</span>
+                }
+            </div>
+
+            <span class="g-subtitle gw-50 text-center" style="font-weight: 600; margin-top: 180px;">Con base a tus
+                respuestas de la evaluación, hemos reunido estas recomendaciones de productos para apoyar tu camino
+                hacia el bienestar.</span>
+        </div>
+    </div>
+
+    <img src="assets/img/headerResult2_3.png" draggable="false" alt="" class="headers">
+    <div class="vertical-line">
+        <span></span>
+    </div>
+
+    <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;" id="productosRecom">
+        <div class="row">
+
+
+            <div class="col-lg-6 col-md-12 col-sm-12"style="margin-bottom: 1rem;">
+            <div class="card" [ngClass]="{ 'card-active': this.recommendedProducts[0].active }" >
+                        
+                        <div style="width: 80%; text-align: center;">
+                            <span class="product-name" style="top: 0; position: absolute; margin-bottom:15rem;"><b> {{
+                                        this.recommendedProducts[0].name }} </b></span>                        
+                        </div>
+
+                        <div class="front" style="margin-top: 10px;">
+                            <div>
+
+                                <img [src]="this.ruta + this.recommendedProducts[0].img" draggable="false" alt="" style="margin-bottom: 5rem; margin-top: 100px;">
+                                <span class="g-text-sm" style="bottom: 0; position: absolute; margin-bottom:10px;">
+                                    <b>¿Por qué recomendamos esto?</b></span>
+                                <p class="buttonClick-text" (click)="toggleCard()" style="margin-bottom: -20px;" id="Showfront">Haz clic aquí</p>
+                            </div>
+
+                        </div>
+
+                        <div class="back" style="height: 520px; margin-top: 10px;">
+                            <div>
+                                <span class="g-text-sm" style="margin-top: -300px; position: absolute;"><b>¿Por qué
+                                        recomendamos esto?</b></span>
+                                        <br>
+                                <span class="whyIsRecommended-Text mb4" style="margin-top: 100px;">
+                                    {{ this.recommendedProducts[0].whyIsRecommended | slice: 0: 2000 }} </span>
+
+                                <p class="buttonClick-text" (click)="toggleCard()" id="Showback">Regresar</p>
+                            </div>
+                        </div>
+
+                        <br>
+                        <button (click)="openLink(this.recommendedProducts[0].linkBuy)" class="primary-btn g-text-sm"
+                            style="margin-bottom: 25px;" id="comprar1">
+                            Comprar ahora
+                        </button>
+            </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12"style="margin-bottom: 1rem;">
+                <div class="card" [ngClass]="{ 'card-active': this.recommendedProducts[1].active }" >
+                    
+                    <div style="width: 80%; text-align: center;">
+                        <span class="product-name" style="top: 0; position: absolute; margin-bottom:15rem;"><b> {{
+                                    this.recommendedProducts[1].name }} </b></span>                        
+                    </div>
+
+                    <div class="front" style="margin-top: 10px;">
+                        <div>
+
+                            <img [src]="this.ruta + this.recommendedProducts[1].img" draggable="false" alt="" style="margin-bottom: 5rem; margin-top: 100px;">
+                            <span class="g-text-sm" style="bottom: 0; position: absolute; margin-bottom:10px;">
+                                <b>¿Por qué recomendamos esto?</b></span>
+                            <p class="buttonClick-text" (click)="toggleCard2()" style="margin-bottom: -20px;" id="Showfront2">Haz clic aquí</p>
+                        </div>
+
+                    </div>
+
+                    <div class="back" style="height: 520px; margin-top: 10px;">
+                        <div>
+                            <span class="g-text-sm" style="margin-top: -300px; position: absolute;"><b>¿Por qué
+                                    recomendamos esto?</b></span>
+                                    <br>
+                            <span class="whyIsRecommended-Text mb4" style="margin-top: 100px;">
+                                {{ this.recommendedProducts[1].whyIsRecommended | slice: 0: 2000 }} </span>
+
+                            <p class="buttonClick-text" (click)="toggleCard2()" id="Showback2">Regresar</p>
+                        </div>
+                    </div>
+                    
+
+                    <br>
+                    <!-- <span class="g-text-sm"><b>¿Por qué recomendamos esto?</b></span>        -->
+                    <button (click)="openLink(this.recommendedProducts[1].linkBuy)" class="primary-btn g-text-sm"
+                        style="margin-bottom: 25px;" id="comprar2">
+                        Comprar ahora
+                    </button>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12"style="margin-bottom: 1rem;">
+                <div class="card" [ngClass]="{ 'card-active': this.recommendedProducts[2].active }" >
+                    
+                    <div style="width: 80%; text-align: center;">
+                        <span class="product-name" style="top: 0; position: absolute; margin-bottom:15rem;"><b> {{
+                                    this.recommendedProducts[2].name }} </b></span>                        
+                        </div>
+
+                    <div class="front" style="margin-top: 10px;">
+                        <div>
+                            <img [src]="this.ruta + this.recommendedProducts[2].img" draggable="false" alt="" style="margin-bottom: 5rem; margin-top: 100px;">
+                            <span class="g-text-sm" style="bottom: 0; position: absolute; margin-bottom:10px;">
+                                <b>¿Por qué recomendamos esto?</b></span>
+                            <p class="buttonClick-text" (click)="toggleCard3()" style="margin-bottom: -20px;" id="Showfront3">Haz clic aquí</p>
+                        </div>
+
+                    </div>
+
+                    <div class="back" style="height: 520px; margin-top: 10px;">
+                        <div>
+                            <span class="g-text-sm" style="margin-top: -300px; position: absolute;"><b>¿Por qué
+                                    recomendamos esto?</b></span>
+                                    <br>
+                            <span class="whyIsRecommended-Text mb4" style="margin-top: 100px;">
+                                {{ this.recommendedProducts[2].whyIsRecommended | slice: 0: 2000 }} </span>
+
+                            <p class="buttonClick-text" (click)="toggleCard3()" id="Showback3">Regresar</p>
+                        </div>
+                    </div>
+
+                    <br>
+                    <!-- <span class="g-text-sm"><b>¿Por qué recomendamos esto?</b></span>        -->
+                    <button (click)="openLink(this.recommendedProducts[2].linkBuy)" class="primary-btn g-text-sm"
+                        style="margin-bottom: 25px;" id="comprar3">
+                        Comprar ahora
+                    </button>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12"style="margin-bottom: 1rem;">
+                <div class="card" [ngClass]="{ 'card-active': this.recommendedProducts[3].active }" >
+
+                    <div style="width: 80%; text-align: center;">
+                        <span class="product-name" style="top: 0; position: absolute; margin-bottom:15rem;"><b> {{
+                                    this.recommendedProducts[3].name }} </b></span>                        
+                        </div>
+
+                    <div class="front" style="margin-top: 10px;">
+                        <div>
+
+                            <img [src]="this.ruta + this.recommendedProducts[3].img" draggable="false" alt="" style="margin-bottom: 5rem; margin-top: 100px;">
+                            <span class="g-text-sm" style="bottom: 0; position: absolute; margin-bottom:10px;">
+                                <b>¿Por qué recomendamos esto?</b></span>
+                            <p class="buttonClick-text" (click)="toggleCard4()" style="margin-bottom: -20px;" id="Showfront4">Haz clic aquí</p>
+                        </div>
+
+                    </div>
+
+                    <div class="back" style="height: 520px; margin-top: 10px;">
+                        <div>
+                            <span class="g-text-sm" style="margin-top: -300px; position: absolute;"><b>¿Por qué
+                                    recomendamos esto?</b></span>
+                                    <br>
+                            <span class="whyIsRecommended-Text mb4" style="margin-top: 100px;">
+                                {{ this.recommendedProducts[3].whyIsRecommended | slice: 0: 2000 }} </span>
+
+                            <p class="buttonClick-text" (click)="toggleCard4()" id="Showback4">Regresar</p>
+                        </div>
+                    </div>
+
+                    <br>
+                    <!-- <span class="g-text-sm"><b>¿Por qué recomendamos esto?</b></span>        -->
+                    <button (click)="openLink(this.recommendedProducts[3].linkBuy)" class="primary-btn g-text-sm"
+                        style="margin-bottom: 25px;" id="comprar4">
+                        Comprar ahora
+                    </button>
+                </div>
+
+            </div>
+
+
+@if(recommendedProducts.length > 4) {
+    <div class="g-text-md mb4" style=" color: #fff; text-align: center; background-color: #006d46; margin-bottom: 25px; max-width: 100%; padding: 20px;">
+        <h4 class="g-text-rec">TAMBIÉN TE PUEDE INTERESAR</h4>
+    </div>    
+}
+@else {
+      <h4 class="g-text-rec"></h4>
+}
+
+
+@for (product of recommendedProducts; track $index) {
+
+    @if(($index + 1) == 5) {
+        <div class="col-lg-3"
+        style="margin-bottom: 1rem;">
+        <div class="card2">
+            
+                <div style="height: 80px;">
+                <span class="product-name2"><b>{{  product.name }}</b></span>
+            </div>
+           
+            <div class="imagenprod">
+                <img [src]="this.ruta + product.img" draggable="false" alt="">
+            </div> 
+            <div class="buttonprod">
+                <button (click)="openLink(product.linkBuy)" class="primary-btn g-text-sm" id="comprar5">
+                Comprar ahora
+                </button>
+            </div>
+
+        </div>
+
+        </div>
+    }
+    @if(($index + 1) == 6) {
+        <div class="col-lg-3"
+        style="margin-bottom: 1rem;">
+        <div class="card2">
+            
+                <div style="height: 80px;">
+                <span class="product-name2"><b>{{  product.name }}</b></span>
+            </div>
+           
+            <div class="imagenprod">
+                <img [src]="this.ruta + product.img" draggable="false" alt="">
+            </div> 
+            <div class="buttonprod">
+                <button (click)="openLink(product.linkBuy)" class="primary-btn g-text-sm" id="comprar6">
+                Comprar ahora
+                </button>
+            </div>
+
+        </div>
+
+        </div>
+    }
+    @if(($index + 1) == 7) {
+        <div class="col-lg-3"
+        style="margin-bottom: 1rem;">
+        <div class="card2">
+            
+                <div style="height: 80px;">
+                <span class="product-name2"><b>{{  product.name }}</b></span>
+            </div>
+           
+            <div class="imagenprod">
+                <img [src]="this.ruta + product.img" draggable="false" alt="">
+            </div> 
+            <div class="buttonprod">
+                <button (click)="openLink(product.linkBuy)" class="primary-btn g-text-sm" id="comprar7">
+                Comprar ahora
+                </button>
+            </div>
+
+        </div>
+
+        </div>
+    }
+    @if(($index + 1) == 8) {
+        <div class="col-lg-3"
+        style="margin-bottom: 1rem;">
+        <div class="card2">
+            
+                <div style="height: 80px;">
+                <span class="product-name2"><b>{{  product.name }}</b></span>
+            </div>
+           
+            <div class="imagenprod">
+                <img [src]="this.ruta + product.img" draggable="false" alt="">
+            </div> 
+            <div class="buttonprod">
+                <button (click)="openLink(product.linkBuy)" class="primary-btn g-text-sm" id="comprar8">
+                Comprar ahora
+                </button>
+            </div>
+
+        </div>
+
+        </div>
+    }
+}
+
+        
+    </div>
+
+    <!-- @if (recommendedProducts && recommendedProducts.length > 0) {
+            @if (numberProducts == 4) {
+                <p  (click)="numberProducts = 4;" class="g-text text-center green" style="cursor: pointer;"></p>
+            }@else {
+                <p  (click)="numberProducts = 4;" class="g-text text-center green" style="cursor: pointer;">Mostrar menos productos</p>
+            }
+        } -->
+
+</div>
+
+<div style="text-align: center;">
+    <h4 class="g-text-md" style="padding-bottom: 20px; color: #84c344;">Imágenes de productos de referencia. Consulta presentación y disponibilidad en tu país.​</h4>
+</div>
+
+
+
+@if (clientCountry == 'mx') {
+<footer>
+    <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
+        <span class="g-text-sm-footer">
+            <b>ESTE PRODUCTO NO ES UN MEDICAMENTO. EL CONSUMO DE ESTE PRODUCTO ES RESPONSABILIDAD DE QUIEN LO RECOMIENDA
+                Y DE QUIEN LO USA.</b>
+        </span>
+    </div>
+
+</footer>
+}
+@else if (clientCountry == 'gt') {
+<footer>
+    <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
+        <span class="g-text-sm-footer">
+            <b>ESTE PRODUCTO NO DEBE USARSE PARA EL DIAGNÓSTICO, TRATAMIENTO, CURA O PREVENCIÓN DE ALGUNA ENFERMEDAD Y
+                NO SUPLE UNA ALIMENTACIÓN EQUILIBRADA.</b>
+            <br>
+            <b>VENTA LIBRE. VÍA DE ADMINISTRACIÓN ORAL.</b>
+            <br>
+            <b>NO USAR EN NIÑOS.</b>
+        </span>
+    </div>
+
+</footer>
+}
+@else if (clientCountry == 'sv') {
+<footer>
+    <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
+        <span class="g-text-sm-footer">
+            <b>ESTE PRODUCTO NO DEBE USARSE PARA EL DIAGNÓSTICO, TRATAMIENTO, CURA O PREVENCIÓN DE ALGUNA ENFERMEDAD Y
+                NO SUPLE UNA ALIMENTACIÓN EQUILIBRADA.</b>
+            <br>
+            <b>VENTA LIBRE. VÍA DE ADMINISTRACIÓN ORAL.</b>
+            <br>
+            <b>NO USAR EN NIÑOS.</b>
+        </span>
+    </div>
+
+</footer>
+}
+@else if (clientCountry == 'hn') {
+<footer>
+    <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
+        <span class="g-text-sm-footer">
+            <b>Este producto no pretende diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</b>
+        </span>
+    </div>
+
+</footer>
+}
+@else if (clientCountry == 'pa') {
+<footer>
+    <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
+        <span class="g-text-sm-footer">
+            <b>Este producto no pretende diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</b>
+        </span>
+    </div>
+
+</footer>
+}
+@else if (clientCountry == 'cr') {
+<footer>
+    <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
+        <span class="g-text-sm-footer">
+            <b>ESTE PRODUCTO NO DEBE USARSE PARA EL DIAGNÓSTICO, TRATAMIENTO, CURA O PREVENCIÓN DE ALGUNA ENFERMEDAD Y
+                NO SUPLE UNA ALIMENTACIÓN EQUILIBRADA.</b>
+            <br>
+            <b>NO USAR EN NIÑOS.</b>
+        </span>
+    </div>
+
+</footer>
+}
+@else if (clientCountry == 'ar') {
+<footer>
+    <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
+        <span class="g-text-sm-footer">
+            <b>“SUPLEMENTA DIETAS INSUFICIENTES. CONSULTE A SU MÉDICO Y/ O FARMACÉUTICO".</b>
+        </span>
+    </div>
+
+</footer>
+}
+@else if (clientCountry == 'cl') {
+<footer>
+    <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
+        <span class="g-text-sm-footer">
+            <b>"Su uso no es recomendable para consumo por menores de 8 años, embarazadas y nodrizas, salvo indicación
+                profesional competente y no reemplaza a una alimentación balanceada".</b>
+        </span>
+    </div>
+
+</footer>
+}
+@else if (clientCountry == 'uy') {
+<footer>
+    <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
+        <span class="g-text-sm-footer">
+            <b>“SUPLEMENTA DIETAS INSUFICIENTES. CONSULTE A SU MÉDICO Y/ O FARMACÉUTICO".</b>
+        </span>
+    </div>
+
+</footer>
+}
+@else if (clientCountry == 'co') {
+<footer>
+    <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
+        <span class="g-text-sm-footer">
+            <b>ESTE PRODUCTO NO SIRVE PARA EL DIAGNOSTICO, TRATAMIENTO, CURA</b>
+            <br>
+            <b>O PREVENCIÓN DE ALGUNA ENFERMEDAD Y NO SUPLE UNA ALIMENTACIÓN</b>
+            <br>
+            <b>EQUILIBRADA. MANTÉNGASE FUERA DEL ALCANCE DE LOS NIÑOS.</b>
+        </span>
+    </div>
+
+</footer>
+}
+@else if (clientCountry == 've') {
+<footer>
+    <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
+        <span class="g-text-sm-footer">
+            <b>Este producto no pretende diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</b>
+        </span>
+    </div>
+
+</footer>
+}@else {
+<footer>
+    <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
+        <span class="g-text-sm-footer">
+            <b>ESTE PRODUCTO NO ES UN MEDICAMENTO. EL CONSUMO DE ESTE PRODUCTO ES RESPONSABILIDAD DE QUIEN LO RECOMIENDA
+                Y DE QUIEN LO USA.</b>
+        </span>
+    </div>
+
+</footer>
+}
+
+
+
+<img src="assets/img/headerResult3_4.png" draggable="false" alt="" class="headers">
+<div class="vertical-line">
+    <span></span>
+</div>
+
+<div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+    <div class="row">
+
+        <div class="col-lg-4 col-md-6 col-sm-12" style="margin-top: 10px;">
+
+            <div class="cart-recommendation">
+                <img src="assets/img/Tip1.png" draggable="false" alt=""
+                    style="border-top-right-radius: 20px; border-top-left-radius: 20px;">
+                <div class="recommendation-body">
+                    <span class="g-text" style="margin-bottom: .5rem;"><b>El agua es vital para el organismo</b></span>
+                    <span class="g-text-sm" style="margin-bottom: 2rem; height:150px;">La sed es una señal de
+                        deshidratación. Es indispensable tomar agua antes de que te sientas sediento(a). Después de
+                        saciar la sed se recomienda seguir tomando líquidos durante el día.
+                    </span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="col-lg-4 col-md-6 col-sm-12" style="margin-top: 10px;">
+            <div class="cart-recommendation">
+                <img src="assets/img/Tip2.png" draggable="false" alt=""
+                    style="border-top-right-radius: 20px; border-top-left-radius: 20px;">
+                <div class="recommendation-body">
+                    <span class="g-text" style="margin-bottom: .5rem;"><b>El sueño de calidad</b></span>
+                    <span class="g-text-sm" style="margin-bottom: 2rem; height:150px;">Dormir ayuda a mantener el
+                        sistema nervioso y el cuerpo en óptimas condiciones. Tener un sueño de calidad y con las horas
+                        necesarias, mínimo 7, mejora el estado de ánimo, reduce el estrés y el riesgo de afectaciones
+                        físicas.
+                    </span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="col-lg-4 col-md-6 col-sm-12" style="margin-top: 10px;">
+            <div class="cart-recommendation">
+                <img src="assets/img/Tip3.png" draggable="false" alt=""
+                    style="border-top-right-radius: 20px; border-top-left-radius: 20px;">
+                <div class="recommendation-body">
+                    <span class="g-text" style="margin-bottom: .5rem;"><b>Los beneficios de la salud oral</b></span>
+                    <span class="g-text-sm" style="margin-bottom: 2rem; height:150px;">Cuidar las encías y los dientes
+                        con una buena higiene (cepillado y uso de hilo dental) y consumiendo alimentos fuentes de calcio
+                        como lácteos, vegetales y pescados ayuda a mantenerlos sanos y hace que sea más fácil comer y
+                        disfrutar de la buena alimentación.
+                    </span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="col-lg-4 col-md-6 col-sm-12" style="margin-top: 10px;">
+            <div class="cart-recommendation">
+                <img src="assets/img/Tip4.png" draggable="false" alt=""
+                    style="border-top-right-radius: 20px; border-top-left-radius: 20px;">
+                <div class="recommendation-body">
+                    <span class="g-text" style="margin-bottom: .5rem;"><b>Importancia de cuidar la vista</b></span>
+                    <span class="g-text-sm" style="margin-bottom: 2rem; height:150px;">Una visión saludable requiere de
+                        diversas formas de cuidado como descansar adecuadamente, proteger los ojos de los rayos UV con
+                        el uso de gafas de sol, tener una buena iluminación y consumir alimentos fuentes de carotenos
+                        como la zanahoria y de vitamina A como los pescados.
+                    </span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="col-lg-4 col-md-6 col-sm-12" style="margin-top: 10px;">
+            <div class="cart-recommendation">
+                <img src="assets/img/Tip5.png" draggable="false" alt=""
+                    style="border-top-right-radius: 20px; border-top-left-radius: 20px;">
+                <div class="recommendation-body">
+                    <span class="g-text" style="margin-bottom: .5rem;"><b>Técnicas que ayudan a lograr el
+                            bienestar</b></span>
+                    <span class="g-text-sm" style="margin-bottom: 2rem; height:150px;">Hay diversas técnicas que pueden
+                        ayudar a disminuir el estrés, a mantener el bienestar físico y emocional. La relajación, la
+                        meditación y el ejercicio pueden ayudar a adquirir habilidades para controlar las situaciones
+                        difíciles, aumentar la autoconciencia y asumir actitudes de autocuidado.
+                    </span>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="col-lg-4 col-md-6 col-sm-12" style="margin-top: 10px;">
+            <div class="cart-recommendation">
+                <img src="assets/img/Tip6.png" draggable="false" alt=""
+                    style="border-top-right-radius: 20px; border-top-left-radius: 20px;">
+                <div class="recommendation-body">
+                    <span class="g-text" style="margin-bottom: .5rem;"><b>Cuidado y protección de la piel</b></span>
+                    <span class="g-text-sm" style="margin-bottom: 2rem; height:150px;">La protección solar, una
+                        alimentación sana que aporte frutas y vegetales, una hidratación adecuada y una limpieza
+                        cuidadosa, pueden contribuir en el mantenimiento de una piel radiante e hidratada.
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+<img src="assets/img/headerResult2_3.png" draggable="false" alt="" class="headers">
+<!--  <img src="assets/img/headerResult4.png" draggable="false" style="width: 100%;" alt=""> -->
+<div class="vertical-line">
+    <span></span>
+</div>
+
+
+
+<div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+
+
+    <div style="margin-bottom: 3rem;">
+        <span class="g-text text-center">¿Deseas conocer más sobre <b style="color: #006d46;">NUTRILITE™</b> y nuestros
+            productos?</span>
+        <a class="g-text text-center" href="https://nutrilitetraceability.lat/" style="text-decoration: underline #84c344; cursor: pointer;">
+            <p style="color: #444; font-size: 1.2rem; ">Visita el sitio de Trazabilidad NUTRILITE™.</p>
+        </a>
+        <br>
+        <span (click)="startQuestionnaire()" class="g-text text-center"
+            style="cursor: pointer; text-decoration: underline #84c344;">Contestar nuevamente la evaluación</span>
+    </div>
+
+
+
+            <!-- <div class="form-group">
+                <label class="g-text required">Dirección de correo electrónico</label>
+                <b class="g-text-sm" style="font-weight: bold; color: #84c344;">(Puedes enviar estas recomendaciones hasta 5 correos)</b>
+                <p-chips class="email-text" formControlName="emails" (onAdd)="addEmail($event)" [max]="5"
+                    [allowDuplicate]="false" [addOnTab]="true" [addOnBlur]="true"
+                    placeholder=" "></p-chips>
+                    <b></b>
+
+                @if (cSend['emails'].errors && isFormSubmitted) {
+                @if (cSend['emails'].errors['required']) {
+                <span style="color: red;"><i class="fa-solid fa-circle-info"></i> Campo requerido</span>
+                }
+                }
+            </div> -->
+
+
+
+            <!-- <div style="margin-bottom: 2rem;">
+                <label class="g-text required">Escribe el texto que se muestra en la imagen</label>
+                <div style="display: flex; gap: 1rem;">
+                    <input formControlName="captcha" (change)="validateCaptcha()" type="text" class="form-control">
+
+                    <span class="g-text"
+                        style="text-decoration: line-through; padding: 0.5rem 1rem; border: 1px solid  #84c344; display: inline; user-select: none; font-weight: 600;">{{
+                        captcha }}</span>
+
+                    <button (click)="makeCaptcha()" type="button" class="secondary-btn g-text"
+                        style="margin: 0; color:#006d46;">
+                        <i class="fa-solid fa-rotate"></i>
+                    </button>
+                </div>
+
+                @if (cSend['captcha'].errors && isFormSubmitted) {
+                @if (cSend['captcha'].errors['required']) {
+                <span style="color: red;"><i class="fa-solid fa-circle-info"></i> Campo requerido</span>
+                }
+                }@else if (!captchaIsValid && isFormSubmitted) {
+                <span style="color: red;"><i class="fa-solid fa-circle-info"></i> El captcha no es valido</span>
+                }
+            </div> -->
+
+            <!-- <div style="display: flex; justify-content: end;">
+                
+
+
+                <button class="primary-btn g-text" style="margin: 0; background-color: #006d46;" id="buttonshare0">
+                    Enviar <i class="fa-regular fa-envelope"></i>
+                </button>
+            </div> -->
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem; text-align: center;">
+            <form class="gw-45">  
+             <label class="g-text mb0">Recibe tus resultados por medio de:</label>
+            
+
+<!-- AddToAny BEGIN -->
+<!-- <div class="row" style="display: flex; justify-content: center;">
+    <div class="col-lg-3 share-button">    
+    <a href="https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Frecomendador-amway.web.app%2F%23%2Frecommendations&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/email.svg" width="50" height="50" style="background-color:#1f1f1f; cursor: pointer; border-radius: 35px; width: 55px; height: 55px;"></a>
+    </div>
+    <div class="col-lg-3 share-button">    
+    <a href="https://www.addtoany.com/add_to/whatsapp?linkurl=https%3A%2F%2Frecomendador-amway.web.app%2F%23%2Frecommendations&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/whatsapp.svg" width="50" height="50" style="background-color:#1f1f1f; cursor: pointer; border-radius: 35px; width: 55px; height: 55px;"></a>
+    </div>
+    <div class="col-lg-3 share-button">    
+    <a href="https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Frecomendador-amway.web.app%2F%23%2Frecommendations&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/print.svg" width="50" height="50" style="background-color: #1f1f1f; cursor: pointer; border-radius: 35px; width: 55px; height: 55px;"></a>
+    </div>
+</div> -->
+<!-- AddToAny END -->
+
+        <div class="row" style="display: flex; justify-content: center;">             
+            <div class="col-lg-3 share-button">
+
+                <button type="button" class="btn btn-success btn-circle btn-lg" title="email" id="buttonshare1" value="email" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="fa-regular fa-envelope"></i>
+                    </button>  
+          
+            </div>    
+            <div class="col-lg-3 share-button">
+
+                <button (click)="sendWhatsapp()" type="button" class="btn btn-success btn-circle btn-lg" title="whatsapp" id="buttonshare2" value="whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </button>  
+      
+            </div>
+            <!-- <div class="col-lg-3 share-button">
+
+                <button (click)="copyUrl()" type="button" class="btn btn-success btn-circle btn-lg" title="Copiar Enlace" id="buttonshare3" value="copy link">
+                    <i class="fas fa-link"></i>
+                </button> 
+      
+            </div> -->
+            <div class="col-lg-3 share-button">
+
+                <button (click)="printToPDF()" type="button" class="btn btn-success btn-circle btn-lg" printTitle="Recomendaciones Nutrilite" [useExistingCss]="true" title="print" id="buttonshare4"  printSectionId="print2" ngxPrint value="print">
+                    <i class="fas fa-print"></i>
+                </button>  
+      
+            </div>
+
+            </div>
+
+            </form>
+</div>
+
+</div>
+
+</div>
+
+<!-- <div id="toast" class="toast">
+    <i class="fa fa-check"></i>
+    <span>Correo enviado correctamente</span>
+</div> -->
+
+
+
+
+
+<div style="visibility: hidden; height: 0px; overflow-y: hidden;">
+    <div id="mail2">
+
+        <head>
+            <style>
+                :root {
+                    color-scheme: light;
+                }
+
+                html,
+                body {
+                    margin: 0 auto !important;
+                    padding: 0 !important;
+                    height: 100% !important;
+                    width: 100% !important;
+
+                    overflow-wrap: break-word;
+                    -ms-word-break: break-all;
+                    -ms-word-break: break-word;
+                    word-break: break-all;
+                    word-break: break-word;
+                }
+
+                ul,
+                ol {
+                    padding: 0;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+
+                li {
+                    margin-bottom: 0;
+                }
+
+
+
+                .list-block-list-outside-left li {
+                    margin-left: 20px !important;
+                }
+
+                .list-block-list-outside-right li {
+                    margin-right: 20px !important;
+                }
+
+
+                .paragraph {
+                    font-size: 15px;
+                    font-family: Open Sans, sans-serif;
+                    font-weight: normal;
+                    font-style: normal;
+                    text-align: start;
+                    line-height: 1;
+                    text-decoration: none;
+                    color: #5f5f5f;
+
+                }
+
+
+                .heading1 {
+                    font-size: 32px;
+                    font-family: Open Sans, sans-serif;
+                    font-weight: normal;
+                    font-style: normal;
+                    text-align: start;
+                    line-height: 1;
+                    text-decoration: none;
+                    color: #000000;
+
+                }
+
+
+                .heading2 {
+                    font-size: 26px;
+                    font-family: Open Sans, sans-serif;
+                    font-weight: normal;
+                    font-style: normal;
+                    text-align: start;
+                    line-height: 1;
+                    text-decoration: none;
+                    color: #000000;
+
+                }
+
+
+                .heading3 {
+                    font-size: 19px;
+                    font-family: Open Sans, sans-serif;
+                    font-weight: normal;
+                    font-style: normal;
+                    text-align: start;
+                    line-height: 1;
+                    text-decoration: none;
+                    color: #000000;
+
+                }
+
+
+                .list {
+                    font-size: 15px;
+                    font-family: Open Sans, sans-serif;
+                    font-weight: normal;
+                    font-style: normal;
+                    text-align: start;
+                    line-height: 1;
+                    text-decoration: none;
+                    color: #5f5f5f;
+
+                }
+
+
+                p a,
+                li a {
+
+                    display: inline-block;
+                    color: #5457FF;
+                    text-decoration: none;
+                    font-style: normal;
+                    font-weight: normal;
+
+                }
+
+                .button-table a {
+                    text-decoration: none;
+                    font-style: normal;
+                    font-weight: normal;
+                }
+
+                .paragraph>span {
+                    text-decoration: none;
+                }
+
+                .heading1>span {
+                    text-decoration: none;
+                }
+
+                .heading2>span {
+                    text-decoration: none;
+                }
+
+                .heading3>span {
+                    text-decoration: none;
+                }
+
+                .list>span {
+                    text-decoration: none;
+                }
+
+
+                * {
+                    -ms-text-size-adjust: 100%;
+                    -webkit-text-size-adjust: 100%;
+                }
+
+                div[style*="margin: 16px 0"] {
+                    margin: 0 !important;
+                }
+
+                #MessageViewBody,
+                #MessageWebViewDiv {
+                    width: 100% !important;
+                }
+
+                table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    mso-table-lspace: 0pt !important;
+                    mso-table-rspace: 0pt !important;
+                }
+
+                table:not(.button-table) {
+                    border-spacing: 0 !important;
+                    border-collapse: collapse !important;
+                    table-layout: fixed !important;
+                    margin: 0 auto !important;
+                }
+
+                th {
+                    font-weight: normal;
+                }
+
+                tr td p {
+                    margin: 0;
+                }
+
+                img {
+                    -ms-interpolation-mode: bicubic;
+                }
+
+                a[x-apple-data-detectors],
+
+                .unstyle-auto-detected-links a,
+                .aBn {
+                    border-bottom: 0 !important;
+                    cursor: default !important;
+                    color: inherit !important;
+                    text-decoration: none !important;
+                    font-size: inherit !important;
+                    font-family: inherit !important;
+                    font-weight: inherit !important;
+                    line-height: inherit !important;
+                }
+
+                .im {
+                    color: inherit !important;
+                }
+
+                .a6S {
+                    display: none !important;
+                    opacity: 0.01 !important;
+                }
+
+                img.g-img+div {
+                    display: none !important;
+                }
+
+                @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+                    u~div .contentMainTable {
+                        min-width: 320px !important;
+                        width: 100% !important;
+                    }
+                }
+
+                @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+                    u~div .contentMainTable {
+                        min-width: 375px !important;
+                        width: 100% !important;
+                    }
+                }
+
+                @media only screen and (min-device-width: 414px) {
+                    u~div .contentMainTable {
+                        min-width: 414px !important;
+                        width: 100% !important;
+                    }
+                }
+            </style>
+
+            <style>
+                @media only screen and (max-device-width: 640px) {
+                    .contentMainTable {
+                        width: 100% !important;
+                        margin: 0 auto !important;
+                    }
+
+                    .single-column {
+                        width: 100% !important;
+                        margin: auto !important;
+                    }
+
+                    .multi-column {
+                        width: 100% !important;
+                        margin: auto !important;
+                    }
+
+                    .imageBlockWrapper {
+                        width: 100% !important;
+                        margin: auto !important;
+                    }
+                }
+
+                @media only screen and (max-width: 640px) {
+                    .contentMainTable {
+                        width: 100% !important;
+                        margin: 0 auto !important;
+                    }
+
+                    .single-column {
+                        width: 100% !important;
+                        margin: auto !important;
+                    }
+
+                    .multi-column {
+                        width: 100% !important;
+                        margin: auto !important;
+                    }
+
+                    .imageBlockWrapper {
+                        width: 100% !important;
+                        margin: auto !important;
+                    }
+                }
+            </style>
+
+        </head>
+
+        <body width="100%"
+            style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #F5F6F8;">
+            <div align="center" role="article" aria-roledescription="email" lang="en"
+                style="width: 100%; background-color: #F5F6F8; display: flex; align-items: center;">
+
+                <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="640"
+                    style="margin: 0 auto !important;" class="contentMainTable">
+                    <tr class="wp-block-editor-spacerblock-v1">
+                        <td style="background-color:#F5F6F8;line-height:50px;font-size:50px;width:100%;min-width:100%">
+                            &nbsp;</td>
+                    </tr>
+                    <tr class="wp-block-editor-headingblock-v1">
+                        <td valign="top"
+                            style="background-color:#ffffff;display:block;padding-top:32px;padding-right:32px;padding-bottom:32px;padding-left:32px;text-align:center">
+                            <p style="font-family:Open Sans, sans-serif;text-align:center;line-height:36.80px;font-size:32px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
+                                class="heading1"><span style="color:#006d46">Tus recomendaciones de NUTRILITE™</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="wp-block-editor-paragraphblock-v1">
+                        <td valign="top" style="padding:0px 32px 32px 32px;background-color:#ffffff">
+                            <p class="paragraph"
+                                style="font-family:Open Sans, sans-serif;text-align:center;line-height:30.00px;font-size:15px;margin:0;color:#5f5f5f;word-break:normal">
+                                Aquí están tus recomendaciones de productos NUTRILITE™ personalizadas según tu
+                                evaluación de suplementos alimenticios/dietarios recientemente completada.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0;background-color:#ffffff;">
+                            <table role="presentation" class="multi-column"
+                                style="width:640px;border-collapse:collapse !important" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0"
+                                        class="wp-block-editor-twocolumnsfiftyfiftyblock-v1">
+                                        <td style="width:320px;float:left" class="wp-block-editor-column single-column">
+                                            <table role="presentation" align="left" border="0" class="single-column"
+                                                width="320"
+                                                style="width:320px;float:left;border-collapse:collapse !important"
+                                                cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr class="wp-block-editor-imageblock-v1">
+                                                        <td style="background-color:#ffffff;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0"
+                                                            align="center">
+                                                            <table align="center" width="320" class="imageBlockWrapper"
+                                                                style="width:320px" role="presentation">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="padding:0"><img
+                                                                                [src]=" this.ruta + recommendedProducts[0].emailImg"
+                                                                                width="320" height="" alt=""
+                                                                                style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0"
+                                                                                class="g-img"></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <td style="width:320px;float:left" class="wp-block-editor-column single-column">
+                                            <table role="presentation" align="right" border="0" class="single-column"
+                                                width="320"
+                                                style="width:320px;float:left;border-collapse:collapse !important"
+                                                cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr class="wp-block-editor-headingblock-v1">
+                                                        <td valign="top"
+                                                            style="background-color:#ffffff;display:block;padding-top:12px;padding-right:32px;padding-bottom:8px;padding-left:32px">
+                                                            <p style="font-family:Open Sans, sans-serif;line-height:29.90px;font-size:26px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
+                                                                class="heading2">{{ recommendedProducts[0].name }}</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:8px 32px 8px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;line-height:17.25px;font-size:15px;margin:0;color:#5f5f5f;word-break:normal">
+                                                                <span style="color:#000000"><span
+                                                                        style="font-weight: bold" class="bold">¿Por qué
+                                                                        recomendamos esto?</span></span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:16px 32px 6px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;line-height:22.50px;font-size:15px;margin:0;color:#5f5f5f;word-break:normal">
+                                                                {{ recommendedProducts[0].whyIsRecommended }}
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-buttonblock-v1" align="center">
+                                                        <td style="background-color:#ffffff;padding-top:12px;padding-right:12px;padding-bottom:12px;padding-left:12px;width:100%"
+                                                            valign="top">
+                                                            <table role="presentation" cellspacing="0" cellpadding="0"
+                                                                class="button-table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td valign="top"
+                                                                            class="button-aZyBhWgqSymMUXOxXk1aC button-td button-td-primary"
+                                                                            style="cursor:pointer;border:none;border-radius:50px;background-color:#006d46;font-size:16px;font-family:Open Sans, sans-serif;width:fit-content;text-decoration:none;letter-spacing:0;color:#ffffff;overflow:hidden">
+                                                                            <a [href]="recommendedProducts[0].linkBuy"
+                                                                                style="color:#ffffff;display:block;padding:10px 24px 10px 24px">Comprar
+                                                                                ahora</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:10px 32px 10px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;text-align:center;line-height:18.00px;font-size:12px;margin:0;color:#5f5f5f;word-break:normal">
+                                                                <span style="color:#84c344">Imágenes de productos de referencia. Consulta presentación y disponibilidad en tu país.</span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0;background-color:#ffffff">
+                            <table role="presentation" class="multi-column"
+                                style="width:640px;border-collapse:collapse !important" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0"
+                                        class="wp-block-editor-twocolumnsfiftyfiftyblock-v1">
+                                        <td style="width:320px;float:left" class="wp-block-editor-column single-column">
+                                            <table role="presentation" align="left" border="0" class="single-column"
+                                                width="320"
+                                                style="width:320px;float:left;border-collapse:collapse !important"
+                                                cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr class="wp-block-editor-imageblock-v1">
+                                                        <td style="background-color:#ffffff;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0"
+                                                            align="center">
+                                                            <table align="center" width="320" class="imageBlockWrapper"
+                                                                style="width:320px" role="presentation">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="padding:0"><img
+                                                                                [src]="this.ruta + recommendedProducts[1].emailImg"
+                                                                                width="320" height="" alt=""
+                                                                                style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0"
+                                                                                class="g-img"></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <td style="width:320px;float:left" class="wp-block-editor-column single-column">
+                                            <table role="presentation" align="right" border="0" class="single-column"
+                                                width="320"
+                                                style="width:320px;float:left;border-collapse:collapse !important"
+                                                cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr class="wp-block-editor-headingblock-v1">
+                                                        <td valign="top"
+                                                            style="background-color:#ffffff;display:block;padding-top:12px;padding-right:32px;padding-bottom:8px;padding-left:32px">
+                                                            <p style="font-family:Open Sans, sans-serif;line-height:29.90px;letter-spacing:0;font-size:26px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
+                                                                class="heading2">{{ recommendedProducts[1].name }}</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:8px 32px 8px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;line-height:17.25px;font-size:15px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
+                                                                <span style="color:#000000"><span
+                                                                        style="font-weight: bold" class="bold">¿Por qué
+                                                                        recomendamos esto?</span></span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:16px 32px 6px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;line-height:22.50px;font-size:15px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
+                                                                {{ recommendedProducts[1].whyIsRecommended }}
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-buttonblock-v1" align="center">
+                                                        <td style="background-color:#ffffff;padding-top:12px;padding-right:12px;padding-bottom:12px;padding-left:12px;width:100%"
+                                                            valign="top">
+                                                            <table role="presentation" cellspacing="0" cellpadding="0"
+                                                                class="button-table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td valign="top"
+                                                                            class="button-5jD-qAHvJU4BH_DqV38Jm button-td button-td-primary"
+                                                                            style="cursor:pointer;border:none;border-radius:50px;background-color:#006d46;font-size:16px;font-family:Open Sans, sans-serif;width:fit-content;text-decoration:none;letter-spacing:0;color:#ffffff;overflow:hidden">
+                                                                            <a [href]="recommendedProducts[1].linkBuy"
+                                                                                style="color:#ffffff;display:block;padding:10px 24px 10px 24px">Comprar
+                                                                                ahora</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:10px 32px 10px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;text-align:center;line-height:18.00px;font-size:12px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
+                                                                <span style="color:#84c344">Imágenes de productos de referencia. Consulta presentación y disponibilidad en tu país.</span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0;background-color:#ffffff">
+                            <table role="presentation" class="multi-column"
+                                style="width:640px;border-collapse:collapse !important" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0"
+                                        class="wp-block-editor-twocolumnsfiftyfiftyblock-v1">
+                                        <td style="width:320px;float:left" class="wp-block-editor-column single-column">
+                                            <table role="presentation" align="left" border="0" class="single-column"
+                                                width="320"
+                                                style="width:320px;float:left;border-collapse:collapse !important"
+                                                cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr class="wp-block-editor-imageblock-v1">
+                                                        <td style="background-color:#ffffff;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0"
+                                                            align="center">
+                                                            <table align="center" width="320" class="imageBlockWrapper"
+                                                                style="width:320px" role="presentation">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="padding:0"><img
+                                                                                [src]="this.ruta + recommendedProducts[2].emailImg"
+                                                                                width="320" height="" alt=""
+                                                                                style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0"
+                                                                                class="g-img"></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <td style="width:320px;float:left" class="wp-block-editor-column single-column">
+                                            <table role="presentation" align="right" border="0" class="single-column"
+                                                width="320"
+                                                style="width:320px;float:left;border-collapse:collapse !important"
+                                                cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr class="wp-block-editor-headingblock-v1">
+                                                        <td valign="top"
+                                                            style="background-color:#ffffff;display:block;padding-top:12px;padding-right:32px;padding-bottom:8px;padding-left:32px">
+                                                            <p style="font-family:Open Sans, sans-serif;line-height:29.90px;letter-spacing:0;font-size:26px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
+                                                                class="heading2">{{ recommendedProducts[2].name }}</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:8px 32px 8px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;line-height:17.25px;font-size:15px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
+                                                                <span style="color:#000000"><span
+                                                                        style="font-weight: bold" class="bold">¿Por qué
+                                                                        recomendamos esto?</span></span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:16px 32px 6px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;line-height:22.50px;font-size:15px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
+                                                                {{ recommendedProducts[2].whyIsRecommended }}
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-buttonblock-v1" align="center">
+                                                        <td style="background-color:#ffffff;padding-top:12px;padding-right:12px;padding-bottom:12px;padding-left:12px;width:100%"
+                                                            valign="top">
+                                                            <table role="presentation" cellspacing="0" cellpadding="0"
+                                                                class="button-table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td valign="top"
+                                                                            class="button-xVDVXgk0F86PLPe51WQxI button-td button-td-primary"
+                                                                            style="cursor:pointer;border:none;border-radius:50px;background-color:#006d46;font-size:16px;font-family:Open Sans, sans-serif;width:fit-content;text-decoration:none;letter-spacing:0;color:#ffffff;overflow:hidden">
+                                                                            <a [href]="recommendedProducts[2].linkBuy"
+                                                                                style="color:#ffffff;display:block;padding:10px 24px 10px 24px">Comprar
+                                                                                ahora</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:10px 32px 10px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;text-align:center;line-height:18.00px;font-size:12px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
+                                                                <span style="color:#84c344">Imágenes de productos de referencia. Consulta presentación y disponibilidad en tu país.</span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0;background-color:#ffffff">
+                            <table role="presentation" class="multi-column"
+                                style="width:640px;border-collapse:collapse !important" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0"
+                                        class="wp-block-editor-twocolumnsfiftyfiftyblock-v1">
+                                        <td style="width:320px;float:left" class="wp-block-editor-column single-column">
+                                            <table role="presentation" align="left" border="0" class="single-column"
+                                                width="320"
+                                                style="width:320px;float:left;border-collapse:collapse !important"
+                                                cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr class="wp-block-editor-imageblock-v1">
+                                                        <td style="background-color:#ffffff;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0"
+                                                            align="center">
+                                                            <table align="center" width="320" class="imageBlockWrapper"
+                                                                style="width:320px" role="presentation">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="padding:0"><img
+                                                                                [src]="this.ruta + recommendedProducts[3].emailImg"
+                                                                                width="320" height="" alt=""
+                                                                                style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0"
+                                                                                class="g-img"></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <td style="width:320px;float:left" class="wp-block-editor-column single-column">
+                                            <table role="presentation" align="right" border="0" class="single-column"
+                                                width="320"
+                                                style="width:320px;float:left;border-collapse:collapse !important"
+                                                cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr class="wp-block-editor-headingblock-v1">
+                                                        <td valign="top"
+                                                            style="background-color:#ffffff;display:block;padding-top:12px;padding-right:32px;padding-bottom:8px;padding-left:32px">
+                                                            <p style="font-family:Open Sans, sans-serif;line-height:29.90px;letter-spacing:0;font-size:26px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
+                                                                class="heading2">{{ recommendedProducts[3].name }}</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:8px 32px 8px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;line-height:17.25px;font-size:15px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
+                                                                <span style="color:#000000"><span
+                                                                        style="font-weight: bold" class="bold">¿Por qué
+                                                                        recomendamos esto?</span></span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:16px 32px 6px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;line-height:22.50px;font-size:15px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
+                                                                {{ recommendedProducts[3].whyIsRecommended }}
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-buttonblock-v1" align="center">
+                                                        <td style="background-color:#ffffff;padding-top:12px;padding-right:12px;padding-bottom:12px;padding-left:12px;width:100%"
+                                                            valign="top">
+                                                            <table role="presentation" cellspacing="0" cellpadding="0"
+                                                                class="button-table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td valign="top"
+                                                                            class="button-sN4miQa2gbJZIz6BQqML5 button-td button-td-primary"
+                                                                            style="cursor:pointer;border:none;border-radius:50px;background-color:#006d46;font-size:16px;font-family:Open Sans, sans-serif;width:fit-content;text-decoration:none;letter-spacing:0;color:#ffffff;overflow:hidden">
+                                                                            <a [href]="recommendedProducts[3].linkBuy"
+                                                                                style="color:#ffffff;display:block;padding:10px 24px 10px 24px">Comprar
+                                                                                ahora</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:10px 32px 10px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;text-align:center;line-height:18.00px;font-size:12px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
+                                                                <span style="color:#84c344">Imágenes de productos de referencia. Consulta presentación y disponibilidad en tu país.</span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="wp-block-editor-imageblock-v1">
+                        <td style="background-color:#ffffff;padding-top:16px;padding-bottom:16px;padding-left:16px;padding-right:16px"
+                            align="center">
+                            <table align="center" width="152" class="imageBlockWrapper" style="width:152px"
+                                role="presentation">
+                                <tbody>
+                                    <tr>
+                                        <td style="padding:0"><img
+                                                src="https://api.smtprelay.co/userfile/5f279ec5-b1c3-40cf-ad77-f1e6b36e8329/amway.png"
+                                                width="152" height="" alt=""
+                                                style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0"
+                                                class="g-img"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+
+
+            </div>
+        </body>
+    </div>
+</div>
+
+
+
+
+<div style="visibility: hidden; height: 0px; overflow-y: hidden;">
+    <div id="print2">
+
+        <head>
+            <style>
+                :root {
+                    color-scheme: light;
+                }
+
+                html,
+                body {
+                    margin: 0 auto !important;
+                    padding: 0 !important;
+                    height: 100% !important;
+                    width: 100% !important;
+
+                    overflow-wrap: break-word;
+                    -ms-word-break: break-all;
+                    -ms-word-break: break-word;
+                    word-break: break-all;
+                    word-break: break-word;
+                }
+
+                ul,
+                ol {
+                    padding: 0;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+
+                li {
+                    margin-bottom: 0;
+                }
+
+
+
+                .list-block-list-outside-left li {
+                    margin-left: 20px !important;
+                }
+
+                .list-block-list-outside-right li {
+                    margin-right: 20px !important;
+                }
+
+
+                .paragraph {
+                    font-size: 15px;
+                    font-family: Open Sans, sans-serif;
+                    font-weight: normal;
+                    font-style: normal;
+                    text-align: start;
+                    line-height: 1;
+                    text-decoration: none;
+                    color: #5f5f5f;
+
+                }
+
+
+                .heading1 {
+                    font-size: 32px;
+                    font-family: Open Sans, sans-serif;
+                    font-weight: normal;
+                    font-style: normal;
+                    text-align: start;
+                    line-height: 1;
+                    text-decoration: none;
+                    color: #000000;
+
+                }
+
+
+                .heading2 {
+                    font-size: 26px;
+                    font-family: Open Sans, sans-serif;
+                    font-weight: normal;
+                    font-style: normal;
+                    text-align: start;
+                    line-height: 1;
+                    text-decoration: none;
+                    color: #000000;
+
+                }
+
+
+                .heading3 {
+                    font-size: 19px;
+                    font-family: Open Sans, sans-serif;
+                    font-weight: normal;
+                    font-style: normal;
+                    text-align: start;
+                    line-height: 1;
+                    text-decoration: none;
+                    color: #000000;
+
+                }
+
+
+                .list {
+                    font-size: 15px;
+                    font-family: Open Sans, sans-serif;
+                    font-weight: normal;
+                    font-style: normal;
+                    text-align: start;
+                    line-height: 1;
+                    text-decoration: none;
+                    color: #5f5f5f;
+
+                }
+
+
+                p a,
+                li a {
+
+                    display: inline-block;
+                    color: #5457FF;
+                    text-decoration: none;
+                    font-style: normal;
+                    font-weight: normal;
+
+                }
+
+                .button-table a {
+                    text-decoration: none;
+                    font-style: normal;
+                    font-weight: normal;
+                }
+
+                .paragraph>span {
+                    text-decoration: none;
+                }
+
+                .heading1>span {
+                    text-decoration: none;
+                }
+
+                .heading2>span {
+                    text-decoration: none;
+                }
+
+                .heading3>span {
+                    text-decoration: none;
+                }
+
+                .list>span {
+                    text-decoration: none;
+                }
+
+
+                * {
+                    -ms-text-size-adjust: 100%;
+                    -webkit-text-size-adjust: 100%;
+                }
+
+                div[style*="margin: 16px 0"] {
+                    margin: 0 !important;
+                }
+
+                #MessageViewBody,
+                #MessageWebViewDiv {
+                    width: 100% !important;
+                }
+
+                table {
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    mso-table-lspace: 0pt !important;
+                    mso-table-rspace: 0pt !important;
+                }
+
+                table:not(.button-table) {
+                    border-spacing: 0 !important;
+                    border-collapse: collapse !important;
+                    table-layout: fixed !important;
+                    margin: 0 auto !important;
+                }
+
+                th {
+                    font-weight: normal;
+                }
+
+                tr td p {
+                    margin: 0;
+                }
+
+                img {
+                    -ms-interpolation-mode: bicubic;
+                }
+
+                a[x-apple-data-detectors],
+
+                .unstyle-auto-detected-links a,
+                .aBn {
+                    border-bottom: 0 !important;
+                    cursor: default !important;
+                    color: inherit !important;
+                    text-decoration: none !important;
+                    font-size: inherit !important;
+                    font-family: inherit !important;
+                    font-weight: inherit !important;
+                    line-height: inherit !important;
+                }
+
+                .im {
+                    color: inherit !important;
+                }
+
+                .a6S {
+                    display: none !important;
+                    opacity: 0.01 !important;
+                }
+
+                img.g-img+div {
+                    display: none !important;
+                }
+
+                @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+                    u~div .contentMainTable {
+                        min-width: 320px !important;
+                        width: 100% !important;
+                    }
+                }
+
+                @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+                    u~div .contentMainTable {
+                        min-width: 375px !important;
+                        width: 100% !important;
+                    }
+                }
+
+                @media only screen and (min-device-width: 414px) {
+                    u~div .contentMainTable {
+                        min-width: 414px !important;
+                        width: 100% !important;
+                    }
+                }
+            </style>
+
+            <style>
+                @media only screen and (max-device-width: 640px) {
+                    .contentMainTable {
+                        width: 100% !important;
+                        margin: 0 auto !important;
+                    }
+
+                    .single-column {
+                        width: 100% !important;
+                        margin: auto !important;
+                    }
+
+                    .multi-column {
+                        width: 100% !important;
+                        margin: auto !important;
+                    }
+
+                    .imageBlockWrapper {
+                        width: 100% !important;
+                        margin: auto !important;
+                    }
+                }
+
+                @media only screen and (max-width: 640px) {
+                    .contentMainTable {
+                        width: 100% !important;
+                        margin: 0 auto !important;
+                    }
+
+                    .single-column {
+                        width: 100% !important;
+                        margin: auto !important;
+                    }
+
+                    .multi-column {
+                        width: 100% !important;
+                        margin: auto !important;
+                    }
+
+                    .imageBlockWrapper {
+                        width: 100% !important;
+                        margin: auto !important;
+                    }
+                }
+            </style>
+
+        </head>
+
+        <body width="100%"
+            style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #F5F6F8;">
+            <div align="center" role="article" aria-roledescription="email" lang="en"
+                style="width: 100%; background-color: #F5F6F8; display: flex; align-items: center;">
+
+                <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="640"
+                    style="margin: 0 auto !important;" class="contentMainTable">
+                    <tr class="wp-block-editor-spacerblock-v1">
+                        <td style="background-color:#F5F6F8;line-height:50px;font-size:50px;width:100%;min-width:100%">
+                            &nbsp;</td>
+                    </tr>
+                    <tr class="wp-block-editor-headingblock-v1">
+                        <td valign="top"
+                            style="background-color:#ffffff;display:block;padding-top:32px;padding-right:32px;padding-bottom:32px;padding-left:32px;text-align:center">
+                            <p style="font-family:Open Sans, sans-serif;text-align:center;line-height:36.80px;font-size:32px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
+                                class="heading1"><span style="color:#006d46">Tus recomendaciones de NUTRILITE™</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="wp-block-editor-paragraphblock-v1">
+                        <td valign="top" style="padding:0px 32px 32px 32px;background-color:#ffffff">
+                            <p class="paragraph"
+                                style="font-family:Open Sans, sans-serif;text-align:center;line-height:30.00px;font-size:15px;margin:0;color:#5f5f5f;word-break:normal">
+                                Aquí están tus recomendaciones de productos NUTRILITE™ personalizadas según tu
+                                evaluación de suplementos alimenticios/dietarios recientemente completada.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0;background-color:#ffffff;">
+                            <table role="presentation" class="multi-column"
+                                style="width:640px;border-collapse:collapse !important" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0"
+                                        class="wp-block-editor-twocolumnsfiftyfiftyblock-v1">
+                                        <td style="width:320px;float:left" class="wp-block-editor-column single-column">
+                                            <table role="presentation" align="left" border="0" class="single-column"
+                                                width="320"
+                                                style="width:320px;float:left;border-collapse:collapse !important"
+                                                cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr class="wp-block-editor-imageblock-v1">
+                                                        <td style="background-color:#ffffff;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0"
+                                                            align="center">
+                                                            <table align="center" width="320" class="imageBlockWrapper"
+                                                                style="width:320px" role="presentation">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="padding:0"><img
+                                                                                [src]="this.ruta + recommendedProducts[0].emailImg"
+                                                                                width="320" height="" alt=""
+                                                                                style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0"
+                                                                                class="g-img"></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <td style="width:320px;float:left" class="wp-block-editor-column single-column">
+                                            <table role="presentation" align="right" border="0" class="single-column"
+                                                width="320"
+                                                style="width:320px;float:left;border-collapse:collapse !important"
+                                                cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr class="wp-block-editor-headingblock-v1">
+                                                        <td valign="top"
+                                                            style="background-color:#ffffff;display:block;padding-top:12px;padding-right:32px;padding-bottom:8px;padding-left:32px">
+                                                            <p style="font-family:Open Sans, sans-serif;line-height:29.90px;font-size:26px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
+                                                                class="heading2">{{ recommendedProducts[0].name }}</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:8px 32px 8px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;line-height:17.25px;font-size:15px;margin:0;color:#5f5f5f;word-break:normal">
+                                                                <span style="color:#000000"><span
+                                                                        style="font-weight: bold" class="bold">¿Por qué
+                                                                        recomendamos esto?</span></span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:16px 32px 6px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;line-height:22.50px;font-size:15px;margin:0;color:#5f5f5f;word-break:normal">
+                                                                {{ recommendedProducts[0].whyIsRecommended }}
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-buttonblock-v1" align="center">
+                                                        <td style="background-color:#ffffff;padding-top:12px;padding-right:12px;padding-bottom:12px;padding-left:12px;width:100%"
+                                                            valign="top">
+                                                            <table role="presentation" cellspacing="0" cellpadding="0"
+                                                                class="button-table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td valign="top"
+                                                                            class="button-aZyBhWgqSymMUXOxXk1aC button-td button-td-primary"
+                                                                            style="cursor:pointer;border:none;border-radius:50px;background-color:#006d46;font-size:16px;font-family:Open Sans, sans-serif;width:fit-content;text-decoration:none;letter-spacing:0;color:#ffffff;overflow:hidden">
+                                                                            <a [href]="recommendedProducts[0].linkBuy"
+                                                                                style="color:#ffffff;display:block;padding:10px 24px 10px 24px">Comprar
+                                                                                ahora</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:10px 32px 10px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;text-align:center;line-height:18.00px;font-size:12px;margin:0;color:#5f5f5f;word-break:normal">
+                                                                <span style="color:#84c344">Imágenes de productos de referencia. Consulta presentación y disponibilidad en tu país.</span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="width: 100%; height: 400px;">
+
+                    </tr>
+                    <tr>
+                        <td
+                            style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0;background-color:#ffffff">
+                            <table role="presentation" class="multi-column"
+                                style="width:640px;border-collapse:collapse !important" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0"
+                                        class="wp-block-editor-twocolumnsfiftyfiftyblock-v1">
+                                        <td style="width:320px;float:left" class="wp-block-editor-column single-column">
+                                            <table role="presentation" align="left" border="0" class="single-column"
+                                                width="320"
+                                                style="width:320px;float:left;border-collapse:collapse !important"
+                                                cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr class="wp-block-editor-imageblock-v1">
+                                                        <td style="background-color:#ffffff;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0"
+                                                            align="center">
+                                                            <table align="center" width="320" class="imageBlockWrapper"
+                                                                style="width:320px" role="presentation">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="padding:0"><img
+                                                                                [src]="this.ruta + recommendedProducts[1].emailImg"
+                                                                                width="320" height="" alt=""
+                                                                                style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0"
+                                                                                class="g-img"></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <td style="width:320px;float:left" class="wp-block-editor-column single-column">
+                                            <table role="presentation" align="right" border="0" class="single-column"
+                                                width="320"
+                                                style="width:320px;float:left;border-collapse:collapse !important"
+                                                cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr class="wp-block-editor-headingblock-v1">
+                                                        <td valign="top"
+                                                            style="background-color:#ffffff;display:block;padding-top:12px;padding-right:32px;padding-bottom:8px;padding-left:32px">
+                                                            <p style="font-family:Open Sans, sans-serif;line-height:29.90px;letter-spacing:0;font-size:26px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
+                                                                class="heading2">{{ recommendedProducts[1].name }}</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:8px 32px 8px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;line-height:17.25px;font-size:15px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
+                                                                <span style="color:#000000"><span
+                                                                        style="font-weight: bold" class="bold">¿Por qué
+                                                                        recomendamos esto?</span></span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:16px 32px 6px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;line-height:22.50px;font-size:15px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
+                                                                {{ recommendedProducts[1].whyIsRecommended }}
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-buttonblock-v1" align="center">
+                                                        <td style="background-color:#ffffff;padding-top:12px;padding-right:12px;padding-bottom:12px;padding-left:12px;width:100%"
+                                                            valign="top">
+                                                            <table role="presentation" cellspacing="0" cellpadding="0"
+                                                                class="button-table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td valign="top"
+                                                                            class="button-5jD-qAHvJU4BH_DqV38Jm button-td button-td-primary"
+                                                                            style="cursor:pointer;border:none;border-radius:50px;background-color:#006d46;font-size:16px;font-family:Open Sans, sans-serif;width:fit-content;text-decoration:none;letter-spacing:0;color:#ffffff;overflow:hidden">
+                                                                            <a [href]="recommendedProducts[1].linkBuy"
+                                                                                style="color:#ffffff;display:block;padding:10px 24px 10px 24px">Comprar
+                                                                                ahora</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:10px 32px 10px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;text-align:center;line-height:18.00px;font-size:12px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
+                                                                <span style="color:#84c344">Imágenes de productos de referencia. Consulta presentación y disponibilidad en tu país.</span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="width: 100%; height: 400px;">
+
+                    </tr>
+                    <tr>
+                        <td
+                            style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0;background-color:#ffffff">
+                            <table role="presentation" class="multi-column"
+                                style="width:640px;border-collapse:collapse !important" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0"
+                                        class="wp-block-editor-twocolumnsfiftyfiftyblock-v1">
+                                        <td style="width:320px;float:left" class="wp-block-editor-column single-column">
+                                            <table role="presentation" align="left" border="0" class="single-column"
+                                                width="320"
+                                                style="width:320px;float:left;border-collapse:collapse !important"
+                                                cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr class="wp-block-editor-imageblock-v1">
+                                                        <td style="background-color:#ffffff;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0"
+                                                            align="center">
+                                                            <table align="center" width="320" class="imageBlockWrapper"
+                                                                style="width:320px" role="presentation">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="padding:0"><img
+                                                                                [src]="this.ruta + recommendedProducts[2].emailImg"
+                                                                                width="320" height="" alt=""
+                                                                                style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0"
+                                                                                class="g-img"></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <td style="width:320px;float:left" class="wp-block-editor-column single-column">
+                                            <table role="presentation" align="right" border="0" class="single-column"
+                                                width="320"
+                                                style="width:320px;float:left;border-collapse:collapse !important"
+                                                cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr class="wp-block-editor-headingblock-v1">
+                                                        <td valign="top"
+                                                            style="background-color:#ffffff;display:block;padding-top:12px;padding-right:32px;padding-bottom:8px;padding-left:32px">
+                                                            <p style="font-family:Open Sans, sans-serif;line-height:29.90px;letter-spacing:0;font-size:26px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
+                                                                class="heading2">{{ recommendedProducts[2].name }}</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:8px 32px 8px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;line-height:17.25px;font-size:15px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
+                                                                <span style="color:#000000"><span
+                                                                        style="font-weight: bold" class="bold">¿Por qué
+                                                                        recomendamos esto?</span></span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:16px 32px 6px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;line-height:22.50px;font-size:15px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
+                                                                {{ recommendedProducts[2].whyIsRecommended }}
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-buttonblock-v1" align="center">
+                                                        <td style="background-color:#ffffff;padding-top:12px;padding-right:12px;padding-bottom:12px;padding-left:12px;width:100%"
+                                                            valign="top">
+                                                            <table role="presentation" cellspacing="0" cellpadding="0"
+                                                                class="button-table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td valign="top"
+                                                                            class="button-xVDVXgk0F86PLPe51WQxI button-td button-td-primary"
+                                                                            style="cursor:pointer;border:none;border-radius:50px;background-color:#006d46;font-size:16px;font-family:Open Sans, sans-serif;width:fit-content;text-decoration:none;letter-spacing:0;color:#ffffff;overflow:hidden">
+                                                                            <a [href]="recommendedProducts[2].linkBuy"
+                                                                                style="color:#ffffff;display:block;padding:10px 24px 10px 24px">Comprar
+                                                                                ahora</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:10px 32px 10px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;text-align:center;line-height:18.00px;font-size:12px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
+                                                                <span style="color:#84c344">Imágenes de productos de referencia. Consulta presentación y disponibilidad en tu país.</span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="width: 100%; height: 400px;">
+
+                    </tr>
+                    <tr>
+                        <td
+                            style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0;background-color:#ffffff">
+                            <table role="presentation" class="multi-column"
+                                style="width:640px;border-collapse:collapse !important" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0"
+                                        class="wp-block-editor-twocolumnsfiftyfiftyblock-v1">
+                                        <td style="width:320px;float:left" class="wp-block-editor-column single-column">
+                                            <table role="presentation" align="left" border="0" class="single-column"
+                                                width="320"
+                                                style="width:320px;float:left;border-collapse:collapse !important"
+                                                cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr class="wp-block-editor-imageblock-v1">
+                                                        <td style="background-color:#ffffff;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0"
+                                                            align="center">
+                                                            <table align="center" width="320" class="imageBlockWrapper"
+                                                                style="width:320px" role="presentation">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="padding:0"><img
+                                                                                [src]="this.ruta + recommendedProducts[3].emailImg"
+                                                                                width="320" height="" alt=""
+                                                                                style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0"
+                                                                                class="g-img"></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <td style="width:320px;float:left" class="wp-block-editor-column single-column">
+                                            <table role="presentation" align="right" border="0" class="single-column"
+                                                width="320"
+                                                style="width:320px;float:left;border-collapse:collapse !important"
+                                                cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr class="wp-block-editor-headingblock-v1">
+                                                        <td valign="top"
+                                                            style="background-color:#ffffff;display:block;padding-top:12px;padding-right:32px;padding-bottom:8px;padding-left:32px">
+                                                            <p style="font-family:Open Sans, sans-serif;line-height:29.90px;letter-spacing:0;font-size:26px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
+                                                                class="heading2">{{ recommendedProducts[3].name }}</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:8px 32px 8px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;line-height:17.25px;font-size:15px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
+                                                                <span style="color:#000000"><span
+                                                                        style="font-weight: bold" class="bold">¿Por qué
+                                                                        recomendamos esto?</span></span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:16px 32px 6px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;line-height:22.50px;font-size:15px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
+                                                                {{ recommendedProducts[3].whyIsRecommended }}
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-buttonblock-v1" align="center">
+                                                        <td style="background-color:#ffffff;padding-top:12px;padding-right:12px;padding-bottom:12px;padding-left:12px;width:100%"
+                                                            valign="top">
+                                                            <table role="presentation" cellspacing="0" cellpadding="0"
+                                                                class="button-table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td valign="top"
+                                                                            class="button-sN4miQa2gbJZIz6BQqML5 button-td button-td-primary"
+                                                                            style="cursor:pointer;border:none;border-radius:50px;background-color:#006d46;font-size:16px;font-family:Open Sans, sans-serif;width:fit-content;text-decoration:none;letter-spacing:0;color:#ffffff;overflow:hidden">
+                                                                            <a [href]="recommendedProducts[3].linkBuy"
+                                                                                style="color:#ffffff;display:block;padding:10px 24px 10px 24px">Comprar
+                                                                                ahora</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="wp-block-editor-paragraphblock-v1">
+                                                        <td valign="top"
+                                                            style="padding:10px 32px 10px 32px;background-color:#ffffff">
+                                                            <p class="paragraph"
+                                                                style="font-family:Open Sans, sans-serif;text-align:center;line-height:18.00px;font-size:12px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
+                                                                <span style="color:#84c344">Imágenes de productos de referencia. Consulta presentación y disponibilidad en tu país.</span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="width: 100%; height: 100px;">
+
+                    </tr>
+                    <tr class="wp-block-editor-imageblock-v1">
+                        <td style="background-color:#ffffff;padding-top:16px;padding-bottom:16px;padding-left:16px;padding-right:16px"
+                            align="center">
+                            <table align="center" width="152" class="imageBlockWrapper" style="width:152px"
+                                role="presentation">
+                                <tbody>
+                                    <tr>
+                                        <td style="padding:0"><img
+                                                src="https://api.smtprelay.co/userfile/5f279ec5-b1c3-40cf-ad77-f1e6b36e8329/amway.png"
+                                                width="152" height="" alt=""
+                                                style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0"
+                                                class="g-img"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+
+
+            </div>
+        </body>
+    </div>
+</div>
+
+
+
+<div class="text-center" style="padding: .5rem;">
+    <span class="g-text-sm-footer">
+        Todos los derechos reservados Amway 2024 © Copyright Términos de uso.
+    </span>
+</div>
+
+
+ <!------------------------   START-MODAL    ----------------------------->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header" style="text-align: center;">
+          <h5 class="modal-title " id="staticBackdropLabel" style="font-family: 'GTWalsheimPro-Regular'; font-weight: bold;">COMPARTE TUS RESULTADOS</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+                <form [formGroup]="sendForm" (ngSubmit)="submitForm()" class="gw-5">
+                    <div class="form-group">
+                        <label class="g-text required">Dirección de correo electrónico</label>
+                        <b class="g-text-sm" style="font-weight: bold; color: #84c344;">(Puedes enviar estas recomendaciones hasta 5 correos)</b>
+                        <p-chips class="email-text" formControlName="emails" (onAdd)="addEmail($event)" [max]="5"
+                            [allowDuplicate]="false" [addOnTab]="true" [addOnBlur]="true"
+                            placeholder=" "></p-chips>
+                            <b></b>
+        
+                        @if (cSend['emails'].errors && isFormSubmitted) {
+                        @if (cSend['emails'].errors['required']) {
+                        <span style="color: red;"><i class="fa-solid fa-circle-info"></i> Campo requerido</span>
+                        }
+                        }
+                    </div>
+        
+        
+        
+                    <div style="margin-bottom: 2rem;">
+                        <label class="g-text required">Escribe el texto que se muestra en la imagen</label>
+                        <div style="display: flex; gap: 1rem;">
+                            <input formControlName="captcha" (change)="validateCaptcha()" type="text" class="form-control">
+        
+                            <span class="g-text"
+                                style="text-decoration: line-through; padding: 0.5rem 1rem; border: 1px solid  #84c344; display: inline; user-select: none; font-weight: 600;">{{
+                                captcha }}</span>
+        
+                            <button (click)="makeCaptcha()" type="button" class="secondary-btn g-text"
+                                style="margin: 0; color:#006d46;">
+                                <i class="fa-solid fa-rotate"></i>
+                            </button>
+                        </div>
+        
+                        @if (cSend['captcha'].errors && isFormSubmitted) {
+                        @if (cSend['captcha'].errors['required']) {
+                        <span style="color: red;"><i class="fa-solid fa-circle-info"></i> Campo requerido</span>
+                        }
+                        }@else if (!captchaIsValid && isFormSubmitted) {
+                        <span style="color: red;"><i class="fa-solid fa-circle-info"></i> El captcha no es valido</span>
+                        }
+                    </div>
+        
+                    <div style="display: flex; justify-content: end;">
+                        
+        
+        
+                        <button class="primary-btn g-text" style="margin: 0; background-color: #006d46;" id="buttonshare0">
+                            Enviar <i class="fa-regular fa-envelope"></i>
+                        </button>
+                    </div>
+
+        
+                </form>
+        
+        
+        
+            </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+    <div id="toast" class="toast">
+        <i class="fa fa-check"></i>
+        <span>Correo enviado correctamente</span>
+    </div>
+
+  </div>
+
+
+  <!------------------------   END-MODAL    ----------------------------->
