@@ -28,15 +28,13 @@ export class StartQuestionnaireComponent implements OnInit {
     } else {
       console.error('Elemento con id "ada-entry" no encontrado.');
     }
-    
+
     let utag_data = environment.utagInfo.startQuestionnaire;
-
+        
     window.utag_data = Object.assign(window.utag_data, utag_data);
-
     //console.log(window.utag_data);
-   
     setTimeout(() => {
-       utag.view(window.utag_data);
+      utag.view(window.utag_data);
     }, 500);
   }
 }

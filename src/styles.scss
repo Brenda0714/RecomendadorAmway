@@ -165,7 +165,12 @@ label.required::after {
     font-family: "GTWalsheimPro-Regular";
 }
 
-
+.g-text2 {
+    display: block;
+    font-weight: 400;
+    font-size: 1.4rem;
+    font-family: "GTWalsheimPro-Regular";
+}
 
 .form-control{
     font-family: "GTWalsheimPro-Regular";
@@ -247,6 +252,10 @@ label.required::after {
         font-size: .8rem;
     }
 
+    .g-text2 {
+        font-size: .8rem;
+    }
+
     .g-text-sm {
         font-size: 1rem;
     }
@@ -311,6 +320,10 @@ label.required::after {
         font-size: .8rem;
     }
 
+    .g-text2 {
+        font-size: .9rem;
+    }
+
     .g-text-sm {
         font-size: 1rem;
     }
@@ -368,8 +381,13 @@ label.required::after {
     .g-text {
         font-size: 1.2rem;
     }
+
     .g-text-footer {
         font-size: 1rem;
+    }
+
+    .g-text2 {
+        font-size: 1.2rem;
     }
 
     .g-text-sm {
@@ -423,8 +441,13 @@ label.required::after {
     .g-text {
         font-size: 1.2rem;
     }
+
     .g-text-footer {
         font-size: 1rem;
+    }
+
+    .g-text2 {
+        font-size: 1.2rem;
     }
 
     .g-text-sm {
@@ -464,8 +487,13 @@ label.required::after {
     .g-text {
         font-size: 1.3rem;
     }
+
     .g-text-footer {
         font-size: 1.1rem;
+    }
+
+    .g-text2 {
+        font-size: 1.3rem;
     }
 
     .g-text-sm {
@@ -503,8 +531,13 @@ label.required::after {
     .g-text {
         font-size: 1.4rem;
     }
+
     .g-text-footer {
         font-size: 1.2rem;
+    }
+
+    .g-text2 {
+        font-size: 1.4rem;
     }
 
     .g-text-sm {

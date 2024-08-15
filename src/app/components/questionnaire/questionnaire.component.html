@@ -17,7 +17,7 @@
          
             @if (questions[questionIndex]?.isMessage) {
                 <br>
-                <span class="g-title" >¡Un placer conocerte, {{ questions[0]?.selected }}!</span>
+                <span class="g-title" >É um prazer conhecer você, {{ questions[0]?.selected }}!</span>
             } 
             @if (questions[questionIndex]?.isFinished) {
                 <img src="assets/img/flowers.png" draggable="false" class="g-img" alt=""><br>
@@ -25,7 +25,7 @@
             }
             @else {
                 @if (questions[questionIndex]?.isInput) {
-                    <span class="g-text">¡Comencemos!</span><br>
+                    <span class="g-text">Vamos começar!</span><br>
                 }
                 <span class="g-title" id="original">{{ questions[questionIndex]?.question }}</span><br>
                <p id="result"></p>
@@ -41,49 +41,26 @@
 
         @if (questions[questionIndex]?.isInput) {
             <div class="form-group gw-30"  >
-                <label class="g-text required" >Nombre</label>
-                <input [(ngModel)]="questions[questionIndex].selected" type="text" maxlength="50" placeholder="Escribe tu nombre" class="form-control" [ngClass]="{ 'required-error': !questions[questionIndex]?.selected && questions[questionIndex]?.showRequired }">
+                <label class="g-text required" >Nome</label>
+                <input [(ngModel)]="questions[questionIndex].selected" type="text" maxlength="50" placeholder="Digite seu nome" class="form-control" [ngClass]="{ 'required-error': !questions[questionIndex]?.selected && questions[questionIndex]?.showRequired }">
                 
                 @if (!questions[questionIndex]?.selected && questions[questionIndex]?.showRequired) {
-                    <span class="g-text-sm gw-30" style="color: red;">¡Espera! ingresa aquí tu nombre</span>
+                    <span class="g-text-sm gw-30" style="color: red;">Espere! Por favor, digite o seu nome aqui.</span>
                 }
                 <br>
-
-                <label class="g-text required" >País</label>
-                <div class="item">
-                <select [(ngModel)]="questions[questionIndex].country" class="form-select" aria-label="Default select example"  [ngClass]="{ 'required-error': !questions[questionIndex]?.country && questions[questionIndex]?.showRequired }">
-                    <option value="ar">Argentina</option>
-                    <option value="co">Colombia</option>
-                    <option value="cr">Costa Rica</option>                    
-                    <option value="cl">Chile</option>
-                    <option value="sv">El Salvador</option>
-                    <option value="gt">Guatemala</option>
-                    <option value="hn">Honduras</option>
-                    <option value="mx">México</option>
-                    <option value="pa">Panamá</option>
-                    <option value="uy">Uruguay</option>
-                    <option value="ve">Venezuela</option>
-                  </select>                    
-                </div>
-
-                  @if (!questions[questionIndex]?.country && questions[questionIndex]?.showRequired) {
-                      <span class="g-text-sm gw-30" style="color: red;">¡Espera! ingresa aquí tu país</span>
-                  }
             </div>
         } @else {
             @for (option of questions[questionIndex]?.options; track $index) {
-                <div (click)="selectOption(questionIndex, option.value, questions[questionIndex]?.multi, option.label)" class="option-btn gw-30">
+                <div (click)="selectOption(questionIndex, option.value, questions[questionIndex]?.multi,  option.label)" class="option-btn gw-30">
                     <span [ngClass]="{ 'checkbox': questions[questionIndex]?.multi, 'radio': !questions[questionIndex]?.multi, 'active': isActive(questionIndex, option.value, questions[questionIndex]?.multi) }" id="seleccion"></span>
-                    
                     <label class="g-text">{{ option.label }}</label>
                     <!-- <div  [innerHTML]="option.label">
                     </div> -->
-                    
                 </div>
             }
     
             @if ((!questions[questionIndex]?.selected || questions[questionIndex]?.selected.length == 0) && questions[questionIndex]?.showRequired) {
-                <span class="g-text-sm gw-30" style="color: red;">¡Espera! ingresa tu respuesta</span>
+                <span class="g-text-sm gw-30" style="color: red;">Espere! Insira sua resposta.</span>
             }
         }
         <div [innerHTML]="questions[questionIndex]?.footer" class="g-footer"></div>
@@ -95,15 +72,15 @@
 </div>
     <div class="footer-btns">
         <button (click)="prevQuestion()" class="g-text secondary-btn" style="color:  #006d46;">
-            <i class="fa fa-chevron-left"></i> Regresar
+            <i class="fa fa-chevron-left"></i> Voltar 
         </button>
         @if(questions[questionIndex]?.isFinished){
             <button (click)="showProducts()" class="g-text primary-btn" style="background-color:  #006d46;">
-                Mis resultados <i class="fa fa-chevron-right"></i>
+                Meus resultados <i class="fa fa-chevron-right"></i>
             </button>
         } @else {
             <button (click)="nextQuestion()" class="g-text primary-btn" style="background-color:  #006d46;">
-                Continuar <i class="fa fa-chevron-right"></i>
+                Começar <i class="fa fa-chevron-right"></i>
             </button>
         }
 

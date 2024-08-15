@@ -1,19 +1,15 @@
-
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
+import { Router, RouterModule, ActivatedRoute } from '@angular/router';
 import { environment } from '../../../environments/environment';
 import { FooterComponent } from '../../template/footer/footer.component';
 import {NgxPrintModule} from 'ngx-print';
-
-
 
 import { ChipsModule } from 'primeng/chips';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 
 declare var utag: any;
 declare var window: any;
-declare var link: any;
 declare var Email: any;
 
 declare var mailSendingApp: any;
@@ -34,10 +30,10 @@ declare var mailSendingApp: any;
   styleUrl: './recommendations.component.scss'
 })
 export class RecommendationsComponent implements OnInit {
-
+  category: string = '';
   clientName: string | null = '';
   clientCountry: string | null = '';
-  country: string = '';
+  country: string  = '';
   recommendedProducts: Array<any> = [];
   clientQuestions: Array<any> = [];
   link: string = '';
@@ -53,34 +49,31 @@ export class RecommendationsComponent implements OnInit {
   recommendations: { product_id: number[] } = {
     product_id: []
   };
-
   ruta : string = '';
-  
-
   numberProducts: number = 4;
 
   code: string | null = '';
-
   values = [];
-
   sendForm!: FormGroup;
   captcha: string = '';
   captchaIsValid: boolean = false;
   isFormSubmitted: boolean = false;
 
+  linknuevo: string = '';
+                            
   constructor(private router: Router,
-              private fb: FormBuilder){
-              }
+              private fb: FormBuilder){}
 
   ngOnInit(): void {
-
+    
     const icon = document.getElementById('ada-entry');
-
     if (icon) {
       (icon as HTMLElement).style.display = 'none';
     } else {
       console.error('Elemento con id "ada-entry" no encontrado.');
     }
+
+
 
     this.clientName = sessionStorage.getItem('clientName');
     this.clientCountry = sessionStorage.getItem('clientCountry');
@@ -92,7 +85,7 @@ export class RecommendationsComponent implements OnInit {
         item.active = false;
         return item;
       });
-    }    
+    }
     
     const IDs = this.fillProductIdsDirectly(this.resID);
     const Names =this.fillProductNameDirectly(this.resName);
@@ -105,21 +98,23 @@ export class RecommendationsComponent implements OnInit {
     utag_data.product_name = Names;
     utag_data.site_country = this.country;
     utag_data.site_currencyCode = this.getCurrencyCode(this.country);
-        
+
     window.utag_data = Object.assign(window.utag_data, utag_data);
 
-       
+
     setTimeout(() => {
       utag.view(window.utag_data);
     }, 500);
-
+    
+    
+    //this.funtionAtribute();
     this.buildForm();
     this.makeCaptcha();
     console.log(this.country); 
 
     this.ruta = (window.location.host.startsWith("www.latinamway.com") || window.location.host.startsWith("latinamway.com")) ? 
     'https://latinamway.com/recomendadornutrilite/es/' : 'https://latinamway-qas.com/recomendadornutrilite/es/';
-    
+
   }
 
   ngAfterViewInit() {
@@ -127,152 +122,141 @@ export class RecommendationsComponent implements OnInit {
   }
 
   getCurrencyCode(country: string) {
-    if (country == 'mx') return 'mxn';
-    else if (country == 'gt') return 'gtq';  //guatemala
-    else if (country == 'sv') return 'svc';  //el salvador
-    else if (country == 'hn') return 'hnl';  //honduras
-    else if (country == 'pa') return 'pab';  //panama
-    else if (country == 'cr') return 'crc';  //costa rica
-    else if (country == 'ar') return 'ars';  //argentina
-    else if (country == 'cl') return 'clp';  //chile
-    else if (country == 'uy') return 'uyu';  //uruguay
-    else if (country == 'co') return 'cop';  //colombia
-    else if (country == 've') return 'vef';  //venezuela
+    if (country == 'br') return 'brl';
     else return '';
   }
 
   fillProductIdsDirectly(resultado: Array<any>){
-    // Inicializa el arreglo para almacenar los itemsku
-    const newProductIds: string[] = [];
-  
-    // Recorre los primeros 8 productos (ajustado a 0-7 para evitar índice fuera de rango)
-    for (let i = 0; i < 8; i++) {
-      const product = this.recommendedProducts[i];
-      if (product) {
-        // Añade el itemsku del producto al arreglo
-        newProductIds.push(product.itemsku);
-      } else {
-        // Si el producto no existe, salimos del bucle
-        resultado = newProductIds;
-        return resultado;
-      }
+  // Inicializa el arreglo para almacenar los itemsku
+  const newProductIds: string[] = [];
+
+  // Recorre los primeros 8 productos (ajustado a 0-7 para evitar índice fuera de rango)
+  for (let i = 0; i < 8; i++) {
+    const product = this.recommendedProducts[i];
+    if (product) {
+      // Añade el itemsku del producto al arreglo
+      newProductIds.push(product.itemsku);
+    } else {
+      // Si el producto no existe, salimos del bucle
+      resultado = newProductIds;
+      return resultado;
     }
-  
-    // Asigna el arreglo completo a resultado
-    resultado = newProductIds;
-    //console.log( resultado);
-    // Devuelve el resultado actualizado
-    return resultado;
-    }
-  
+  }
+
+  // Asigna el arreglo completo a resultado
+  resultado = newProductIds;
+  //console.log( resultado);
+  // Devuelve el resultado actualizado
+  return resultado;
+  }
+
   fillProductNameDirectly(resultado: Array<any>){
-  
-    // Inicializa el arreglo para almacenar los itemsku
-    const newProductNames: string[] = [];
-  
-    // Recorre los primeros 8 productos (ajustado a 0-7 para evitar índice fuera de rango)
-    for (let i = 0; i < 8; i++) {
-      const product = this.recommendedProducts[i];
-      if (product) {
-        // Añade el itemsku del producto al arreglo
-        newProductNames.push(product.name);
-      } else {
-        // Si el producto no existe, salimos del bucle
-        resultado = newProductNames;
-        return resultado;
-      }
+
+  // Inicializa el arreglo para almacenar los itemsku
+  const newProductNames: string[] = [];
+
+  // Recorre los primeros 8 productos (ajustado a 0-7 para evitar índice fuera de rango)
+  for (let i = 0; i < 8; i++) {
+    const product = this.recommendedProducts[i];
+    if (product) {
+      // Añade el itemsku del producto al arreglo
+      newProductNames.push(product.name);
+    } else {
+      // Si el producto no existe, salimos del bucle
+      resultado = newProductNames;
+      return resultado;
     }
-  
-    // Asigna el arreglo completo a resultado
-    resultado = newProductNames;
-    //console.log( resultado);
-    // Devuelve el resultado actualizado
-    return resultado;
-  
-  
+  }
+
+  // Asigna el arreglo completo a resultado
+  resultado = newProductNames;
+  //console.log( resultado);
+  // Devuelve el resultado actualizado
+  return resultado;
+
+
+  }
+
+  toggleCard() {
+    const showfront = document.getElementById('Showfront');
+    const showback = document.getElementById('Showback');
+
+    if (showfront && showback) {
+
+          // Toggle the `active` state
+          this.recommendedProducts[0].active = !this.recommendedProducts[0].active;
+
+          // Update visibility based on the `active` state
+          if (this.recommendedProducts[0].active) {
+              showfront.style.display = 'none';
+              showback.style.display = 'block';
+          } else {
+              showfront.style.display = 'block';
+              showback.style.display = 'none';
+          }         
+
     }
+}
+  toggleCard2() {
+    const showfront = document.getElementById('Showfront2');
+    const showback = document.getElementById('Showback2');
 
+    if (showfront && showback) {
 
-    toggleCard() {
-      const showfront = document.getElementById('Showfront');
-      const showback = document.getElementById('Showback');
+          // Toggle the `active` state
+          this.recommendedProducts[1].active = !this.recommendedProducts[1].active;
 
-      if (showfront && showback) {
+          // Update visibility based on the `active` state
+          if (this.recommendedProducts[1].active) {
+              showfront.style.display = 'none';
+              showback.style.display = 'block';
+          } else {
+              showfront.style.display = 'block';
+              showback.style.display = 'none';
+          }         
 
-            // Toggle the `active` state
-            this.recommendedProducts[0].active = !this.recommendedProducts[0].active;
+    }
+}
+  toggleCard3() {
+    const showfront = document.getElementById('Showfront3');
+    const showback = document.getElementById('Showback3');
 
-            // Update visibility based on the `active` state
-            if (this.recommendedProducts[0].active) {
-                showfront.style.display = 'none';
-                showback.style.display = 'block';
-            } else {
-                showfront.style.display = 'block';
-                showback.style.display = 'none';
-            }         
+    if (showfront && showback) {
 
-      }
-  }
-    toggleCard2() {
-      const showfront = document.getElementById('Showfront2');
-      const showback = document.getElementById('Showback2');
+          // Toggle the `active` state
+          this.recommendedProducts[2].active = !this.recommendedProducts[2].active;
 
-      if (showfront && showback) {
+          // Update visibility based on the `active` state
+          if (this.recommendedProducts[2].active) {
+              showfront.style.display = 'none';
+              showback.style.display = 'block';
+          } else {
+              showfront.style.display = 'block';
+              showback.style.display = 'none';
+          }         
 
-            // Toggle the `active` state
-            this.recommendedProducts[1].active = !this.recommendedProducts[1].active;
+    }
+}
+  toggleCard4() {
+    const showfront = document.getElementById('Showfront4');
+    const showback = document.getElementById('Showback4');
 
-            // Update visibility based on the `active` state
-            if (this.recommendedProducts[1].active) {
-                showfront.style.display = 'none';
-                showback.style.display = 'block';
-            } else {
-                showfront.style.display = 'block';
-                showback.style.display = 'none';
-            }         
+    if (showfront && showback) {
 
-      }
-  }
-    toggleCard3() {
-      const showfront = document.getElementById('Showfront3');
-      const showback = document.getElementById('Showback3');
+          // Toggle the `active` state
+          this.recommendedProducts[3].active = !this.recommendedProducts[3].active;
 
-      if (showfront && showback) {
+          // Update visibility based on the `active` state
+          if (this.recommendedProducts[3].active) {
+              showfront.style.display = 'none';
+              showback.style.display = 'block';
+          } else {
+              showfront.style.display = 'block';
+              showback.style.display = 'none';
+          }         
 
-            // Toggle the `active` state
-            this.recommendedProducts[2].active = !this.recommendedProducts[2].active;
-
-            // Update visibility based on the `active` state
-            if (this.recommendedProducts[2].active) {
-                showfront.style.display = 'none';
-                showback.style.display = 'block';
-            } else {
-                showfront.style.display = 'block';
-                showback.style.display = 'none';
-            }         
-
-      }
-  }
-    toggleCard4() {
-      const showfront = document.getElementById('Showfront4');
-      const showback = document.getElementById('Showback4');
-
-      if (showfront && showback) {
-
-            // Toggle the `active` state
-            this.recommendedProducts[3].active = !this.recommendedProducts[3].active;
-
-            // Update visibility based on the `active` state
-            if (this.recommendedProducts[3].active) {
-                showfront.style.display = 'none';
-                showback.style.display = 'block';
-            } else {
-                showfront.style.display = 'block';
-                showback.style.display = 'none';
-            }         
-
-      }
-  }
+    }
+}
 
   functionatribute2() {
     try {
@@ -314,7 +298,6 @@ export class RecommendationsComponent implements OnInit {
     }
   }
 
-
   buildForm(){
     this.sendForm = this.fb.group({
       emails: [[], [Validators.required]],
@@ -330,78 +313,65 @@ export class RecommendationsComponent implements OnInit {
       console.log("No Send Email");
       return;       
     }
-  
-    // Log form values for debugging
+
     //console.log(this.vSend);
-  
-    // Proceed to send the email
+
     this.sendemails();
-
-
   }
 
-  
+
+
   sendemails(){
-
-    let toast = document.getElementById('toast');
-
-    let mailBody = document.getElementById('mail2');
-
-    let emails = this.vSend.emails;
-
-
-    let recomendado = environment.utagInfo.ShareContinue;
+      let toast = document.getElementById('toast');
+      let mailBody = document.getElementById('mail2');
+      let emails = this.vSend.emails;
+      let recomendado = environment.utagInfo.ShareContinue;
 
     recomendado.share_channel = "email";
 
     utag.link(recomendado);
     //console.log(recomendado);
 
+    let emailReq = {
+
+      "from": "nutrirec@amway.com",
+
+      "to": emails,
+
+      "content": mailBody?.outerHTML,
+
+      "subject": "Suas recomendações NUTRILITE",
+
+      "isHtml": true               
+
+    }  
+
+  mailSendingApp.sendEmail(emailReq,'qa')
 
 
-      let emailReq = {
+  this.sendForm.reset();
+  this.isFormSubmitted = false;
+  this.makeCaptcha();
 
-        "from": "nutrirec@amway.com",
-
-        "to": emails,
-
-        "content": mailBody?.outerHTML,
-
-        "subject": "Tus recomendaciones Nutrilite",
-
-        "isHtml": true               
-
-      }  
-
-    mailSendingApp.sendEmail(emailReq,'qa')
-
-
-    this.sendForm.reset();
-    this.isFormSubmitted = false;
-    this.makeCaptcha();
-
-    toast?.classList.add("show");
-    setTimeout(() => {
-      toast?.classList.remove("show");        
-    }, 2000)
-
-
+  toast?.classList.add("show");
+  setTimeout(() => {
+    toast?.classList.remove("show");        
+  }, 2000)
   }
 
   sendWhatsapp(){
-
+    
   let recomendado = environment.utagInfo.ShareContinue;
-  
+
   recomendado.share_channel = "whatssapp";
-  
+
   //window.utag_data = Object.assign(window.utag_data, recomendado);
-  
+
   utag.link(recomendado);
   //console.log(recomendado);
 
 
-
-      var message = encodeURIComponent('Tus recomendaciones de NUTRILITE™') + encodeURI('\n') +
+      var message = encodeURIComponent('As suas recomendações NUTRILITE™') + encodeURI('\n') +
       encodeURI('\n') + encodeURIComponent(this.recommendedProducts[0].name) + encodeURI('\n') + encodeURIComponent(this.recommendedProducts[0].linkBuy) +
       encodeURI('\n') + encodeURIComponent(this.recommendedProducts[1].name) + encodeURI('\n') + encodeURIComponent(this.recommendedProducts[1].linkBuy) +
       encodeURI('\n') + encodeURIComponent(this.recommendedProducts[2].name) + encodeURI('\n') + encodeURIComponent(this.recommendedProducts[2].linkBuy) +
@@ -411,9 +381,11 @@ export class RecommendationsComponent implements OnInit {
       const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       if (isMobile) {
         window.location.href = whatsapp_url;
+
       }else{
+
         try { 
-          
+
           const whatsappWebUrl = `https://web.whatsapp.com/send?text=` + message;
            window.open(whatsappWebUrl , '_blank');
 
@@ -428,25 +400,28 @@ export class RecommendationsComponent implements OnInit {
         // utag.link(share);
 
         // console.log(share);
+
       }
   }
- 
-   // sendEmail(){
-  //   let toast = document.getElementById('toast');
 
+
+  // sendEmail(){
+  //   let toast = document.getElementById('toast');
   //   let mailBody = document.getElementById('mail2');
 
-  //   let emails = this.vSend.emails;
+  //   let emails = this.vSend.emails.toString();
 
   //   // let recomendado = environment.utagInfo.ShareContinue;
-  
+
   //   // recomendado[0].share_channel = this.Share1;
-    
+
   //   //window.utag_data = Object.assign(window.utag_data, recomendado);
+
+
 
   //   Email.send({
   //     SecureToken: "3037af90-3a76-4406-84ae-6935e5361872",
-  //     From: "nutrirec@amway.com", // Cambiar ruta de Amway   nutrirec@amway.com
+  //     From: "nutrirec@amway.com", // nutrirec@amway.com  Cambiar ruta de Amway
 
   //     //SecureToken: "c646155a-175b-47c7-b135-812a36bc50fc",
   //     //From: "diego.hernandez.condor@gmail.com", // Cambiar ruta de Amway
@@ -463,18 +438,69 @@ export class RecommendationsComponent implements OnInit {
 
   //     toast?.classList.add("show");
   //     setTimeout(() => {
-  //       toast?.classList.remove("show");        
+  //       toast?.classList.remove("show");
   //     }, 2000)
   //   });
   // }
+  linkcopiado(){
+   
+     // 1. Obtén la URL actual
+//const currentUrl = window.location.href;
+
+
+// 3. Construye un objeto con los parámetros
+const parametros = {
+  parametro1: this.recommendedProducts[0].name,
+  parametro2: this.recommendedProducts[0].whyIsRecommended,
+  parametro3: this.recommendedProducts[1].name,
+  parametro4: this.recommendedProducts[1].whyIsRecommended,
+  parametro5: this.recommendedProducts[2].name,
+  parametro6: this.recommendedProducts[2].whyIsRecommended,
+  parametro7: this.recommendedProducts[3].name,
+  parametro8: this.recommendedProducts[3].whyIsRecommended,
+  // Aquí puedes agregar más parámetros si es necesario
+};
+
+// 4. Convierte el objeto en una cadena de consulta
+const queryString = new URLSearchParams(parametros).toString();
+
+// 5. Combina la cadena de consulta con la URL parseada
+//const nuevaUrl = `?${currentUrl.search.slice(1)}&${queryString}`;
+
+//const link = currentUrl + nuevaUrl;
+
+
+const arrayString = JSON.stringify(parametros);
+const encodedArray = encodeURIComponent(arrayString);
+const currentUrl = new URL(window.location.href);
+currentUrl.searchParams.set('array', encodedArray);
+
+// Actualiza la URL en la barra de direcciones del navegador
+window.history.pushState({}, '', currentUrl.toString());
+
+// Copia la URL resultante al portapapeles
+const nuevaUrl = currentUrl.toString(); // Obtiene la URL actualizada después de pushState
+this.linknuevo = nuevaUrl;
+navigator.clipboard.writeText(nuevaUrl)
+  .then(() => {
+    console.log('URL copiada al portapapeles:', nuevaUrl);
+  })
+  .catch((error) => {
+    console.error('Error al copiar la URL:', error);
+  });
+
+  }
+
+
 
   copyUrl(): void {    
-
+    
     let recomendado = environment.utagInfo.ShareContinue;
 
     recomendado.share_channel = this.Share3;
-
-
+    
+    //window.utag_data = Object.assign(window.utag_data, recomendado);
+    
     utag.link(recomendado);
     //console.log(recomendado);
     // Convertir los IDs a una cadena codificada
@@ -485,41 +511,37 @@ export class RecommendationsComponent implements OnInit {
     // Copiar la URL al portapapeles
     navigator.clipboard.writeText(newUrl).then(() => {
 
+
       alert("LINK DEL RECOMENDADOR A SIDO COPIADO");
       console.error('URL COPIADO: ' + newUrl);
-
-        
+    
     }).catch(err => {
       console.error('Error al copiar la URL: ', err);
     });
   }
 
-  
 
 
-
-
-  printToPDF(){   
+  printToPDF(){
 
     let recomendado = environment.utagInfo.ShareContinue;
 
     recomendado.share_channel = "print";
 
-    utag.link(recomendado);
+    //window.utag_data = Object.assign(window.utag_data, recomendado);
 
-    
+    utag.link(recomendado);
     //console.log(recomendado);
 
-  }
+}
   
   openLink(link: string){
+    let recomendado = environment.utagInfo.RecommendationsContinue;
 
-     let recomendado = environment.utagInfo.RecommendationsContinue;
+    window.open(link, '_blank');
 
-       //window.utag_data = Object.assign(window.utag_data, recomendado);
-       window.open(link, '_blank')
-       utag.link(recomendado);
-       //console.log(recomendado);
+    utag.link(recomendado);
+    //console.log(recomendado);
   }
   /*
   Secure token
@@ -559,8 +581,6 @@ DBB6AD785D81E60B33707AD39F5235A97A44
   2525
   */
 
-
-
   validateCaptcha(){
     if(this.vSend.captcha == this.captcha){
       this.captchaIsValid = true;
@@ -599,10 +619,7 @@ DBB6AD785D81E60B33707AD39F5235A97A44
 
   get cSend(){ return this.sendForm.controls; }
 
-
-
-
-
+  
 }
 
 

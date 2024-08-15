@@ -1,11 +1,9 @@
 {
   "projects": {
-    "default": "recomendador-amway",
-    "español": "recomendador-amway",
-    "es": "recomendador-amway",
-    "ess": "recomendador-amway",
-    "qa": "recomendador-amway",
-    "rec": "recomendador-amway"
+    "default": "recomendador-br-amway",
+    "brasil": "recomendador-br-amway",
+    "brassil": "recomendador-br-amway",
+    "braa": "recomendador-br-amway"
   },
   "targets": {},
   "etags": {}

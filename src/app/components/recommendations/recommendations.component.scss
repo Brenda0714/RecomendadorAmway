@@ -21,22 +21,8 @@
     background-color: #fff;
 }
 
-.cart-product {
-    padding: 1rem; 
-    border: 1px solid #ccc; 
-    display: flex; 
-    align-items: center; 
-    gap: 1rem; 
-    border-radius: 10px;
-    height: 100%;
-    width: 100%;
 
-    img {
-        width: 250px; 
-        flex-grow: 0; 
-        flex-shrink: 0;
-    }
-}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .card2{
     padding: 1rem; 
@@ -83,16 +69,17 @@
     }
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .buttonprod{
-    text-align: center;
-    display: flex;
-    bottom: 0;
-    }
-    
-    .card2 button{
-        background-color: #006d46; 
-    }
+text-align: center;
+display: flex;
+bottom: 0;
+}
+
+.card2 button{
+
+    background-color: #006d46; 
+
+}
 
 .product-name2{
     display: block;
@@ -186,8 +173,6 @@ transform: perspective(900px) rotateY(360deg);
 
 }
 
-
-
 .whyIsRecommended-Text{
     display: block;
     font-weight: 400;
@@ -202,8 +187,6 @@ transform: perspective(900px) rotateY(360deg);
     font-size: 2.3rem;
     font-family: "GTWalsheimPro-Regular";
 }
-
-
 
 .cart-recommendation {
     border: 1px solid #ccc; 
@@ -256,7 +239,7 @@ p-chips{
     gap: 1rem;
     position: fixed;
     top: 5%;
-    right: 10%;
+    right: 1%;
     visibility: hidden;
     transition: .5s linear;
 
@@ -279,6 +262,7 @@ p-chips{
     width: 100%;
 }
 
+
 ///Share buttons
 /// 
 .btn-circle {
@@ -296,7 +280,6 @@ p-chips{
     width: 25%;
 }
 
-
 .g-text-rec {
     display: block;
     font-weight: 400;
@@ -312,11 +295,7 @@ p-chips{
         height: 130px;
     }
     
-    .cart-product {
-        img {
-            width: 100px; 
-        }
-    }
+
 
     .card{
         img {
@@ -327,7 +306,7 @@ p-chips{
 
     .card2{
         width: 100%;
-        height: 430px;
+        height: 420px;
     
     }
 
@@ -339,6 +318,7 @@ p-chips{
             max-height: 250px; 
         }
     }
+
 
     .card-ad{
         img {
@@ -352,7 +332,7 @@ p-chips{
     }
 
     .product-name2{
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
 
     .whyIsRecommended-Text{
@@ -363,7 +343,7 @@ p-chips{
 
     .headers{
         width: 600px;
-        margin-left: -100px;
+        margin-left: -150px;
     }
 
     .btn-circle {
@@ -380,6 +360,7 @@ p-chips{
     .g-text-rec {
         font-size: 1.8rem;
     }
+
 }
 
 
@@ -388,12 +369,6 @@ p-chips{
     .cart-name {
         width: 70%; 
         height: 130px;
-    }
-    
-    .cart-product {
-        img {
-            width: 100px; 
-        }
     }
 
     .card{
@@ -404,7 +379,7 @@ p-chips{
 
     .card2{
         width: 100%;
-        height: 430px;
+        height: 420px;
     
     }
 
@@ -417,6 +392,7 @@ p-chips{
         }
     }
 
+
     .card-ad{
         img {
             width: 60%;
@@ -425,7 +401,7 @@ p-chips{
     }
 
     .product-name{
-        font-size: 1.7rem;
+        font-size: 1.8rem;
     }
 
     .product-name2{
@@ -494,17 +470,6 @@ p-chips{
         font-size: .9rem;
 
     }
-
-    .btn-circle {
-        width: 40px;
-        height: 40px;
-        font-size: 25px;
-
-    }
-
-    .share-button{
-        width: 15%;
-    }
 }
 
 // Large devices (desktops, 992px and dpwn)
@@ -541,17 +506,6 @@ p-chips{
         font-size: .9rem;
 
     }
-
-    .btn-circle {
-        width: 40px;
-        height: 40px;
-        font-size: 25px;
-
-    }
-
-    .share-button{
-        width: 15%;
-    }
 }
 
 // X-Large devices (large desktops, 1399px and down)
@@ -580,6 +534,13 @@ p-chips{
 
     }
 
+    .card2{
+        img {
+            width: 500px; 
+        }
+
+    }
+
     .product-name{
         font-size: 2.1rem;
     }
@@ -588,8 +549,6 @@ p-chips{
         font-size: .9rem;
 
     }
-
-
 }
 
 // XX-Large devices (larger desktops, 1400px and up)

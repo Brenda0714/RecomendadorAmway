@@ -1,5 +1,5 @@
 <div class="navbar">
-    <span class="g-text-nav" [routerLink]="['/start-questionnaire']" style="cursor: pointer; font-weight: bold;">Recomendador de Bienestar de Nutrilite™</span>
+    <span class="g-text-nav" [routerLink]="['/start-questionnaire']" style="cursor: pointer; font-weight: bold;">Recomendador Nutrilite™ de bem-estar</span>
 
     <div class="dropdown dropstart" >
         <button type="button" class="toggle-btn" id="toggleMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
@@ -9,9 +9,10 @@
         </button>
     
         <div class="dropdown-menu" id="toggleDropdown" aria-labelledby="toggleMenu">
-            
+
             <a (click)="closeSubMenu2()" [routerLink]="['/start-questionnaire']" routerLinkActive="active-route" class="dropdown-item g-text" href="javascript:void(0)">Recomendador</a>
-            <a (click)="closeSubMenu2()" [routerLink]="['/countries']" routerLinkActive="active-route" class="dropdown-item g-text" href="javascript:void(0)">Comprar</a>
+            <a href="https://www.amway.com.br/pt/Nutri%C3%A7%C3%A3o/c/nutricao?utm_source=recomendador&utm_medium=recommendations&utm_campaign=br_pt_recomendador_produtos&utm_content=cta_comprar&utm_term=Nutri%C3%A7%C3%A3o" class="dropdown-item g-text">Comprar</a>
+
         </div>
     </div>
 

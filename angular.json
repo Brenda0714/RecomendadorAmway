@@ -47,13 +47,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "940kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "3mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "9kb",
-                  "maximumError": "8kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "7kb"
                 }
               ],
               "outputHashing": "all"
@@ -111,5 +111,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "6903b939-a5e6-4728-9436-ea7bcc90dc00"
   }
 }

@@ -32,7 +32,7 @@ export class HowDoesItWorkComponent implements OnInit {
     //console.log(window.utag_data);
     setTimeout(() => {
       utag.view(window.utag_data);
-    }, 5000);
+    }, 500);
   }
 
   startQuestionnaire(){
