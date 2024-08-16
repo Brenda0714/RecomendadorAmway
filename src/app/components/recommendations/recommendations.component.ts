@@ -290,7 +290,7 @@ export class RecommendationsComponent implements OnInit {
       }
 
     // Agrega atributos a los botones de compra
-    for (let i = 0; i <= 8; i++) {
+    for (let i = 0; i <= 7; i++) {
       const product = this.recommendedProducts[i];
       const node = nodes[i - 0];
       if (node) {
@@ -327,7 +327,7 @@ export class RecommendationsComponent implements OnInit {
     this.isFormSubmitted = true;
 
     if(this.sendForm.invalid || !this.captchaIsValid){
-      console.log("No Send Email");
+      // console.log("No Send Email");
       return;       
     }
   

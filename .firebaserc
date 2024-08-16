@@ -1,12 +1,9 @@
 {
   "projects": {
-    "default": "recomendador-amway",
-    "español": "recomendador-amway",
-    "es": "recomendador-amway",
-    "ess": "recomendador-amway",
-    "qa": "recomendador-amway",
-    "rec": "recomendador-amway"
+    "default": "pruebas-d912d",
+    "a": "pruebas-d912d"
   },
   "targets": {},
-  "etags": {}
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Router, RouterModule, NavigationExtras } from '@angular/router';
 
 import { environment } from '../../../environments/environment';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 declare var utag: any;
 declare var window: any;
@@ -529,9 +530,14 @@ export class QuestionnaireComponent implements OnInit {
 
   recommendedProducts: Array<any> = [];
 
-  constructor(private router: Router){}
+  safeFooter: SafeHtml;
+  constructor(private router: Router,private sanitizer: DomSanitizer){
+    this.safeFooter = '';  
+  }
 
 
+
+ 
 
   ngOnInit(): void {
     //console.log(this.pagina);
@@ -543,7 +549,11 @@ export class QuestionnaireComponent implements OnInit {
       console.error('Elemento con id "ada-entry" no encontrado.');
     }
     this.utag_data = environment.utagInfo.questionnaire;
-
+    this.questions.forEach(q => {
+      if (q.footer) {
+        q.footer = this.sanitizeHtml(q.footer);
+      }
+    });
 
     this.functionpage2(this.pagina);
 
@@ -552,6 +562,12 @@ export class QuestionnaireComponent implements OnInit {
     'https://latinamway.com/recomendadornutrilite/es/' : 'https://latinamway-qas.com/recomendadornutrilite/es/';
  
   }
+
+
+  sanitizeHtml(html: string): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(html);
+  }
+
 
   funtionAtribute(pregunta: string){
     try {
@@ -734,7 +750,7 @@ export class QuestionnaireComponent implements OnInit {
 
         // Actualizar `window.utag_data` con los nuevos datos
         window.utag_data = { ...window.utag_data, ...this.utag_data };
-        console.log(window.utag_data);
+        // console.log(window.utag_data);
         this.updateUtagView();
   }
 
@@ -879,7 +895,7 @@ export class QuestionnaireComponent implements OnInit {
   validateCountryConditions(){
     let country = this.questions[0].country;
 
-    console.log(country);
+    // console.log(country);
 
     for (let i = 0; i < this.recommendedProducts.length; i++) {
 
