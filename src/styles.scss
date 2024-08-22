@@ -224,6 +224,11 @@ label.required::after {
 
 // extra Small devices (smartphones, 576px and down)
 @media (min-width: 250px) and (max-width: 374px) {
+    .dropstart{
+
+        width: 15%;
+
+    }
     .g-title-xl {
         font-size: 1.8rem;
     }
@@ -241,7 +246,7 @@ label.required::after {
     }
 
     .g-text-nav{
-        font-size: .6rem;
+        font-size: .8rem;
     }
 
     .g-text {
@@ -292,6 +297,12 @@ label.required::after {
 
 // Small devices (smartphones, 576px and down)
 @media (min-width: 375px) and (max-width: 576px) {
+    .dropstart{
+
+        width: 15%;
+
+    }
+
     .g-title-xl {
         font-size: 2.2rem;
     }
@@ -309,7 +320,7 @@ label.required::after {
     }
 
     .g-text-nav{
-        font-size: .9rem;
+        font-size: .8rem;
     }
 
     .g-text {

@@ -3,7 +3,8 @@
     "default": "recomendador-br-amway",
     "brasil": "recomendador-br-amway",
     "brassil": "recomendador-br-amway",
-    "braa": "recomendador-br-amway"
+    "braa": "recomendador-br-amway",
+    "firebrasil": "recomendador-br-amway"
   },
   "targets": {},
   "etags": {}

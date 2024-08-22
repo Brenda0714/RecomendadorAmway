@@ -709,7 +709,7 @@ updateUtagView() {
 
         // Actualizar `window.utag_data` con los nuevos datos
         window.utag_data = { ...window.utag_data, ...this.utag_data };
-        console.log(window.utag_data);
+        //console.log(window.utag_data);
         this.updateUtagView();
   }
 
