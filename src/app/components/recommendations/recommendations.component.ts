@@ -95,8 +95,6 @@ export class RecommendationsComponent implements OnInit {
     const IDs = this.fillProductIdsDirectly(this.resID);
     const Names =this.fillProductNameDirectly(this.resName);
 
-    let utag_data = environment.utagInfo.recommendations;
-
     this.country = this.clientCountry ?? '';
 
     this.utag_data.product_id = IDs;
