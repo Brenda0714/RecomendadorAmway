@@ -1,9 +1,8 @@
 {
   "projects": {
-    "default": "pruebas-d912d",
-    "a": "pruebas-d912d"
+    "default": "recomendador-amway",
+    "las": "recomendador-amway"
   },
   "targets": {},
-  "etags": {},
-  "dataconnectEmulatorConfig": {}
+  "etags": {}
 }

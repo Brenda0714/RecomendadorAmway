@@ -5,9 +5,6 @@ import { Router, RouterModule } from '@angular/router';
 import { environment } from '../../../environments/environment';
 import { FooterComponent } from '../../template/footer/footer.component';
 import {NgxPrintModule} from 'ngx-print';
-
-
-
 import { ChipsModule } from 'primeng/chips';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 
@@ -35,6 +32,7 @@ declare var mailSendingApp: any;
 })
 export class RecommendationsComponent implements OnInit {
 
+  utag_data: any = environment.utagInfo.recommendations;
   clientName: string | null = '';
   clientCountry: string | null = '';
   country: string = '';
@@ -101,12 +99,12 @@ export class RecommendationsComponent implements OnInit {
 
     this.country = this.clientCountry ?? '';
 
-    utag_data.product_id = IDs;
-    utag_data.product_name = Names;
-    utag_data.site_country = this.country;
-    utag_data.site_currencyCode = this.getCurrencyCode(this.country);
+    this.utag_data.product_id = IDs;
+    this.utag_data.product_name = Names;
+    this.utag_data.site_country = this.country;
+    this.utag_data.site_currencyCode = this.getCurrencyCode(this.country);
         
-    window.utag_data = Object.assign(window.utag_data, utag_data);
+    window.utag_data = Object.assign(window.utag_data, this.utag_data);
 
        
     setTimeout(() => {
@@ -115,7 +113,7 @@ export class RecommendationsComponent implements OnInit {
 
     this.buildForm();
     this.makeCaptcha();
-    console.log(this.country); 
+    console.log(this.country);
 
     this.ruta = (window.location.host.startsWith("www.latinamway.com") || window.location.host.startsWith("latinamway.com")) ? 
     'https://latinamway.com/recomendadornutrilite/es/' : 'https://latinamway-qas.com/recomendadornutrilite/es/';
