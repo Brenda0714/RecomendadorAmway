@@ -518,14 +518,6 @@ export class QuestionnaireComponent implements OnInit {
   ngOnInit(): void {
     
     
-    const icon = document.getElementById('ada-entry');
-
-    if (icon) {
-      (icon as HTMLElement).style.display = 'none';
-    } else {
-      console.error('Elemento con id "ada-entry" no encontrado.');
-    }
-    
     this.utag_data = environment.utagInfo.questionnaire;
         
     this.functionpage2(this.pagina);
