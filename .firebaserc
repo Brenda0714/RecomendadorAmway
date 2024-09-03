@@ -1,7 +1,8 @@
 {
   "projects": {
     "default": "recomendador-amway",
-    "las": "recomendador-amway"
+    "las": "recomendador-amway",
+    "tealium": "recomendador-amway"
   },
   "targets": {},
   "etags": {}
