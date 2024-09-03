@@ -40,7 +40,9 @@ body {
 
 
 
-
+#ada-button-frame{
+    visibility: hidden !important;
+}
 
 label.required::after {
     content: ' *';

@@ -72,13 +72,6 @@ export class RecommendationsComponent implements OnInit {
 
   ngOnInit(): void {
 
-    const icon = document.getElementById('ada-entry');
-
-    if (icon) {
-      (icon as HTMLElement).style.display = 'none';
-    } else {
-      console.error('Elemento con id "ada-entry" no encontrado.');
-    }
 
     this.clientName = sessionStorage.getItem('clientName');
     this.clientCountry = sessionStorage.getItem('clientCountry');
