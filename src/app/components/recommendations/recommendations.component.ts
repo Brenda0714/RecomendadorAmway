@@ -32,7 +32,7 @@ declare var mailSendingApp: any;
 })
 export class RecommendationsComponent implements OnInit {
 
-  utag_data: any = environment.utagInfo.recommendations;
+  utag_data2: any = environment.utagInfo.recommendations;
   clientName: string | null = '';
   clientCountry: string | null = '';
   country: string = '';
@@ -90,12 +90,13 @@ export class RecommendationsComponent implements OnInit {
 
     this.country = this.clientCountry ?? '';
 
-    this.utag_data.product_id = IDs;
-    this.utag_data.product_name = Names;
-    this.utag_data.site_country = this.country;
-    this.utag_data.site_currencyCode = this.getCurrencyCode(this.country);
+    this.utag_data2.product_id = IDs;
+    this.utag_data2.product_name = Names;
+    this.utag_data2.site_country = this.country;
+    this.utag_data2.page_section = "recommendations";
+    this.utag_data2.site_currencyCode = this.getCurrencyCode(this.country);
         
-    window.utag_data = Object.assign(window.utag_data, this.utag_data);
+    window.utag_data = Object.assign(window.utag_data, this.utag_data2);
 
        
     setTimeout(() => {
@@ -105,6 +106,7 @@ export class RecommendationsComponent implements OnInit {
     this.buildForm();
     this.makeCaptcha();
     console.log(this.country);
+    console.log(window.utag_data);
 
     this.ruta = (window.location.host.startsWith("www.latinamway.com") || window.location.host.startsWith("latinamway.com")) ? 
     'https://latinamway.com/recomendadornutrilite/es/' : 'https://latinamway-qas.com/recomendadornutrilite/es/';

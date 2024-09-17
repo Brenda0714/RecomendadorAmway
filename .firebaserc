@@ -2,7 +2,9 @@
   "projects": {
     "default": "recomendador-amway",
     "las": "recomendador-amway",
-    "tealium": "recomendador-amway"
+    "tealium": "recomendador-amway",
+    "firebase deploy": "recomendador-amway",
+    "fire": "recomendador-amway"
   },
   "targets": {},
   "etags": {}
