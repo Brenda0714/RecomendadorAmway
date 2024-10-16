@@ -4,7 +4,8 @@
     "las": "recomendador-amway",
     "tealium": "recomendador-amway",
     "firebase deploy": "recomendador-amway",
-    "fire": "recomendador-amway"
+    "fire": "recomendador-amway",
+    "rec": "recomendador-amway"
   },
   "targets": {},
   "etags": {}

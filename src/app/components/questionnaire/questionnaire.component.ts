@@ -635,106 +635,176 @@ export class QuestionnaireComponent implements OnInit {
     switch (pagina) {
         case 0:
             this.utag_data.page_section = "country";
+        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
             break;
         
         case 1:
                 this.utag_data.page_section = "questionnaire_start";
                 this.utag_data.site_country = this.questions[0]?.country || ''; // Asegúrate de que `questions[0]` esté definido
                 this.utag_data.site_currencyCode = this.getCurrencyCode(this.questions[0]?.country || '');
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
                 break;
         
         case 2:
                 this.utag_data.page_section = 'question' + pagina;
                 this.utag_data.site_country = this.questions[0]?.country || ''; // Asegúrate de que `questions[0]` esté definido
                 this.utag_data.site_currencyCode = this.getCurrencyCode(this.questions[0]?.country || '');
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
                 break;
         
         case 3:
                 this.utag_data.page_section = 'question' + pagina;
                 this.utag_data.site_country = this.questions[0]?.country || ''; // Asegúrate de que `questions[0]` esté definido
                 this.utag_data.site_currencyCode = this.getCurrencyCode(this.questions[0]?.country || '');
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
                 break;
         case 4:
                 this.utag_data.page_section = 'question' + pagina;
                 this.utag_data.site_country = this.questions[0]?.country || ''; // Asegúrate de que `questions[0]` esté definido
                 this.utag_data.site_currencyCode = this.getCurrencyCode(this.questions[0]?.country || '');
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
                 break;
         case 5:
                 this.utag_data.page_section = 'question' + pagina;
                 this.utag_data.site_country = this.questions[0]?.country || ''; // Asegúrate de que `questions[0]` esté definido
                 this.utag_data.site_currencyCode = this.getCurrencyCode(this.questions[0]?.country || '');
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
                 break;
         case 6:
                 this.utag_data.page_section = 'question' + pagina;
                 this.utag_data.site_country = this.questions[0]?.country || ''; // Asegúrate de que `questions[0]` esté definido
                 this.utag_data.site_currencyCode = this.getCurrencyCode(this.questions[0]?.country || '');
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
                 break;
 
         case 7:
                 this.utag_data.page_section = 'question' + pagina;
                 this.utag_data.site_country = this.questions[0]?.country || ''; // Asegúrate de que `questions[0]` esté definido
                 this.utag_data.site_currencyCode = this.getCurrencyCode(this.questions[0]?.country || '');
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
                 break;
         case 8:
                 this.utag_data.page_section = 'question' + pagina;
                 this.utag_data.site_country = this.questions[0]?.country || ''; // Asegúrate de que `questions[0]` esté definido
                 this.utag_data.site_currencyCode = this.getCurrencyCode(this.questions[0]?.country || '');
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
                 break;
         case 9:
                 this.utag_data.page_section = 'question' + pagina;
                 this.utag_data.site_country = this.questions[0]?.country || ''; // Asegúrate de que `questions[0]` esté definido
                 this.utag_data.site_currencyCode = this.getCurrencyCode(this.questions[0]?.country || '');
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
                 break;
         case 10:
                 this.utag_data.page_section = 'question' + pagina;
                 this.utag_data.site_country = this.questions[0]?.country || ''; // Asegúrate de que `questions[0]` esté definido
                 this.utag_data.site_currencyCode = this.getCurrencyCode(this.questions[0]?.country || '');
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
                 break;
         case 11:
                 this.utag_data.page_section = 'question' + pagina;
                 this.utag_data.site_country = this.questions[0]?.country || ''; // Asegúrate de que `questions[0]` esté definido
                 this.utag_data.site_currencyCode = this.getCurrencyCode(this.questions[0]?.country || '');
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
                 break;
         case 12:
                 this.utag_data.page_section = 'question' + pagina;
                 this.utag_data.site_country = this.questions[0]?.country || ''; // Asegúrate de que `questions[0]` esté definido
                 this.utag_data.site_currencyCode = this.getCurrencyCode(this.questions[0]?.country || '');
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
                 break;
         case 13:
                 this.utag_data.page_section = 'question' + pagina;
                 this.utag_data.site_country = this.questions[0]?.country || ''; // Asegúrate de que `questions[0]` esté definido
                 this.utag_data.site_currencyCode = this.getCurrencyCode(this.questions[0]?.country || '');
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
                 break;
         case 14:
                 this.utag_data.page_section = 'question' + pagina;
                 this.utag_data.site_country = this.questions[0]?.country || ''; // Asegúrate de que `questions[0]` esté definido
                 this.utag_data.site_currencyCode = this.getCurrencyCode(this.questions[0]?.country || '');
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
                 break;
         case 15:
                 this.utag_data.page_section = 'question' + pagina;
                 this.utag_data.site_country = this.questions[0]?.country || ''; // Asegúrate de que `questions[0]` esté definido
                 this.utag_data.site_currencyCode = this.getCurrencyCode(this.questions[0]?.country || '');
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
                 break;
         case 16:
                 this.utag_data.page_section = 'question' + pagina;
                 this.utag_data.site_country = this.questions[0]?.country || ''; // Asegúrate de que `questions[0]` esté definido
                 this.utag_data.site_currencyCode = this.getCurrencyCode(this.questions[0]?.country || '');
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
                 break;
         case 17:
                 this.utag_data.page_section = 'question' + pagina;
                 this.utag_data.site_country = this.questions[0]?.country || ''; // Asegúrate de que `questions[0]` esté definido
                 this.utag_data.site_currencyCode = this.getCurrencyCode(this.questions[0]?.country || '');
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
                 break;
         case 18:
                 this.utag_data.page_section = 'question' + pagina;
                 this.utag_data.site_country = this.questions[0]?.country || ''; // Asegúrate de que `questions[0]` esté definido
                 this.utag_data.site_currencyCode = this.getCurrencyCode(this.questions[0]?.country || '');
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
                 break;
         
         case 19:
                 this.utag_data.page_section = "questionnaire_complete";
                 this.utag_data.site_country = this.questions[0]?.country || '';
                 this.utag_data.site_currencyCode = this.getCurrencyCode(this.questions[0]?.country || '');
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
+                break;
+        
+        case 20:
+                this.utag_data = environment.utagInfo.recommendations;
+                this.utag_data.page_section = "recommendations";
+                        // Actualizar `window.utag_data` con los nuevos datos
+        window.utag_data = { ...window.utag_data, ...this.utag_data };
+        this.updateUtagView();
+        this.functionPageRecomendations();
+
                 break;
         
         default:
@@ -742,13 +812,11 @@ export class QuestionnaireComponent implements OnInit {
             return;
     }
 
-
-        // Actualizar `window.utag_data` con los nuevos datos
-        window.utag_data = { ...window.utag_data, ...this.utag_data };
-        // console.log(window.utag_data);
-        this.updateUtagView();
   }
 
+  functionPageRecomendations() {
+    this.router.navigate(['recommendations']);
+}
 
   selectOption(indexQuestion: number, value: number, isMulti: boolean, option: string){
       if(isMulti){
@@ -773,6 +841,13 @@ export class QuestionnaireComponent implements OnInit {
   }
   
   showProducts(){
+
+    this.questionIndex = 20;
+
+    this.pagina = this.questionIndex;
+
+    this.functionpage2(this.pagina);
+
     let products: Array<number> = [];
     
     // Obtengo todos los ID's de los productos relacionados a las opciones seleccionadas en el questionario
@@ -1928,7 +2003,6 @@ if(this.recommendedProducts[i].name == 'B Plus'){
     sessionStorage.setItem('clientCountry', this.questions[0].country);
     sessionStorage.setItem('recommendedProducts', JSON.stringify(this.recommendedProducts));
 
-    this.router.navigate(['recommendations']);
   }
 
   sortByCount(a: any, b: any){

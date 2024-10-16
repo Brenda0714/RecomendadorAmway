@@ -32,7 +32,7 @@ declare var mailSendingApp: any;
 })
 export class RecommendationsComponent implements OnInit {
 
-  utag_data2: any = environment.utagInfo.recommendations;
+  utag_data: any;
   clientName: string | null = '';
   clientCountry: string | null = '';
   country: string = '';
@@ -89,19 +89,25 @@ export class RecommendationsComponent implements OnInit {
     const Names =this.fillProductNameDirectly(this.resName);
 
     this.country = this.clientCountry ?? '';
+    if (window.utag_data) {
+      this.utag_data = window.utag_data; // Use the updated utag_data
 
-    this.utag_data2.product_id = IDs;
-    this.utag_data2.product_name = Names;
-    this.utag_data2.site_country = this.country;
-    this.utag_data2.page_section = "recommendations";
-    this.utag_data2.site_currencyCode = this.getCurrencyCode(this.country);
+    this.utag_data.product_id = IDs;
+    this.utag_data.product_name = Names;
+    this.utag_data.site_country = this.country;
+    this.utag_data.page_section = "recommendations";
+    this.utag_data.site_currencyCode = this.getCurrencyCode(this.country);
         
-    window.utag_data = Object.assign(window.utag_data, this.utag_data2);
+    window.utag_data = Object.assign(window.utag_data, this.utag_data);
 
-       
     setTimeout(() => {
-      utag.view(window.utag_data);
-    }, 500);
+     utag.view(window.utag_data);
+    }, 500);      
+
+    } else {
+      console.error('uTag data is not available in Recommendations component.');
+    }
+
 
     this.buildForm();
     this.makeCaptcha();
