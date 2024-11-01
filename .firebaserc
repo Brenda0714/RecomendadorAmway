@@ -5,7 +5,8 @@
     "brassil": "recomendador-br-amway",
     "braa": "recomendador-br-amway",
     "firebrasil": "recomendador-br-amway",
-    "tealium": "recomendador-br-amway"
+    "tealium": "recomendador-br-amway",
+    "brarec": "recomendador-br-amway"
   },
   "targets": {},
   "etags": {}
