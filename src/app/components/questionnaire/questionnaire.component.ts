@@ -495,16 +495,16 @@ export class QuestionnaireComponent implements OnInit {
       count: 0,
       itemsku: '321611',
     },
-    {
-      id: 19,
-      name: 'Garlic Plus',
-      whyIsRecommended: 'Contém alicina e quercetina. Pode contribuir para a redução dos níveis elevados de gordura no sangue e prevenir a formação de depósitos de gordura nas artérias. Hipotensor.',
-      img: 'assets/img/LAS/Ajo_Concentrado.png',
-      emailImg: this.ruta + 'assets/img/LAS/Ajo_Concentrado.png',
-      linkBuy:'https://www.amway.com.br/pt/Garlic-Plus-Nutrilite/p/125618?utm_source=recomendador&utm_medium=recommendations&utm_campaign=br_pt_recomendador_produtos&utm_content=cta_comprar&utm_term=garlic',
-      count: 0,
-      itemsku: '125618',
-    }
+    // {
+    //   id: 19,
+    //   name: 'Garlic Plus',
+    //   whyIsRecommended: 'Contém alicina e quercetina. Pode contribuir para a redução dos níveis elevados de gordura no sangue e prevenir a formação de depósitos de gordura nas artérias. Hipotensor.',
+    //   img: 'assets/img/LAS/Ajo_Concentrado.png',
+    //   emailImg: this.ruta + 'assets/img/LAS/Ajo_Concentrado.png',
+    //   linkBuy:'https://www.amway.com.br/pt/Garlic-Plus-Nutrilite/p/125618?utm_source=recomendador&utm_medium=recommendations&utm_campaign=br_pt_recomendador_produtos&utm_content=cta_comprar&utm_term=garlic',
+    //   count: 0,
+    //   itemsku: '125618',
+    // }
   ];
 
 
