@@ -615,6 +615,8 @@ export class QuestionnaireComponent implements OnInit {
       // Asegúrate de que los datos de utag_data están correctamente definidos
       if (window.utag_data) {
           utag.view(window.utag_data);
+
+          console.log(window.utag_data);
           //console.log('Datos enviados a Tealium:', window.utag_data);
       } else {
           console.error('Datos de uTag no están definidos.');
@@ -635,6 +637,8 @@ export class QuestionnaireComponent implements OnInit {
     switch (pagina) {
         case 0:
             this.utag_data.page_section = "country";
+            this.utag_data.site_country = "none";
+            this.utag_data.site_currencyCode = "none";
         // Actualizar `window.utag_data` con los nuevos datos
         window.utag_data = { ...window.utag_data, ...this.utag_data };
         this.updateUtagView();
@@ -806,7 +810,6 @@ export class QuestionnaireComponent implements OnInit {
         this.functionPageRecomendations();
 
                 break;
-        
         default:
             console.warn('Página no reconocida:', pagina);
             return;
@@ -1914,12 +1917,7 @@ if(this.recommendedProducts[i].name == 'Daily Plus'){
 if(this.recommendedProducts[i].name == 'Omega 3 Plus'){
   this.recommendedProducts[i].linkBuy = 'https://www.amway.com.ve/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=A&BC=100107&C=AG&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=ve_es_site_recomendador&utm_content=cta_comprar&utm_term=omega3';
   this.recommendedProducts[i].itemsku = '100107';
- }
-// LinkBuy C Plus
-if(this.recommendedProducts[i].name == 'C Plus'){
-this.recommendedProducts[i].linkBuy = 'https://www.amway.com.ve/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=A&BC=106710&C=AG&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=ve_es_site_recomendador&utm_content=cta_comprar&utm_term=Acerola_C';
-this.recommendedProducts[i].itemsku = '106710';
-} 
+ } 
 // LinkBuy Proteina
 if(this.recommendedProducts[i].name == 'Proteína Vegetal en polvo'){
 this.recommendedProducts[i].linkBuy = 'https://www.amway.com.ve/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=A&BC=110415&C=AG&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=ve_es_site_recomendador&utm_content=cta_comprar&utm_term=Proteina_Vegetal';
@@ -1986,7 +1984,8 @@ if(this.recommendedProducts[i].name == 'B Plus'){
           this.recommendedProducts[i].name == 'Multicaroteno' || 
           this.recommendedProducts[i].name == 'Bodykey Shake Plus' || 
           this.recommendedProducts[i].name == 'Fibra en Polvo' ||
-          this.recommendedProducts[i].name == 'Daily + 1 Vive Libre')
+          this.recommendedProducts[i].name == 'Daily + 1 Vive Libre'||
+          this.recommendedProducts[i].name == 'C Plus')
           this.recommendedProducts[i] = null;
 
       }
