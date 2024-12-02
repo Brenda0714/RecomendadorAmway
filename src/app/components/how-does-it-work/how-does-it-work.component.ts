@@ -26,6 +26,9 @@ export class HowDoesItWorkComponent implements OnInit {
     setTimeout(() => {
       utag.view(window.utag_data);
     }, 5000);
+
+    console.log(window.utag_data);
+    
   }
 
   startQuestionnaire(){

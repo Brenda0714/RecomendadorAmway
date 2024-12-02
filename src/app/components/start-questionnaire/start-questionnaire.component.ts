@@ -29,5 +29,8 @@ export class StartQuestionnaireComponent implements OnInit {
     setTimeout(() => {
        utag.view(window.utag_data);
     }, 500);
+
+    console.log(window.utag_data);
+
   }
 }
