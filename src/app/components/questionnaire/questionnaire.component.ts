@@ -157,15 +157,15 @@ export class QuestionnaireComponent implements OnInit {
           dataHtml: '<b>Proteína:</b> Alta.<br><b>Grasas:</b> Alta.<br><b>Carbohidratos:</b> Baja.'
      
         },
-        { label: 'Proteína: Alta. Grasas: Baja. Carbohidratos: Alta.', value: 3, products: [7],
+        { label: 'Proteína: Alta. Grasas: Baja. Carbohidratos: Alta.', value: 2, products: [7],
                 dataHtml: '<b>Proteína:</b> Alta.<br><b>Grasas:</b> Baja.<br><b>Carbohidratos:</b> Alta.' 
 
         },
-        { label: 'Proteína: Baja. Grasas: Alta. Carbohidratos: Alta.', value: 4, products: [7, 18],
+        { label: 'Proteína: Baja. Grasas: Alta. Carbohidratos: Alta.', value: 3, products: [7, 18],
                 dataHtml: '<b>Proteína:</b> Baja.<br><b>Grasas:</b> Alta.<br><b>Carbohidratos:</b> Alta.' 
 
         },
-        { label: 'Balanceada: con una mezcla equilibrada de carbohidratos, proteínas y grasa.', value: 2, products: [1]
+        { label: 'Balanceada: con una mezcla equilibrada de carbohidratos, proteínas y grasa.', value: 4, products: [1]
         },      
       ],
       selected: null,
@@ -974,6 +974,22 @@ export class QuestionnaireComponent implements OnInit {
 
       if(country == 'mx'){
 
+        // LinkBuy Omega 3 Plus
+        if(this.recommendedProducts[i].name == 'Omega 3 Plus'){
+           this.recommendedProducts[i].name = 'Triple Omega-3';
+           this.recommendedProducts[i].img = 'assets/img/LAS/TripleOmega3_v2.png';
+           this.recommendedProducts[i].emailImg = this.ruta +'assets/img/LAS/TripleOmega3_v2.png';
+           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/Store/Catalogue.aspx?show=Top&line=K';
+
+        }
+
+        // LinkBuy Equilibra Tu Vida
+        if(this.recommendedProducts[i].name == 'Daily +1 Equilibra tu vida'){
+           this.recommendedProducts[i].img = 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
+           this.recommendedProducts[i].emailImg = this.ruta + 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
+           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdsList&IC=1&C=XC&line=X&NavM=N';
+        }
+
         if(this.recommendedProducts[i].name == 'Double X'){
 
           let aux = this.recommendedProducts[5];
@@ -1087,11 +1103,21 @@ export class QuestionnaireComponent implements OnInit {
           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.ar/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=P&BC=126009&C=PE&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=ar_es_site_recomendador&utm_content=cta_comprar&utm_term=daily_plus';
           this.recommendedProducts[i].itemsku = '126009';
        }
-       // LinkBuy Omega 3 Plus
-       if(this.recommendedProducts[i].name == 'Omega 3 Plus'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.ar/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=P&BC=122173&C=PE&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=ar_es_site_recomendador&utm_content=cta_comprar&utm_term=Omega3';
-          this.recommendedProducts[i].itemsku = '122173';
-         }
+        // LinkBuy Omega 3 Plus
+        if(this.recommendedProducts[i].name == 'Omega 3 Plus'){
+           this.recommendedProducts[i].name = 'Triple Omega-3';
+           this.recommendedProducts[i].img = 'assets/img/LAS/TripleOmega3_v2.png';
+           this.recommendedProducts[i].emailImg = this.ruta +'assets/img/LAS/TripleOmega3_v2.png';
+           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/Store/Catalogue.aspx?show=Top&line=K';
+
+        }
+
+        // LinkBuy Equilibra Tu Vida
+        if(this.recommendedProducts[i].name == 'Daily +1 Equilibra tu vida'){
+           this.recommendedProducts[i].img = 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
+           this.recommendedProducts[i].emailImg = this.ruta + 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
+           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdsList&IC=1&C=XC&line=X&NavM=N';
+        }
        // LinkBuy C Plus
        if(this.recommendedProducts[i].name == 'C Plus'){
        this.recommendedProducts[i].linkBuy = 'https://www.amway.com.ar/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=P&BC=109741&C=PE&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=ar_es_site_recomendador&utm_content=cta_comprar&utm_term=C_Plus';
@@ -1167,12 +1193,7 @@ export class QuestionnaireComponent implements OnInit {
           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.ar/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=P&BC=321288&C=PQ&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=ar_es_site_recomendador&utm_content=cta_comprar&utm_term=Respuesta_optima';
           this.recommendedProducts[i].itemsku = '321288';
           }
-        // LinkBuy Daily+1 Equilibra tu vida
-        if(this.recommendedProducts[i].name == 'Daily +1 Equilibra tu vida'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.ar/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=P&BC=321299&C=PQ&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=ar_es_site_recomendador&utm_content=cta_comprar&utm_term=equilibra_tu_vida';
-          this.recommendedProducts[i].itemsku = '321299';
-          }
-
+        // LinkBuy Double X
         if(this.recommendedProducts[i].name == 'Double X'){
 
           let aux = this.recommendedProducts[5];
@@ -1193,11 +1214,21 @@ export class QuestionnaireComponent implements OnInit {
           this.recommendedProducts[i].linkBuy = 'https://www.amway.co.cr/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=B&BC=126010&C=BS&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=cr_es_site_recomendador&utm_content=cta_comprar&utm_term=Daily_Plus';
           this.recommendedProducts[i].itemsku = '126010';
        }
-       // LinkBuy Omega 3 Plus
-       if(this.recommendedProducts[i].name == 'Omega 3 Plus'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.co.cr/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=B&BC=122173&C=BS&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=cr_es_site_recomendador&utm_content=cta_comprar&utm_term=Omega3';
-          this.recommendedProducts[i].itemsku = '122173';
-         }
+        // LinkBuy Omega 3 Plus
+        if(this.recommendedProducts[i].name == 'Omega 3 Plus'){
+           this.recommendedProducts[i].name = 'Triple Omega-3';
+           this.recommendedProducts[i].img = 'assets/img/LAS/TripleOmega3_v2.png';
+           this.recommendedProducts[i].emailImg = this.ruta +'assets/img/LAS/TripleOmega3_v2.png';
+           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/Store/Catalogue.aspx?show=Top&line=K';
+
+        }
+
+        // LinkBuy Equilibra Tu Vida
+        if(this.recommendedProducts[i].name == 'Daily +1 Equilibra tu vida'){
+           this.recommendedProducts[i].img = 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
+           this.recommendedProducts[i].emailImg = this.ruta + 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
+           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdsList&IC=1&C=XC&line=X&NavM=N';
+        }
        // LinkBuy C Plus
        if(this.recommendedProducts[i].name == 'C Plus'){
        this.recommendedProducts[i].linkBuy = 'https://www.amway.co.cr/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=B&BC=109741&C=BS&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=cr_es_site_recomendador&utm_content=cta_comprar&utm_term=C_Plus';
@@ -1278,11 +1309,6 @@ export class QuestionnaireComponent implements OnInit {
           this.recommendedProducts[i].linkBuy = 'https://www.amway.co.cr/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=B&BC=321288&C=BY&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=cr_es_site_recomendador&utm_content=cta_comprar&utm_term=Respuesta_optima';
           this.recommendedProducts[i].itemsku = '321288';
           }
-        // LinkBuy Daily+1 Equilibra tu vida
-        if(this.recommendedProducts[i].name == 'Daily +1 Equilibra tu vida'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.co.cr/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=B&BC=321299&C=BY&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=cr_es_site_recomendador&utm_content=cta_comprar&utm_term=equilibra_tu_vida';
-          this.recommendedProducts[i].itemsku = '321299';
-          }
 
           if(this.recommendedProducts[i].name == 'Double X'){
 
@@ -1300,11 +1326,21 @@ if(this.recommendedProducts[i].name == 'Daily Plus'){
   this.recommendedProducts[i].linkBuy = 'https://www.amway.com.gt/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=C&BC=126009&C=CX&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=gt_es_site_recomendador&utm_content=cta_comprar&utm_term=Daily_Plus';
   this.recommendedProducts[i].itemsku = '126009';
 }
-// LinkBuy Omega 3 Plus
-if(this.recommendedProducts[i].name == 'Omega 3 Plus'){
-  this.recommendedProducts[i].linkBuy = 'https://www.amway.com.gt/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=C&BC=122173&C=CX&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=gt_es_site_recomendador&utm_content=cta_comprar&utm_term=Omega3';
-  this.recommendedProducts[i].itemsku = '122173';
- }
+        // LinkBuy Omega 3 Plus
+        if(this.recommendedProducts[i].name == 'Omega 3 Plus'){
+           this.recommendedProducts[i].name = 'Triple Omega-3';
+           this.recommendedProducts[i].img = 'assets/img/LAS/TripleOmega3_v2.png';
+           this.recommendedProducts[i].emailImg = this.ruta +'assets/img/LAS/TripleOmega3_v2.png';
+           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/Store/Catalogue.aspx?show=Top&line=K';
+
+        }
+
+        // LinkBuy Equilibra Tu Vida
+        if(this.recommendedProducts[i].name == 'Daily +1 Equilibra tu vida'){
+           this.recommendedProducts[i].img = 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
+           this.recommendedProducts[i].emailImg = this.ruta + 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
+           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdsList&IC=1&C=XC&line=X&NavM=N';
+        }
 // LinkBuy C Plus
 if(this.recommendedProducts[i].name == 'C Plus'){
 this.recommendedProducts[i].linkBuy = 'https://www.amway.com.gt/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=C&BC=109741&C=CX&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=gt_es_site_recomendador&utm_content=cta_comprar&utm_term=C_Plus';
@@ -1385,11 +1421,6 @@ if(this.recommendedProducts[i].name == 'B Plus'){
           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.gt/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=C&BC=321288&C=CZ&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=gt_es_site_recomendador&utm_content=cta_comprar&utm_term=Respuesta_optima';
           this.recommendedProducts[i].itemsku = '321288';      
           }
-        // LinkBuy Daily+1 Equilibra tu vida
-        if(this.recommendedProducts[i].name == 'Daily +1 Equilibra tu vida'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.gt/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=C&BC=321299&C=CZ&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=gt_es_site_recomendador&utm_content=cta_comprar&utm_term=equilibra_tu_vida';
-          this.recommendedProducts[i].itemsku = '321299';      
-          }
 
           if(this.recommendedProducts[i].name == 'Double X'){
 
@@ -1406,11 +1437,21 @@ if(this.recommendedProducts[i].name == 'Daily Plus'){
   this.recommendedProducts[i].linkBuy = 'https://www.amway.com.hn/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=C&BC=126009&C=CY&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=hn_es_site_recomendador&utm_content=cta_comprar&utm_term=daily_Plus';
   this.recommendedProducts[i].itemsku = '126009'; 
 }
-// LinkBuy Omega 3 Plus
-if(this.recommendedProducts[i].name == 'Omega 3 Plus'){
-  this.recommendedProducts[i].linkBuy = 'https://www.amway.com.hn/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=C&BC=122173&C=CY&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=hn_es_site_recomendador&utm_content=cta_comprar&utm_term=Omega3';
-  this.recommendedProducts[i].itemsku = '122173'; 
- }
+        // LinkBuy Omega 3 Plus
+        if(this.recommendedProducts[i].name == 'Omega 3 Plus'){
+           this.recommendedProducts[i].name = 'Triple Omega-3';
+           this.recommendedProducts[i].img = 'assets/img/LAS/TripleOmega3_v2.png';
+           this.recommendedProducts[i].emailImg = this.ruta +'assets/img/LAS/TripleOmega3_v2.png';
+           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/Store/Catalogue.aspx?show=Top&line=K';
+
+        }
+
+        // LinkBuy Equilibra Tu Vida
+        if(this.recommendedProducts[i].name == 'Daily +1 Equilibra tu vida'){
+           this.recommendedProducts[i].img = 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
+           this.recommendedProducts[i].emailImg = this.ruta + 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
+           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdsList&IC=1&C=XC&line=X&NavM=N';
+        }
 // LinkBuy C Plus
 if(this.recommendedProducts[i].name == 'C Plus'){
 this.recommendedProducts[i].linkBuy = 'https://www.amway.com.hn/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=C&BC=109741&C=CY&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=hn_es_site_recomendador&utm_content=cta_comprar&utm_term=C_Plus';
@@ -1490,11 +1531,6 @@ if(this.recommendedProducts[i].name == 'B Plus'){
         if(this.recommendedProducts[i].name == 'Daily +1 Respuesta Óptima'){
           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.hn/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=C&BC=321288&C=CA&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=hn_es_site_recomendador&utm_content=cta_comprar&utm_term=Respuesta_optima';
           this.recommendedProducts[i].itemsku = '321288'; 
-          }
-        // LinkBuy Daily+1 Equilibra tu vida
-        if(this.recommendedProducts[i].name == 'Daily +1 Equilibra tu vida'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.hn/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=C&BC=321299&C=CA&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=hn_es_site_recomendador&utm_content=cta_comprar&utm_term=equilibra_tu_vida';
-          this.recommendedProducts[i].itemsku = '321299'; 
           }
 
           if(this.recommendedProducts[i].name == 'Double X'){
@@ -1618,11 +1654,21 @@ if(this.recommendedProducts[i].name == 'Daily Plus'){
   this.recommendedProducts[i].linkBuy = 'https://www.amway.com.pa/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=B&BC=117549&utm_source=recomendador&utm_medium=recommendations&utm_campaign=pa_es_site_recomendador&utm_content=cta_comprar&utm_term=daily_Plus';
   this.recommendedProducts[i].itemsku = '117548';
 }
-// LinkBuy Omega 3 Plus
-if(this.recommendedProducts[i].name == 'Omega 3 Plus'){
-  this.recommendedProducts[i].linkBuy = 'https://www.amway.com.pa/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=B&BC=122173&C=BB&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=pa_es_site_recomendador&utm_content=cta_comprar&utm_term=omega3';
-  this.recommendedProducts[i].itemsku = '122173';
- }
+        // LinkBuy Omega 3 Plus
+        if(this.recommendedProducts[i].name == 'Omega 3 Plus'){
+           this.recommendedProducts[i].name = 'Triple Omega-3';
+           this.recommendedProducts[i].img = 'assets/img/LAS/TripleOmega3_v2.png';
+           this.recommendedProducts[i].emailImg = this.ruta +'assets/img/LAS/TripleOmega3_v2.png';
+           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/Store/Catalogue.aspx?show=Top&line=K';
+
+        }
+
+        // LinkBuy Equilibra Tu Vida
+        if(this.recommendedProducts[i].name == 'Daily +1 Equilibra tu vida'){
+           this.recommendedProducts[i].img = 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
+           this.recommendedProducts[i].emailImg = this.ruta + 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
+           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdsList&IC=1&C=XC&line=X&NavM=N';
+        }
 // LinkBuy C Plus
 if(this.recommendedProducts[i].name == 'C Plus'){
 this.recommendedProducts[i].linkBuy = 'https://www.amway.com.pa/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=B&BC=109741&C=BB&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=pa_es_site_recomendador&utm_content=cta_comprar&utm_term=C_Plus';
@@ -1694,11 +1740,6 @@ if(this.recommendedProducts[i].name == 'Cal Mag D'){
           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.pa/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=B&BC=321237&C=BP&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=pa_es_site_recomendador&utm_content=cta_comprar&utm_term=Respuesta_optima';
           this.recommendedProducts[i].itemsku = '321237';
           }
-        // LinkBuy Daily+1 Equilibra tu vida
-        if(this.recommendedProducts[i].name == 'Daily +1 Equilibra tu vida'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.pa/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=B&BC=321245&C=BP&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=pa_es_site_recomendador&utm_content=cta_comprar&utm_term=equilibra_tu_vida';
-          this.recommendedProducts[i].itemsku = '321245';
-          }
 
         if(this.recommendedProducts[i].name == 'Double X'){
 
@@ -1726,11 +1767,21 @@ if(this.recommendedProducts[i].name == 'Daily Plus'){
   this.recommendedProducts[i].linkBuy = 'https://www.amway.cl/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=C&BC=120011&C=CO&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=cl_es_site_recomendador&utm_content=cta_comprar&utm_term=daily_Plus';
   this.recommendedProducts[i].itemsku = '117548';
 }
-// LinkBuy Omega 3 Plus
-if(this.recommendedProducts[i].name == 'Omega 3 Plus'){
-  this.recommendedProducts[i].linkBuy = 'https://www.amway.cl/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=C&BC=122173&C=CO&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=cl_es_site_recomendador&utm_content=cta_comprar&utm_term=omega3';
-  this.recommendedProducts[i].itemsku = '122173';
- }
+        // LinkBuy Omega 3 Plus
+        if(this.recommendedProducts[i].name == 'Omega 3 Plus'){
+           this.recommendedProducts[i].name = 'Triple Omega-3';
+           this.recommendedProducts[i].img = 'assets/img/LAS/TripleOmega3_v2.png';
+           this.recommendedProducts[i].emailImg = this.ruta +'assets/img/LAS/TripleOmega3_v2.png';
+           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/Store/Catalogue.aspx?show=Top&line=K';
+
+        }
+
+        // LinkBuy Equilibra Tu Vida
+        if(this.recommendedProducts[i].name == 'Daily +1 Equilibra tu vida'){
+           this.recommendedProducts[i].img = 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
+           this.recommendedProducts[i].emailImg = this.ruta + 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
+           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdsList&IC=1&C=XC&line=X&NavM=N';
+        }
 // LinkBuy C Plus
 if(this.recommendedProducts[i].name == 'C Plus'){
 this.recommendedProducts[i].linkBuy = 'https://www.amway.cl/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=C&BC=109741&C=CO&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=cl_es_site_recomendador&utm_content=cta_comprar&utm_term=C_Plus';
@@ -1796,11 +1847,7 @@ if(this.recommendedProducts[i].name == 'B Plus'){
           this.recommendedProducts[i].linkBuy = 'https://www.amway.cl/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=C&BC=321288&C=CX&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=cl_es_site_recomendador&utm_content=cta_comprar&utm_term=Respuesta_optima';
           this.recommendedProducts[i].itemsku = '321237';
           }
-        // LinkBuy Daily+1 Equilibra tu vida
-        if(this.recommendedProducts[i].name == 'Daily +1 Equilibra tu vida'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.cl/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=C&BC=321299&C=CX&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=cl_es_site_recomendador&utm_content=cta_comprar&utm_term=equilibra_tu_vida';
-          this.recommendedProducts[i].itemsku = '321245';
-          }
+
         // eliminar double x
         // eliminar multicaroteno
         // eliminar Ajo concentrado
@@ -1989,6 +2036,8 @@ if(this.recommendedProducts[i].name == 'B Plus'){
           this.recommendedProducts[i] = null;
 
       }
+
+      console.log(this.recommendedProducts[i].emailImg);
     }
 
     //console.log([...this.recommendedProducts]);

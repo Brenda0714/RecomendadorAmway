@@ -5,6 +5,28 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "/recomendadornutrilite/es/assets/**",
+        "headers": [
+
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          },          
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000"
+          }
+        ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   }
 }

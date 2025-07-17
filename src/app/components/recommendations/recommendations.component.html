@@ -26,166 +26,177 @@
     <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;" id="productosRecom">
         <div class="row">
 
+            @for (product of recommendedProducts; track $index) {
+                @if(($index + 1) == 1){
+                    <div class="col-lg-6 col-md-12 col-sm-12"style="margin-bottom: 1rem;">
+                    <div class="card" [ngClass]="{ 'card-active': product.active }" >
+                                
+                                <div style="width: 80%; text-align: center;">
+                                    <span class="product-name" style="top: 0; position: absolute; margin-bottom:15rem;"><b> {{  product.name }} </b></span>                        
+                                </div>
 
-            <div class="col-lg-6 col-md-12 col-sm-12"style="margin-bottom: 1rem;">
-            <div class="card" [ngClass]="{ 'card-active': this.recommendedProducts[0].active }" >
-                        
-                        <div style="width: 80%; text-align: center;">
-                            <span class="product-name" style="top: 0; position: absolute; margin-bottom:15rem;"><b> {{
-                                        this.recommendedProducts[0].name }} </b></span>                        
-                        </div>
+                                <div class="front" style="margin-top: 10px;">
+                                    <div>
 
-                        <div class="front" style="margin-top: 10px;">
-                            <div>
+                                        <img [src]="product.finalImg" draggable="false" alt="" style="margin-bottom: 5rem; margin-top: 100px;">
+                                        <span class="g-text-sm" style="bottom: 0; position: absolute; margin-bottom:10px;">
+                                            <b>¿Por qué recomendamos esto?</b></span>
+                                        <p class="buttonClick-text" (click)="toggleCard()" style="margin-bottom: -20px;" id="Showfront">Haz clic aquí</p>
+                                    </div>
 
-                                <img [src]="this.ruta + this.recommendedProducts[0].img" draggable="false" alt="" style="margin-bottom: 5rem; margin-top: 100px;">
-                                <span class="g-text-sm" style="bottom: 0; position: absolute; margin-bottom:10px;">
-                                    <b>¿Por qué recomendamos esto?</b></span>
-                                <p class="buttonClick-text" (click)="toggleCard()" style="margin-bottom: -20px;" id="Showfront">Haz clic aquí</p>
+                                </div>
+
+                                <div class="back" style="height: 520px; margin-top: 10px;">
+                                    <div>
+                                        <span class="g-text-sm" style="margin-top: -300px; position: absolute;"><b>¿Por qué
+                                                recomendamos esto?</b></span>
+                                                <br>
+                                        <span class="whyIsRecommended-Text mb4" style="margin-top: 100px;">
+                                            {{ product.whyIsRecommended | slice: 0: 2000 }} </span>
+
+                                        <p class="buttonClick-text" (click)="toggleCard()" id="Showback">Regresar</p>
+                                    </div>
+                                </div>
+
+                                <br>
+                                <button (click)="openLink(product.linkBuy)" class="primary-btn g-text-sm"
+                                    style="margin-bottom: 25px;" id="comprar1">
+                                    Comprar ahora
+                                </button>
+                    </div>
+
+                    </div>                    
+                }
+
+                @if(($index + 1) == 2){
+                    <div class="col-lg-6 col-md-12 col-sm-12"style="margin-bottom: 1rem;">
+                        <div class="card" [ngClass]="{ 'card-active': product.active }" >
+                            
+                            <div style="width: 80%; text-align: center;">
+                                <span class="product-name" style="top: 0; position: absolute; margin-bottom:15rem;"><b> {{
+                                            product.name }} </b></span>                        
                             </div>
 
-                        </div>
+                            <div class="front" style="margin-top: 10px;">
+                                <div>
 
-                        <div class="back" style="height: 520px; margin-top: 10px;">
-                            <div>
-                                <span class="g-text-sm" style="margin-top: -300px; position: absolute;"><b>¿Por qué
-                                        recomendamos esto?</b></span>
-                                        <br>
-                                <span class="whyIsRecommended-Text mb4" style="margin-top: 100px;">
-                                    {{ this.recommendedProducts[0].whyIsRecommended | slice: 0: 2000 }} </span>
+                                    <img [src]="product.finalImg" draggable="false" alt="" style="margin-bottom: 5rem; margin-top: 100px;">
+                                    <span class="g-text-sm" style="bottom: 0; position: absolute; margin-bottom:10px;">
+                                        <b>¿Por qué recomendamos esto?</b></span>
+                                    <p class="buttonClick-text" (click)="toggleCard2()" style="margin-bottom: -20px;" id="Showfront2">Haz clic aquí</p>
+                                </div>
 
-                                <p class="buttonClick-text" (click)="toggleCard()" id="Showback">Regresar</p>
                             </div>
-                        </div>
 
-                        <br>
-                        <button (click)="openLink(this.recommendedProducts[0].linkBuy)" class="primary-btn g-text-sm"
-                            style="margin-bottom: 25px;" id="comprar1">
-                            Comprar ahora
-                        </button>
-            </div>
+                            <div class="back" style="height: 520px; margin-top: 10px;">
+                                <div>
+                                    <span class="g-text-sm" style="margin-top: -300px; position: absolute;"><b>¿Por qué
+                                            recomendamos esto?</b></span>
+                                            <br>
+                                    <span class="whyIsRecommended-Text mb4" style="margin-top: 100px;">
+                                        {{ product.whyIsRecommended | slice: 0: 2000 }} </span>
 
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12"style="margin-bottom: 1rem;">
-                <div class="card" [ngClass]="{ 'card-active': this.recommendedProducts[1].active }" >
-                    
-                    <div style="width: 80%; text-align: center;">
-                        <span class="product-name" style="top: 0; position: absolute; margin-bottom:15rem;"><b> {{
-                                    this.recommendedProducts[1].name }} </b></span>                        
-                    </div>
+                                    <p class="buttonClick-text" (click)="toggleCard2()" id="Showback2">Regresar</p>
+                                </div>
+                            </div>
+                            
 
-                    <div class="front" style="margin-top: 10px;">
-                        <div>
-
-                            <img [src]="this.ruta + this.recommendedProducts[1].img" draggable="false" alt="" style="margin-bottom: 5rem; margin-top: 100px;">
-                            <span class="g-text-sm" style="bottom: 0; position: absolute; margin-bottom:10px;">
-                                <b>¿Por qué recomendamos esto?</b></span>
-                            <p class="buttonClick-text" (click)="toggleCard2()" style="margin-bottom: -20px;" id="Showfront2">Haz clic aquí</p>
+                            <br>
+                            <!-- <span class="g-text-sm"><b>¿Por qué recomendamos esto?</b></span>        -->
+                            <button (click)="openLink(product.linkBuy)" class="primary-btn g-text-sm"
+                                style="margin-bottom: 25px;" id="comprar2">
+                                Comprar ahora
+                            </button>
                         </div>
 
                     </div>
+                }
 
-                    <div class="back" style="height: 520px; margin-top: 10px;">
-                        <div>
-                            <span class="g-text-sm" style="margin-top: -300px; position: absolute;"><b>¿Por qué
-                                    recomendamos esto?</b></span>
-                                    <br>
-                            <span class="whyIsRecommended-Text mb4" style="margin-top: 100px;">
-                                {{ this.recommendedProducts[1].whyIsRecommended | slice: 0: 2000 }} </span>
+                @if(($index + 1) == 3){
+                    <div class="col-lg-6 col-md-12 col-sm-12"style="margin-bottom: 1rem;">
+                        <div class="card" [ngClass]="{ 'card-active': product.active }" >
+                            
+                            <div style="width: 80%; text-align: center;">
+                                <span class="product-name" style="top: 0; position: absolute; margin-bottom:15rem;"><b> {{
+                                            product.name }} </b></span>                        
+                                </div>
 
-                            <p class="buttonClick-text" (click)="toggleCard2()" id="Showback2">Regresar</p>
-                        </div>
-                    </div>
-                    
+                            <div class="front" style="margin-top: 10px;">
+                                <div>
+                                    <img [src]="product.finalImg" draggable="false" alt="" style="margin-bottom: 5rem; margin-top: 100px;">
+                                    <span class="g-text-sm" style="bottom: 0; position: absolute; margin-bottom:10px;">
+                                        <b>¿Por qué recomendamos esto?</b></span>
+                                    <p class="buttonClick-text" (click)="toggleCard3()" style="margin-bottom: -20px;" id="Showfront3">Haz clic aquí</p>
+                                </div>
 
-                    <br>
-                    <!-- <span class="g-text-sm"><b>¿Por qué recomendamos esto?</b></span>        -->
-                    <button (click)="openLink(this.recommendedProducts[1].linkBuy)" class="primary-btn g-text-sm"
-                        style="margin-bottom: 25px;" id="comprar2">
-                        Comprar ahora
-                    </button>
-                </div>
+                            </div>
 
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12"style="margin-bottom: 1rem;">
-                <div class="card" [ngClass]="{ 'card-active': this.recommendedProducts[2].active }" >
-                    
-                    <div style="width: 80%; text-align: center;">
-                        <span class="product-name" style="top: 0; position: absolute; margin-bottom:15rem;"><b> {{
-                                    this.recommendedProducts[2].name }} </b></span>                        
-                        </div>
+                            <div class="back" style="height: 520px; margin-top: 10px;">
+                                <div>
+                                    <span class="g-text-sm" style="margin-top: -300px; position: absolute;"><b>¿Por qué
+                                            recomendamos esto?</b></span>
+                                            <br>
+                                    <span class="whyIsRecommended-Text mb4" style="margin-top: 100px;">
+                                        {{ product.whyIsRecommended | slice: 0: 2000 }} </span>
 
-                    <div class="front" style="margin-top: 10px;">
-                        <div>
-                            <img [src]="this.ruta + this.recommendedProducts[2].img" draggable="false" alt="" style="margin-bottom: 5rem; margin-top: 100px;">
-                            <span class="g-text-sm" style="bottom: 0; position: absolute; margin-bottom:10px;">
-                                <b>¿Por qué recomendamos esto?</b></span>
-                            <p class="buttonClick-text" (click)="toggleCard3()" style="margin-bottom: -20px;" id="Showfront3">Haz clic aquí</p>
-                        </div>
+                                    <p class="buttonClick-text" (click)="toggleCard3()" id="Showback3">Regresar</p>
+                                </div>
+                            </div>
 
-                    </div>
-
-                    <div class="back" style="height: 520px; margin-top: 10px;">
-                        <div>
-                            <span class="g-text-sm" style="margin-top: -300px; position: absolute;"><b>¿Por qué
-                                    recomendamos esto?</b></span>
-                                    <br>
-                            <span class="whyIsRecommended-Text mb4" style="margin-top: 100px;">
-                                {{ this.recommendedProducts[2].whyIsRecommended | slice: 0: 2000 }} </span>
-
-                            <p class="buttonClick-text" (click)="toggleCard3()" id="Showback3">Regresar</p>
-                        </div>
-                    </div>
-
-                    <br>
-                    <!-- <span class="g-text-sm"><b>¿Por qué recomendamos esto?</b></span>        -->
-                    <button (click)="openLink(this.recommendedProducts[2].linkBuy)" class="primary-btn g-text-sm"
-                        style="margin-bottom: 25px;" id="comprar3">
-                        Comprar ahora
-                    </button>
-                </div>
-
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12"style="margin-bottom: 1rem;">
-                <div class="card" [ngClass]="{ 'card-active': this.recommendedProducts[3].active }" >
-
-                    <div style="width: 80%; text-align: center;">
-                        <span class="product-name" style="top: 0; position: absolute; margin-bottom:15rem;"><b> {{
-                                    this.recommendedProducts[3].name }} </b></span>                        
-                        </div>
-
-                    <div class="front" style="margin-top: 10px;">
-                        <div>
-
-                            <img [src]="this.ruta + this.recommendedProducts[3].img" draggable="false" alt="" style="margin-bottom: 5rem; margin-top: 100px;">
-                            <span class="g-text-sm" style="bottom: 0; position: absolute; margin-bottom:10px;">
-                                <b>¿Por qué recomendamos esto?</b></span>
-                            <p class="buttonClick-text" (click)="toggleCard4()" style="margin-bottom: -20px;" id="Showfront4">Haz clic aquí</p>
+                            <br>
+                            <!-- <span class="g-text-sm"><b>¿Por qué recomendamos esto?</b></span>        -->
+                            <button (click)="openLink(product.linkBuy)" class="primary-btn g-text-sm"
+                                style="margin-bottom: 25px;" id="comprar3">
+                                Comprar ahora
+                            </button>
                         </div>
 
                     </div>
+                }
 
-                    <div class="back" style="height: 520px; margin-top: 10px;">
-                        <div>
-                            <span class="g-text-sm" style="margin-top: -300px; position: absolute;"><b>¿Por qué
-                                    recomendamos esto?</b></span>
-                                    <br>
-                            <span class="whyIsRecommended-Text mb4" style="margin-top: 100px;">
-                                {{ this.recommendedProducts[3].whyIsRecommended | slice: 0: 2000 }} </span>
+                 @if(($index + 1) == 4){
+                    <div class="col-lg-6 col-md-12 col-sm-12"style="margin-bottom: 1rem;">
+                        <div class="card" [ngClass]="{ 'card-active': product.active }" >
 
-                            <p class="buttonClick-text" (click)="toggleCard4()" id="Showback4">Regresar</p>
+                            <div style="width: 80%; text-align: center;">
+                                <span class="product-name" style="top: 0; position: absolute; margin-bottom:15rem;"><b> {{
+                                            product.name }} </b></span>                        
+                                </div>
+
+                            <div class="front" style="margin-top: 10px;">
+                                <div>
+
+                                    <img [src]="product.finalImg" draggable="false" alt="" style="margin-bottom: 5rem; margin-top: 100px;">
+                                    <span class="g-text-sm" style="bottom: 0; position: absolute; margin-bottom:10px;">
+                                        <b>¿Por qué recomendamos esto?</b></span>
+                                    <p class="buttonClick-text" (click)="toggleCard4()" style="margin-bottom: -20px;" id="Showfront4">Haz clic aquí</p>
+                                </div>
+
+                            </div>
+
+                            <div class="back" style="height: 520px; margin-top: 10px;">
+                                <div>
+                                    <span class="g-text-sm" style="margin-top: -300px; position: absolute;"><b>¿Por qué
+                                            recomendamos esto?</b></span>
+                                            <br>
+                                    <span class="whyIsRecommended-Text mb4" style="margin-top: 100px;">
+                                        {{ product.whyIsRecommended | slice: 0: 2000 }} </span>
+
+                                    <p class="buttonClick-text" (click)="toggleCard4()" id="Showback4">Regresar</p>
+                                </div>
+                            </div>
+
+                            <br>
+                            <!-- <span class="g-text-sm"><b>¿Por qué recomendamos esto?</b></span>        -->
+                            <button (click)="openLink(product.linkBuy)" class="primary-btn g-text-sm"
+                                style="margin-bottom: 25px;" id="comprar4">
+                                Comprar ahora
+                            </button>
                         </div>
-                    </div>
 
-                    <br>
-                    <!-- <span class="g-text-sm"><b>¿Por qué recomendamos esto?</b></span>        -->
-                    <button (click)="openLink(this.recommendedProducts[3].linkBuy)" class="primary-btn g-text-sm"
-                        style="margin-bottom: 25px;" id="comprar4">
-                        Comprar ahora
-                    </button>
-                </div>
-
-            </div>
+                    </div>                    
+                 }
+            }
 
 
 @if(recommendedProducts.length > 4) {
@@ -210,7 +221,7 @@
             </div>
            
             <div class="imagenprod">
-                <img [src]="this.ruta + product.img" draggable="false" alt="">
+                <img [src]="product.finalImg" draggable="false" alt="">
             </div> 
             <div class="buttonprod">
                 <button (click)="openLink(product.linkBuy)" class="primary-btn g-text-sm" id="comprar5">
@@ -232,7 +243,7 @@
             </div>
            
             <div class="imagenprod">
-                <img [src]="this.ruta + product.img" draggable="false" alt="">
+                <img [src]="product.finalImg" draggable="false" alt="">
             </div> 
             <div class="buttonprod">
                 <button (click)="openLink(product.linkBuy)" class="primary-btn g-text-sm" id="comprar6">
@@ -254,7 +265,7 @@
             </div>
            
             <div class="imagenprod">
-                <img [src]="this.ruta + product.img" draggable="false" alt="">
+                <img [src]="product.finalImg" draggable="false" alt="">
             </div> 
             <div class="buttonprod">
                 <button (click)="openLink(product.linkBuy)" class="primary-btn g-text-sm" id="comprar7">
@@ -276,7 +287,7 @@
             </div>
            
             <div class="imagenprod">
-                <img [src]="this.ruta + product.img" draggable="false" alt="">
+                <img [src]="product.finalImg" draggable="false" alt="">
             </div> 
             <div class="buttonprod">
                 <button (click)="openLink(product.linkBuy)" class="primary-btn g-text-sm" id="comprar8">
@@ -308,9 +319,9 @@
 </div>
 
 
-
-@if (clientCountry == 'mx') {
 <footer>
+@if (clientCountry == 'mx') {
+
     <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
         <span class="g-text-sm-footer">
             <b>ESTE PRODUCTO NO ES UN MEDICAMENTO. EL CONSUMO DE ESTE PRODUCTO ES RESPONSABILIDAD DE QUIEN LO RECOMIENDA
@@ -318,10 +329,10 @@
         </span>
     </div>
 
-</footer>
+
 }
 @else if (clientCountry == 'gt') {
-<footer>
+
     <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
         <span class="g-text-sm-footer">
             <b>ESTE PRODUCTO NO DEBE USARSE PARA EL DIAGNÓSTICO, TRATAMIENTO, CURA O PREVENCIÓN DE ALGUNA ENFERMEDAD Y
@@ -333,10 +344,10 @@
         </span>
     </div>
 
-</footer>
+
 }
 @else if (clientCountry == 'sv') {
-<footer>
+
     <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
         <span class="g-text-sm-footer">
             <b>ESTE PRODUCTO NO DEBE USARSE PARA EL DIAGNÓSTICO, TRATAMIENTO, CURA O PREVENCIÓN DE ALGUNA ENFERMEDAD Y
@@ -348,30 +359,30 @@
         </span>
     </div>
 
-</footer>
+
 }
 @else if (clientCountry == 'hn') {
-<footer>
+
     <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
         <span class="g-text-sm-footer">
             <b>Este producto no pretende diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</b>
         </span>
     </div>
 
-</footer>
+
 }
 @else if (clientCountry == 'pa') {
-<footer>
+
     <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
         <span class="g-text-sm-footer">
             <b>Este producto no pretende diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</b>
         </span>
     </div>
 
-</footer>
+
 }
 @else if (clientCountry == 'cr') {
-<footer>
+
     <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
         <span class="g-text-sm-footer">
             <b>ESTE PRODUCTO NO DEBE USARSE PARA EL DIAGNÓSTICO, TRATAMIENTO, CURA O PREVENCIÓN DE ALGUNA ENFERMEDAD Y
@@ -381,20 +392,20 @@
         </span>
     </div>
 
-</footer>
+
 }
 @else if (clientCountry == 'ar') {
-<footer>
+
     <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
         <span class="g-text-sm-footer">
             <b>“SUPLEMENTA DIETAS INSUFICIENTES. CONSULTE A SU MÉDICO Y/ O FARMACÉUTICO".</b>
         </span>
     </div>
 
-</footer>
+
 }
 @else if (clientCountry == 'cl') {
-<footer>
+
     <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
         <span class="g-text-sm-footer">
             <b>"Su uso no es recomendable para consumo por menores de 8 años, embarazadas y nodrizas, salvo indicación
@@ -402,20 +413,18 @@
         </span>
     </div>
 
-</footer>
 }
 @else if (clientCountry == 'uy') {
-<footer>
+
     <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
         <span class="g-text-sm-footer">
             <b>“SUPLEMENTA DIETAS INSUFICIENTES. CONSULTE A SU MÉDICO Y/ O FARMACÉUTICO".</b>
         </span>
     </div>
 
-</footer>
 }
 @else if (clientCountry == 'co') {
-<footer>
+
     <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
         <span class="g-text-sm-footer">
             <b>ESTE PRODUCTO NO SIRVE PARA EL DIAGNOSTICO, TRATAMIENTO, CURA</b>
@@ -426,19 +435,19 @@
         </span>
     </div>
 
-</footer>
+
 }
 @else if (clientCountry == 've') {
-<footer>
+
     <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
         <span class="g-text-sm-footer">
             <b>Este producto no pretende diagnosticar, tratar, curar ni prevenir ninguna enfermedad.</b>
         </span>
     </div>
 
-</footer>
+
 }@else {
-<footer>
+
     <div class="text-center" style="padding: 1.5rem; background-color: #f1f1f1; margin-top: 10px;">
         <span class="g-text-sm-footer">
             <b>ESTE PRODUCTO NO ES UN MEDICAMENTO. EL CONSUMO DE ESTE PRODUCTO ES RESPONSABILIDAD DE QUIEN LO RECOMIENDA
@@ -446,10 +455,10 @@
         </span>
     </div>
 
-</footer>
+
 }
 
-
+</footer>
 
 <img src="assets/img/headerResult3_4.png" draggable="false" alt="" class="headers">
 <div class="vertical-line">
@@ -1006,7 +1015,10 @@
                                 evaluación de suplementos alimenticios/dietarios recientemente completada.</p>
                         </td>
                     </tr>
-                    <tr>
+@for (mailProd of recommendedProducts; track $index){
+
+    @if(($index + 1) == 1){
+<tr>
                         <td
                             style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0;background-color:#ffffff;">
                             <table role="presentation" class="multi-column"
@@ -1028,7 +1040,7 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td style="padding:0"><img
-                                                                                [src]=" this.ruta + recommendedProducts[0].emailImg"
+                                                                                [src]=" mailProd.img"
                                                                                 width="320" height="" alt=""
                                                                                 style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0"
                                                                                 class="g-img"></td>
@@ -1050,7 +1062,7 @@
                                                         <td valign="top"
                                                             style="background-color:#ffffff;display:block;padding-top:12px;padding-right:32px;padding-bottom:8px;padding-left:32px">
                                                             <p style="font-family:Open Sans, sans-serif;line-height:29.90px;font-size:26px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
-                                                                class="heading2">{{ recommendedProducts[0].name }}</p>
+                                                                class="heading2">{{ mailProd.name }}</p>
                                                         </td>
                                                     </tr>
                                                     <tr class="wp-block-editor-paragraphblock-v1">
@@ -1069,7 +1081,7 @@
                                                             style="padding:16px 32px 6px 32px;background-color:#ffffff">
                                                             <p class="paragraph"
                                                                 style="font-family:Open Sans, sans-serif;line-height:22.50px;font-size:15px;margin:0;color:#5f5f5f;word-break:normal">
-                                                                {{ recommendedProducts[0].whyIsRecommended }}
+                                                                {{ mailProd.whyIsRecommended }}
                                                             </p>
                                                         </td>
                                                     </tr>
@@ -1083,7 +1095,7 @@
                                                                         <td valign="top"
                                                                             class="button-aZyBhWgqSymMUXOxXk1aC button-td button-td-primary"
                                                                             style="cursor:pointer;border:none;border-radius:50px;background-color:#006d46;font-size:16px;font-family:Open Sans, sans-serif;width:fit-content;text-decoration:none;letter-spacing:0;color:#ffffff;overflow:hidden">
-                                                                            <a [href]="recommendedProducts[0].linkBuy"
+                                                                            <a [href]="mailProd.linkBuy"
                                                                                 style="color:#ffffff;display:block;padding:10px 24px 10px 24px">Comprar
                                                                                 ahora</a>
                                                                         </td>
@@ -1109,7 +1121,10 @@
                             </table>
                         </td>
                     </tr>
-                    <tr>
+    }
+
+    @if(($index + 1) == 2){
+        <tr>
                         <td
                             style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0;background-color:#ffffff">
                             <table role="presentation" class="multi-column"
@@ -1131,7 +1146,7 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td style="padding:0"><img
-                                                                                [src]="this.ruta + recommendedProducts[1].emailImg"
+                                                                                [src]="mailProd.img"
                                                                                 width="320" height="" alt=""
                                                                                 style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0"
                                                                                 class="g-img"></td>
@@ -1153,7 +1168,7 @@
                                                         <td valign="top"
                                                             style="background-color:#ffffff;display:block;padding-top:12px;padding-right:32px;padding-bottom:8px;padding-left:32px">
                                                             <p style="font-family:Open Sans, sans-serif;line-height:29.90px;letter-spacing:0;font-size:26px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
-                                                                class="heading2">{{ recommendedProducts[1].name }}</p>
+                                                                class="heading2">{{ mailProd.name }}</p>
                                                         </td>
                                                     </tr>
                                                     <tr class="wp-block-editor-paragraphblock-v1">
@@ -1172,7 +1187,7 @@
                                                             style="padding:16px 32px 6px 32px;background-color:#ffffff">
                                                             <p class="paragraph"
                                                                 style="font-family:Open Sans, sans-serif;line-height:22.50px;font-size:15px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
-                                                                {{ recommendedProducts[1].whyIsRecommended }}
+                                                                {{ mailProd.whyIsRecommended }}
                                                             </p>
                                                         </td>
                                                     </tr>
@@ -1186,7 +1201,7 @@
                                                                         <td valign="top"
                                                                             class="button-5jD-qAHvJU4BH_DqV38Jm button-td button-td-primary"
                                                                             style="cursor:pointer;border:none;border-radius:50px;background-color:#006d46;font-size:16px;font-family:Open Sans, sans-serif;width:fit-content;text-decoration:none;letter-spacing:0;color:#ffffff;overflow:hidden">
-                                                                            <a [href]="recommendedProducts[1].linkBuy"
+                                                                            <a [href]="mailProd.linkBuy"
                                                                                 style="color:#ffffff;display:block;padding:10px 24px 10px 24px">Comprar
                                                                                 ahora</a>
                                                                         </td>
@@ -1212,7 +1227,10 @@
                             </table>
                         </td>
                     </tr>
-                    <tr>
+    }
+
+    @if(($index + 1) == 3){
+        <tr>
                         <td
                             style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0;background-color:#ffffff">
                             <table role="presentation" class="multi-column"
@@ -1234,7 +1252,7 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td style="padding:0"><img
-                                                                                [src]="this.ruta + recommendedProducts[2].emailImg"
+                                                                                [src]="mailProd.img"
                                                                                 width="320" height="" alt=""
                                                                                 style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0"
                                                                                 class="g-img"></td>
@@ -1256,7 +1274,7 @@
                                                         <td valign="top"
                                                             style="background-color:#ffffff;display:block;padding-top:12px;padding-right:32px;padding-bottom:8px;padding-left:32px">
                                                             <p style="font-family:Open Sans, sans-serif;line-height:29.90px;letter-spacing:0;font-size:26px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
-                                                                class="heading2">{{ recommendedProducts[2].name }}</p>
+                                                                class="heading2">{{ mailProd.name }}</p>
                                                         </td>
                                                     </tr>
                                                     <tr class="wp-block-editor-paragraphblock-v1">
@@ -1275,7 +1293,7 @@
                                                             style="padding:16px 32px 6px 32px;background-color:#ffffff">
                                                             <p class="paragraph"
                                                                 style="font-family:Open Sans, sans-serif;line-height:22.50px;font-size:15px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
-                                                                {{ recommendedProducts[2].whyIsRecommended }}
+                                                                {{ mailProd.whyIsRecommended }}
                                                             </p>
                                                         </td>
                                                     </tr>
@@ -1289,7 +1307,7 @@
                                                                         <td valign="top"
                                                                             class="button-xVDVXgk0F86PLPe51WQxI button-td button-td-primary"
                                                                             style="cursor:pointer;border:none;border-radius:50px;background-color:#006d46;font-size:16px;font-family:Open Sans, sans-serif;width:fit-content;text-decoration:none;letter-spacing:0;color:#ffffff;overflow:hidden">
-                                                                            <a [href]="recommendedProducts[2].linkBuy"
+                                                                            <a [href]="mailProd.linkBuy"
                                                                                 style="color:#ffffff;display:block;padding:10px 24px 10px 24px">Comprar
                                                                                 ahora</a>
                                                                         </td>
@@ -1315,7 +1333,10 @@
                             </table>
                         </td>
                     </tr>
-                    <tr>
+    }
+
+    @if(($index + 1) == 4){
+        <tr>
                         <td
                             style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0;background-color:#ffffff">
                             <table role="presentation" class="multi-column"
@@ -1337,7 +1358,7 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td style="padding:0"><img
-                                                                                [src]="this.ruta + recommendedProducts[3].emailImg"
+                                                                                [src]="mailProd.img"
                                                                                 width="320" height="" alt=""
                                                                                 style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0"
                                                                                 class="g-img"></td>
@@ -1359,7 +1380,7 @@
                                                         <td valign="top"
                                                             style="background-color:#ffffff;display:block;padding-top:12px;padding-right:32px;padding-bottom:8px;padding-left:32px">
                                                             <p style="font-family:Open Sans, sans-serif;line-height:29.90px;letter-spacing:0;font-size:26px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
-                                                                class="heading2">{{ recommendedProducts[3].name }}</p>
+                                                                class="heading2">{{ mailProd.name }}</p>
                                                         </td>
                                                     </tr>
                                                     <tr class="wp-block-editor-paragraphblock-v1">
@@ -1378,7 +1399,7 @@
                                                             style="padding:16px 32px 6px 32px;background-color:#ffffff">
                                                             <p class="paragraph"
                                                                 style="font-family:Open Sans, sans-serif;line-height:22.50px;font-size:15px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
-                                                                {{ recommendedProducts[3].whyIsRecommended }}
+                                                                {{ mailProd.whyIsRecommended }}
                                                             </p>
                                                         </td>
                                                     </tr>
@@ -1392,7 +1413,7 @@
                                                                         <td valign="top"
                                                                             class="button-sN4miQa2gbJZIz6BQqML5 button-td button-td-primary"
                                                                             style="cursor:pointer;border:none;border-radius:50px;background-color:#006d46;font-size:16px;font-family:Open Sans, sans-serif;width:fit-content;text-decoration:none;letter-spacing:0;color:#ffffff;overflow:hidden">
-                                                                            <a [href]="recommendedProducts[3].linkBuy"
+                                                                            <a [href]="mailProd.linkBuy"
                                                                                 style="color:#ffffff;display:block;padding:10px 24px 10px 24px">Comprar
                                                                                 ahora</a>
                                                                         </td>
@@ -1418,6 +1439,11 @@
                             </table>
                         </td>
                     </tr>
+    }
+
+}
+
+
                     <tr class="wp-block-editor-imageblock-v1">
                         <td style="background-color:#ffffff;padding-top:16px;padding-bottom:16px;padding-left:16px;padding-right:16px"
                             align="center">
@@ -1751,6 +1777,7 @@
                             </p>
                         </td>
                     </tr>
+                    
                     <tr class="wp-block-editor-paragraphblock-v1">
                         <td valign="top" style="padding:0px 32px 32px 32px;background-color:#ffffff">
                             <p class="paragraph"
@@ -1759,7 +1786,10 @@
                                 evaluación de suplementos alimenticios/dietarios recientemente completada.</p>
                         </td>
                     </tr>
-                    <tr>
+
+@for (printProd of recommendedProducts; track $index){
+@if(($index + 1) == 1){
+    <tr>
                         <td
                             style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0;background-color:#ffffff;">
                             <table role="presentation" class="multi-column"
@@ -1781,7 +1811,7 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td style="padding:0"><img
-                                                                                [src]="this.ruta + recommendedProducts[0].emailImg"
+                                                                                [src]="printProd.finalImg"
                                                                                 width="320" height="" alt=""
                                                                                 style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0"
                                                                                 class="g-img"></td>
@@ -1803,7 +1833,7 @@
                                                         <td valign="top"
                                                             style="background-color:#ffffff;display:block;padding-top:12px;padding-right:32px;padding-bottom:8px;padding-left:32px">
                                                             <p style="font-family:Open Sans, sans-serif;line-height:29.90px;font-size:26px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
-                                                                class="heading2">{{ recommendedProducts[0].name }}</p>
+                                                                class="heading2">{{ printProd.name }}</p>
                                                         </td>
                                                     </tr>
                                                     <tr class="wp-block-editor-paragraphblock-v1">
@@ -1822,7 +1852,7 @@
                                                             style="padding:16px 32px 6px 32px;background-color:#ffffff">
                                                             <p class="paragraph"
                                                                 style="font-family:Open Sans, sans-serif;line-height:22.50px;font-size:15px;margin:0;color:#5f5f5f;word-break:normal">
-                                                                {{ recommendedProducts[0].whyIsRecommended }}
+                                                                {{ printProd.whyIsRecommended }}
                                                             </p>
                                                         </td>
                                                     </tr>
@@ -1836,7 +1866,7 @@
                                                                         <td valign="top"
                                                                             class="button-aZyBhWgqSymMUXOxXk1aC button-td button-td-primary"
                                                                             style="cursor:pointer;border:none;border-radius:50px;background-color:#006d46;font-size:16px;font-family:Open Sans, sans-serif;width:fit-content;text-decoration:none;letter-spacing:0;color:#ffffff;overflow:hidden">
-                                                                            <a [href]="recommendedProducts[0].linkBuy"
+                                                                            <a [href]="printProd.linkBuy"
                                                                                 style="color:#ffffff;display:block;padding:10px 24px 10px 24px">Comprar
                                                                                 ahora</a>
                                                                         </td>
@@ -1862,10 +1892,16 @@
                             </table>
                         </td>
                     </tr>
-                    <tr style="width: 100%; height: 400px;">
+                    <tr style="width: 100%; height: 500px;">
+
+
+
 
                     </tr>
-                    <tr>
+}
+
+@if(($index + 1) == 2){
+      <tr>
                         <td
                             style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0;background-color:#ffffff">
                             <table role="presentation" class="multi-column"
@@ -1887,7 +1923,7 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td style="padding:0"><img
-                                                                                [src]="this.ruta + recommendedProducts[1].emailImg"
+                                                                                [src]="printProd.finalImg"
                                                                                 width="320" height="" alt=""
                                                                                 style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0"
                                                                                 class="g-img"></td>
@@ -1909,7 +1945,7 @@
                                                         <td valign="top"
                                                             style="background-color:#ffffff;display:block;padding-top:12px;padding-right:32px;padding-bottom:8px;padding-left:32px">
                                                             <p style="font-family:Open Sans, sans-serif;line-height:29.90px;letter-spacing:0;font-size:26px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
-                                                                class="heading2">{{ recommendedProducts[1].name }}</p>
+                                                                class="heading2">{{ printProd.name }}</p>
                                                         </td>
                                                     </tr>
                                                     <tr class="wp-block-editor-paragraphblock-v1">
@@ -1928,7 +1964,7 @@
                                                             style="padding:16px 32px 6px 32px;background-color:#ffffff">
                                                             <p class="paragraph"
                                                                 style="font-family:Open Sans, sans-serif;line-height:22.50px;font-size:15px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
-                                                                {{ recommendedProducts[1].whyIsRecommended }}
+                                                                {{ printProd.whyIsRecommended }}
                                                             </p>
                                                         </td>
                                                     </tr>
@@ -1942,7 +1978,7 @@
                                                                         <td valign="top"
                                                                             class="button-5jD-qAHvJU4BH_DqV38Jm button-td button-td-primary"
                                                                             style="cursor:pointer;border:none;border-radius:50px;background-color:#006d46;font-size:16px;font-family:Open Sans, sans-serif;width:fit-content;text-decoration:none;letter-spacing:0;color:#ffffff;overflow:hidden">
-                                                                            <a [href]="recommendedProducts[1].linkBuy"
+                                                                            <a [href]="printProd.linkBuy"
                                                                                 style="color:#ffffff;display:block;padding:10px 24px 10px 24px">Comprar
                                                                                 ahora</a>
                                                                         </td>
@@ -1968,10 +2004,16 @@
                             </table>
                         </td>
                     </tr>
-                    <tr style="width: 100%; height: 400px;">
+                    <tr style="width: 100%; height: 500px;">
+
+
+
 
                     </tr>
-                    <tr>
+}
+    
+@if(($index + 1) == 3){
+    <tr>
                         <td
                             style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0;background-color:#ffffff">
                             <table role="presentation" class="multi-column"
@@ -1993,7 +2035,7 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td style="padding:0"><img
-                                                                                [src]="this.ruta + recommendedProducts[2].emailImg"
+                                                                                [src]="printProd.finalImg"
                                                                                 width="320" height="" alt=""
                                                                                 style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0"
                                                                                 class="g-img"></td>
@@ -2015,7 +2057,7 @@
                                                         <td valign="top"
                                                             style="background-color:#ffffff;display:block;padding-top:12px;padding-right:32px;padding-bottom:8px;padding-left:32px">
                                                             <p style="font-family:Open Sans, sans-serif;line-height:29.90px;letter-spacing:0;font-size:26px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
-                                                                class="heading2">{{ recommendedProducts[2].name }}</p>
+                                                                class="heading2">{{ printProd.name }}</p>
                                                         </td>
                                                     </tr>
                                                     <tr class="wp-block-editor-paragraphblock-v1">
@@ -2034,7 +2076,7 @@
                                                             style="padding:16px 32px 6px 32px;background-color:#ffffff">
                                                             <p class="paragraph"
                                                                 style="font-family:Open Sans, sans-serif;line-height:22.50px;font-size:15px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
-                                                                {{ recommendedProducts[2].whyIsRecommended }}
+                                                                {{ printProd.whyIsRecommended }}
                                                             </p>
                                                         </td>
                                                     </tr>
@@ -2048,7 +2090,7 @@
                                                                         <td valign="top"
                                                                             class="button-xVDVXgk0F86PLPe51WQxI button-td button-td-primary"
                                                                             style="cursor:pointer;border:none;border-radius:50px;background-color:#006d46;font-size:16px;font-family:Open Sans, sans-serif;width:fit-content;text-decoration:none;letter-spacing:0;color:#ffffff;overflow:hidden">
-                                                                            <a [href]="recommendedProducts[2].linkBuy"
+                                                                            <a [href]="printProd.linkBuy"
                                                                                 style="color:#ffffff;display:block;padding:10px 24px 10px 24px">Comprar
                                                                                 ahora</a>
                                                                         </td>
@@ -2074,10 +2116,16 @@
                             </table>
                         </td>
                     </tr>
-                    <tr style="width: 100%; height: 400px;">
+                    <tr style="width: 100%; height: 500px;">
+
+
+
 
                     </tr>
-                    <tr>
+}
+
+@if(($index + 1) == 4){
+    <tr>
                         <td
                             style="padding-top:0;padding-left:0;padding-right:0;padding-bottom:0;background-color:#ffffff">
                             <table role="presentation" class="multi-column"
@@ -2099,7 +2147,7 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td style="padding:0"><img
-                                                                                [src]="this.ruta + recommendedProducts[3].emailImg"
+                                                                                [src]="printProd.finalImg"
                                                                                 width="320" height="" alt=""
                                                                                 style="border-radius:0px;display:block;height:auto;width:100%;max-width:100%;border:0"
                                                                                 class="g-img"></td>
@@ -2121,7 +2169,7 @@
                                                         <td valign="top"
                                                             style="background-color:#ffffff;display:block;padding-top:12px;padding-right:32px;padding-bottom:8px;padding-left:32px">
                                                             <p style="font-family:Open Sans, sans-serif;line-height:29.90px;letter-spacing:0;font-size:26px;background-color:#ffffff;color:#000000;margin:0;word-break:normal"
-                                                                class="heading2">{{ recommendedProducts[3].name }}</p>
+                                                                class="heading2">{{ printProd.name }}</p>
                                                         </td>
                                                     </tr>
                                                     <tr class="wp-block-editor-paragraphblock-v1">
@@ -2140,7 +2188,7 @@
                                                             style="padding:16px 32px 6px 32px;background-color:#ffffff">
                                                             <p class="paragraph"
                                                                 style="font-family:Open Sans, sans-serif;line-height:22.50px;font-size:15px;margin:0;color:#5f5f5f;letter-spacing:0;word-break:normal">
-                                                                {{ recommendedProducts[3].whyIsRecommended }}
+                                                                {{ printProd.whyIsRecommended }}
                                                             </p>
                                                         </td>
                                                     </tr>
@@ -2154,7 +2202,7 @@
                                                                         <td valign="top"
                                                                             class="button-sN4miQa2gbJZIz6BQqML5 button-td button-td-primary"
                                                                             style="cursor:pointer;border:none;border-radius:50px;background-color:#006d46;font-size:16px;font-family:Open Sans, sans-serif;width:fit-content;text-decoration:none;letter-spacing:0;color:#ffffff;overflow:hidden">
-                                                                            <a [href]="recommendedProducts[3].linkBuy"
+                                                                            <a [href]="printProd.linkBuy"
                                                                                 style="color:#ffffff;display:block;padding:10px 24px 10px 24px">Comprar
                                                                                 ahora</a>
                                                                         </td>
@@ -2180,9 +2228,16 @@
                             </table>
                         </td>
                     </tr>
-                    <tr style="width: 100%; height: 100px;">
+                    <tr style="width: 100%; height: 500px;">
+
+
+
 
                     </tr>
+}
+
+}
+
                     <tr class="wp-block-editor-imageblock-v1">
                         <td style="background-color:#ffffff;padding-top:16px;padding-bottom:16px;padding-left:16px;padding-right:16px"
                             align="center">

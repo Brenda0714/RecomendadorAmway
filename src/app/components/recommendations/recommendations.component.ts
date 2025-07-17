@@ -19,7 +19,7 @@ declare var mailSendingApp: any;
   selector: 'app-recommendations',
   standalone: true,
   imports: [
-    FooterComponent,
+    //FooterComponent,
     CommonModule,
     RouterModule,
     FormsModule,
@@ -117,11 +117,27 @@ export class RecommendationsComponent implements OnInit {
     this.ruta = (window.location.host.startsWith("www.latinamway.com") || window.location.host.startsWith("latinamway.com")) ? 
     'https://latinamway.com/recomendadornutrilite/es/' : 'https://latinamway-qas.com/recomendadornutrilite/es/';
     
+
+    this.recommendedProducts.forEach(async (product) => {
+      const remoteUrl = this.ruta + product.img;
+      const exists = await this.checkImageExists(remoteUrl);
+      product.finalImg = exists ? remoteUrl : product.img;
+    });
   }
 
   ngAfterViewInit() {
     this.functionatribute2();
   }
+
+  //CHECAR IMAGENES
+  checkImageExists(url: string): Promise<boolean> {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => resolve(true);
+    img.onerror = () => resolve(false);
+    img.src = url;
+  });
+}
 
   getCurrencyCode(country: string) {
     if (country == 'mx') return 'mxn';
@@ -397,12 +413,12 @@ export class RecommendationsComponent implements OnInit {
   //console.log(recomendado);
 
 
+      var message = encodeURIComponent('Tus recomendaciones de NUTRILITE™') + encodeURI('\n'); 
 
-      var message = encodeURIComponent('Tus recomendaciones de NUTRILITE™') + encodeURI('\n') +
-      encodeURI('\n') + encodeURIComponent(this.recommendedProducts[0].name) + encodeURI('\n') + encodeURIComponent(this.recommendedProducts[0].linkBuy) +
-      encodeURI('\n') + encodeURIComponent(this.recommendedProducts[1].name) + encodeURI('\n') + encodeURIComponent(this.recommendedProducts[1].linkBuy) +
-      encodeURI('\n') + encodeURIComponent(this.recommendedProducts[2].name) + encodeURI('\n') + encodeURIComponent(this.recommendedProducts[2].linkBuy) +
-      encodeURI('\n') + encodeURIComponent(this.recommendedProducts[3].name) + encodeURI('\n') + encodeURIComponent(this.recommendedProducts[3].linkBuy);
+      this.recommendedProducts.forEach(product => {
+        message += encodeURIComponent(product.name) + encodeURI('\n') + encodeURIComponent(product.linkBuy) + encodeURI('\n');
+      });
+      
       var whatsapp_url = "whatsapp://send?text=" + message;
       
       const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
