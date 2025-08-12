@@ -1003,92 +1003,92 @@ export class QuestionnaireComponent implements OnInit {
        else if(country == 'co'){
         // LinkBuy DailyPlus
         if(this.recommendedProducts[i].name == 'Daily Plus'){
-           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Daily-Plus-90/117549&utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Daily_Plus';
+           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Daily-Plus-90/117549CO?utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Daily_Plus';
            this.recommendedProducts[i].itemsku = '117548';
         }
         // LinkBuy Omega 3 Plus
         if(this.recommendedProducts[i].name == 'Omega 3 Plus'){
-           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Omega-3-Plus-30/122173&utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Omega3';
+           this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Omega-3-Plus-30/122173CO?utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Omega3';
            this.recommendedProducts[i].itemsku = '122173';
           }
         // LinkBuy C Plus
         if(this.recommendedProducts[i].name == 'C Plus'){
-        this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/C-Plus-Extended-Release-Liberación-Prolongada/109741&utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=C_Plus';
+        this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/C-Plus-Extended-Release-Liberación-Prolongada/109741CO?utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=C_Plus';
         this.recommendedProducts[i].itemsku = '109741';
       } 
         // LinkBuy Proteina
         if(this.recommendedProducts[i].name == 'Proteína Vegetal en polvo'){
-        this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Proteína-Vegetal/110415&utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Proteina_Vegetal';
+        this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Proteína-Vegetal/110415CO?utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Proteina_Vegetal';
         this.recommendedProducts[i].itemsku = '110415';
         }         
         // LinkBuy CalMag D
         if(this.recommendedProducts[i].name == 'Cal Mag D'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Suplemento-Dietario-con-Vitamina-D,-Calcio-y-Magnesio-en-Tabletas/110609&utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=CalMag_D';
+          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Suplemento-Dietario-con-Vitamina-D,-Calcio-y-Magnesio-en-Tabletas/110609CO?utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=CalMag_D';
           this.recommendedProducts[i].itemsku = '110609';
          }
         // LinkBuy B Plus
         if(this.recommendedProducts[i].name == 'B Plus'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/B-Complex-Dual-Release/110170&utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=B_Plus';
+          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/B-Complex-Dual-Release/110170CP?utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=B_Plus';
           this.recommendedProducts[i].itemsku = '110170';
          }
         // LinkBuy Multicaroteno
         if(this.recommendedProducts[i].name == 'Multicaroteno'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Suplemento-Dietario-a-Base-de-Aceites-Vegetales-y-Carotenos,-en-cápsulas/109536&utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Multicaroteno';
+          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Suplemento-Dietario-a-Base-de-Aceites-Vegetales-y-Carotenos,-en-cápsulas/109536CO?utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Multicaroteno';
           this.recommendedProducts[i].itemsku = '109536';
           }
         // LinkBuy Ajo Concentrado
         if(this.recommendedProducts[i].name == 'Ajo Concentrado'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Herbals-Ajo/100566&utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=ajo_concentrado';
+          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Herbals-Ajo/100566CO?utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=ajo_concentrado';
           this.recommendedProducts[i].itemsku = '100566';
           }
         // LinkBuy BodyKey Shake Plus
         if(this.recommendedProducts[i].name == 'Bodykey Shake Plus'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/brands/bodykey&utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Bodykey';
+          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/brands/bodykey?utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Bodykey';
           this.recommendedProducts[i].itemsku = '';
           }
         // LinkBuy Lecitina E
         if(this.recommendedProducts[i].name == 'Lecitina E'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Lecitina-E-(Línea-de-Comercialización-Nutrilite™)/122174&utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Lecitina';
+          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Lecitina-E-(Línea-de-Comercialización-Nutrilite™)/122174CO?utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Lecitina';
           this.recommendedProducts[i].itemsku = '122174';
           }
         // LinkBuy Fibra en polvo
         if(this.recommendedProducts[i].name == 'Fibra en Polvo'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Fibra-en-Polvo/102736&utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Fibra_polvo';
+          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Fibra-en-Polvo/102736CO?utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Fibra_polvo';
           this.recommendedProducts[i].itemsku = '102736';
           }
         // LinkBuy Tri Iron Folic
         if(this.recommendedProducts[i].name == 'Tri Iron Folic'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Tri-Iron-Folic-Mezcla-a-Base-de-Vitamina-C,-Hierro,-Espinaca-y-Ácido-Fólico-en-Tabletas/102046&utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Tri_iron_folic';
+          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Tri-Iron-Folic-Mezcla-a-Base-de-Vitamina-C,-Hierro,-Espinaca-y-Ácido-Fólico-en-Tabletas/102046CO?utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Tri_iron_folic';
           this.recommendedProducts[i].itemsku = '102046';
           }
         // LinkBuy Daily+1 Prende tu día
         if(this.recommendedProducts[i].name == 'Daily +1 Prende tu día'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Daily+1-Prende-tu-día/321227&utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Prende_tu_dia';
+          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Daily+1-Prende-tu-día/321227CO?utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Prende_tu_dia';
           this.recommendedProducts[i].itemsku = '321227';
           }
         // LinkBuy Daily+1 Vive libre
         if(this.recommendedProducts[i].name == 'Daily + 1 Vive Libre'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Daily+1-Vive-Libre/321243&utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=vive_libre';
+          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Daily+1-Vive-Libre/321243CO?utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=vive_libre';
           this.recommendedProducts[i].itemsku = '321243';
           }
         // LinkBuy Daily+1 Luce radiante
         if(this.recommendedProducts[i].name == 'Daily +1 Luce Radiante'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Daily-Plus-+-Lecitina-E-(Línea-de-Comercialización-Nutrilite™)/321230&utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Luce_radiante';
+          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Daily-Plus-+-Lecitina-E-(Línea-de-Comercialización-Nutrilite™)/321230CO?utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Luce_radiante';
           this.recommendedProducts[i].itemsku = '321230';
           }
         // LinkBuy Daily+1 Muévete libre
         if(this.recommendedProducts[i].name == 'Daily +1 Muévete Libre'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Daily+1-Muévete-Libre/321242&utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Muevete_libre';
+          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Daily+1-Muévete-Libre/321242CO?utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Muevete_libre';
           this.recommendedProducts[i].itemsku = '321242';
           }
         // LinkBuy Daily+1 Respuesta óptima
         if(this.recommendedProducts[i].name == 'Daily +1 Respuesta Óptima'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Daily+1-Respuesta-Óptima/321237&utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Respuesta_optima';
+          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Daily+1-Respuesta-Óptima/321237CO?utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=Respuesta_optima';
           this.recommendedProducts[i].itemsku = '321237';
           }
         // LinkBuy Daily+1 Equilibra tu vida
         if(this.recommendedProducts[i].name == 'Daily +1 Equilibra tu vida'){
-          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Daily+1-Equilibra-tu-Vida/321245&utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=equilibra_tu_vida';
+          this.recommendedProducts[i].linkBuy = 'https://www.amway.com.co/product/Daily+1-Equilibra-tu-Vida/321245CO?utm_source=recomendador&utm_medium=recommendations&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=equilibra_tu_vida';
           this.recommendedProducts[i].itemsku = '321245';
           }
 

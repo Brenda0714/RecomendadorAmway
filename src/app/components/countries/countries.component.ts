@@ -23,7 +23,7 @@ export class CountriesComponent implements OnInit {
     },     
     {
         img: 'assets/img/Compras/Colombia2.png',
-        link: 'https://www.amway.com.co/category/nutricion&utm_source=recomendador&utm_medium=countries&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=nutricion'
+        link: 'https://www.amway.com.co/category/nutricion?utm_source=recomendador&utm_medium=countries&utm_campaign=co_es_site_recomendador&utm_content=cta_comprar&utm_term=nutricion'
     },    
 
     {
