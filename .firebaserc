@@ -1,7 +1,8 @@
 {
   "projects": {
     "default": "recomendador-amway",
-    "cambio": "recomendador-amway"
+    "cambio": "recomendador-amway",
+    "comabio2": "recomendador-amway"
   },
   "targets": {},
   "etags": {}
