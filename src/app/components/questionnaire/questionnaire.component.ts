@@ -1537,8 +1537,11 @@ const recommended = this.recommendedProducts;
       }  
       // LinkBuy Omega 3 Plus
       if(this.recommendedProducts[i].id == 4){
-        this.recommendedProducts[i].linkBuy = 'https://www.amway.com.sv/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=O&BC=122173&C=OY&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=sv_es_site_recomendador&utm_content=cta_comprar&utm_term=omega3';
-        this.recommendedProducts[i].itemsku = '122173';
+      this.recommendedProducts[i].name = 'Triple Omega-3';
+      this.recommendedProducts[i].img = 'assets/img/LAS/TripleOmega3_v2.png';
+      this.recommendedProducts[i].emailImg = this.ruta +'assets/img/LAS/TripleOmega3_v2.png';
+      this.recommendedProducts[i].linkBuy = 'https://www.amway.com.sv/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=O&BC=126130&C=OY&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=sv_es_site_recomendador&utm_content=cta_comprar&utm_term=Omega3';
+      this.recommendedProducts[i].itemsku = '126130';
       }      
       // LinkBuy Double X
       if(this.recommendedProducts[i].id == 5){
@@ -1552,8 +1555,10 @@ const recommended = this.recommendedProducts;
       }
       // LinkBuy Daily+1 Equilibra tu vida
       if(this.recommendedProducts[i].id == 7){
-      this.recommendedProducts[i].linkBuy = 'https://www.amway.com.sv/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=O&BC=321245&C=OA&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=sv_es_site_recomendador&utm_content=cta_comprar&utm_term=equilibra_tu_vida';
-      this.recommendedProducts[i].itemsku = '321245';
+      this.recommendedProducts[i].img = 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
+      this.recommendedProducts[i].emailImg = this.ruta + 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
+      this.recommendedProducts[i].linkBuy = 'https://www.amway.com.sv/Store/Catalogue.aspx?show=PrdsList&IC=0&C=OA&line=O&NavM=N&utm_source=recomendador&utm_medium=recommendations&utm_campaign=sv_es_site_recomendador&utm_content=cta_comprar&utm_term=equilibra_tu_vida';
+      this.recommendedProducts[i].itemsku = '327950'; 
       } 
       // LinkBuy C Plus
       if(this.recommendedProducts[i].id == 8){
@@ -1813,8 +1818,11 @@ const recommended = this.recommendedProducts;
       }
       // LinkBuy Omega 3 Plus
       if(this.recommendedProducts[i].id == 4){
-        this.recommendedProducts[i].linkBuy = 'https://www.amway.com.uy/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=F&BC=122173&C=FR&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=uy_es_site_recomendador&utm_content=cta_comprar&utm_term=omega3';
-        this.recommendedProducts[i].itemsku = '122173';
+      this.recommendedProducts[i].name = 'Triple Omega-3';
+      this.recommendedProducts[i].img = 'assets/img/LAS/TripleOmega3_v2.png';
+      this.recommendedProducts[i].emailImg = this.ruta +'assets/img/LAS/TripleOmega3_v2.png';
+      this.recommendedProducts[i].linkBuy = 'https://www.amway.com.uy/Store/Catalogue.aspx?show=PrdDetail&line=P&NavM=N&BC=126130&utm_source=recomendador&utm_medium=recommendations&utm_campaign=uy_es_site_recomendador&utm_content=cta_comprar&utm_term=Omega3';
+      this.recommendedProducts[i].itemsku = '126130';
       }      
       // LinkBuy Double X
       if(this.recommendedProducts[i].id == 5){
@@ -1828,8 +1836,10 @@ const recommended = this.recommendedProducts;
       }
       // LinkBuy Daily+1 Equilibra tu vida
       if(this.recommendedProducts[i].id == 7){
-      this.recommendedProducts[i].linkBuy = 'https://www.amway.com.uy/Store/Catalogue.aspx?show=PrdsList&IC=0&C=FY&line=F&NavM=N&utm_source=recomendador&utm_medium=recommendations&utm_campaign=uy_es_site_recomendador&utm_content=cta_comprar&utm_term=equilibra_tu_vida';
-      this.recommendedProducts[i].itemsku = '';
+      this.recommendedProducts[i].img = 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
+      this.recommendedProducts[i].emailImg = this.ruta + 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
+      this.recommendedProducts[i].linkBuy = 'https://www.amway.com.uy/Store/Catalogue.aspx?show=PrdsList&IC=1&C=FR&line=F&NavM=N&utm_source=recomendador&utm_medium=recommendations&utm_campaign=uy_es_site_recomendador&utm_content=cta_comprar&utm_term=equilibra_tu_vida';
+      this.recommendedProducts[i].itemsku = '327952';
       }
       // LinkBuy C Plus
       if(this.recommendedProducts[i].id == 8){
