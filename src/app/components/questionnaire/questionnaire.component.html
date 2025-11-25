@@ -3,22 +3,22 @@
 <div class="questionnaire">
 
     @if (questions[questionIndex]?.isMessage) {
-        <br><br><br><br>   <br><br><br><br>   <br><br><br><br>   
-       } 
-       @else{ 
+        <br><br><br><br>   <br><br><br><br>   <br><br><br><br>
+       }
+       @else{
            <img src="assets/img/Hoja_3.png" class="" alt="" style="position:absolute; bottom: 25%; width: 10%; right: 0; ">
            <img src="assets/img/Hoja_1.png" class="" alt="" style="position:absolute; z-index: 1; bottom: 13%; width: 13%;">
            <img src="assets/img/Hoja_2.png" class="" alt="" style="position:absolute; z-index: 1; bottom: 35%; width: 6%;">
-          
-           
+
+
        }
     <div class="question" >
         <div class="container">
-         
+
             @if (questions[questionIndex]?.isMessage) {
                 <br>
                 <span class="g-title" >¡Un placer conocerte, {{ questions[0]?.selected }}!</span>
-            } 
+            }
             @if (questions[questionIndex]?.isFinished) {
                 <img src="assets/img/flowers.png" draggable="false" class="g-img" alt=""><br>
                 <span class="g-title">{{ questions[questionIndex]?.question }}</span>
@@ -43,7 +43,7 @@
             <div class="form-group gw-30"  >
                 <label class="g-text required" >Nombre</label>
                 <input [(ngModel)]="questions[questionIndex].selected" type="text" maxlength="50" placeholder="Escribe tu nombre" class="form-control" [ngClass]="{ 'required-error': !questions[questionIndex]?.selected && questions[questionIndex]?.showRequired }">
-                
+
                 @if (!questions[questionIndex]?.selected && questions[questionIndex]?.showRequired) {
                     <span class="g-text-sm gw-30" style="color: red;">¡Espera! ingresa aquí tu nombre</span>
                 }
@@ -54,7 +54,7 @@
                 <select [(ngModel)]="questions[questionIndex].country" class="form-select" aria-label="Default select example"  [ngClass]="{ 'required-error': !questions[questionIndex]?.country && questions[questionIndex]?.showRequired }">
                     <option value="ar">Argentina</option>
                     <option value="co">Colombia</option>
-                    <option value="cr">Costa Rica</option>                    
+                    <option value="cr">Costa Rica</option>
                     <option value="cl">Chile</option>
                     <option value="sv">El Salvador</option>
                     <option value="gt">Guatemala</option>
@@ -62,8 +62,7 @@
                     <option value="mx">México</option>
                     <option value="pa">Panamá</option>
                     <option value="uy">Uruguay</option>
-                    <option value="ve">Venezuela</option>
-                  </select>                    
+                  </select>
                 </div>
 
                   @if (!questions[questionIndex]?.country && questions[questionIndex]?.showRequired) {
@@ -74,14 +73,14 @@
             @for (option of questions[questionIndex]?.options; track $index) {
                 <div (click)="selectOption(questionIndex, option.value, questions[questionIndex]?.multi, option.label)" class="option-btn gw-30">
                     <span [ngClass]="{ 'checkbox': questions[questionIndex]?.multi, 'radio': !questions[questionIndex]?.multi, 'active': isActive(questionIndex, option.value, questions[questionIndex]?.multi) }" id="seleccion"></span>
-                    
+
                     <label class="g-text">{{ option.label }}</label>
                     <!-- <div  [innerHTML]="option.label">
                     </div> -->
-                    
+
                 </div>
             }
-    
+
             @if ((!questions[questionIndex]?.selected || questions[questionIndex]?.selected.length == 0) && questions[questionIndex]?.showRequired) {
                 <span class="g-text-sm gw-30" style="color: red;">¡Espera! ingresa tu respuesta</span>
             }

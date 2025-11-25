@@ -40,7 +40,6 @@ export class AppComponent {
     else if (code == 'cl') return 'clp';  //chile
     else if (code == 'uy') return 'uyu';  //uruguay
     else if (code == 'co') return 'cop';  //colombia
-    else if (code == 've') return 'vef';  //venezuela
     else return '';
   }
 }
