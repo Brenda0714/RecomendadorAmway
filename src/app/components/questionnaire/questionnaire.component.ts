@@ -2162,6 +2162,7 @@ const recommended = this.recommendedProducts;
     else if (country == 'cl') return 'clp';  //chile
     else if (country == 'uy') return 'uyu';  //uruguay
     else if (country == 'co') return 'cop';  //colombia
+    else if (country == 've') return 'vef';
     else return '';
   }
 
