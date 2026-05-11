@@ -343,7 +343,7 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Suplemento alimenticio/dietario con 22 micronutrientes esenciales: 12 vitaminas y 10 minerales, además de concentrados vegetales que aportan fitonutrientes que ayudan en el funcionamiento diario del cuerpo.',
       img: 'assets/img/LAS/Daily_Plus.png',
       emailImg: this.ruta +'assets/img/LAS/Daily_Plus.png',
-      linkBuy:'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=K&BC=126009&C=KH&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=Daily_Plus_45',  // LINKS DE COMPRA PRODUCTOS
+      linkBuy:'https://www.amway.com.mx/product/daily-plus-45-tabletas/126009MX&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Daily_Plus',  // LINKS DE COMPRA PRODUCTOS
       count: 0,
       itemsku: '126009',
     },
@@ -353,7 +353,7 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Aporta dos fuentes naturales de calcio: carbonato de calcio (piedra caliza) y algas marinas calcificadas, además contiene vitamina D y magnesio que promueven y ayudan al organismo con la absorción, retención y utilización del calcio para el desarrollo de huesos y dientes fuertes.',
       img: 'assets/img/LAS/CalMagD.png',
       emailImg: this.ruta + 'assets/img/LAS/CalMagD.png',
-      linkBuy:'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&line=G&NavM=N&BC=110609&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=CalMag_D',
+      linkBuy:'https://www.amway.com.mx/product/cal-mag-d/110609MX&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=CalMag_D',
       count: 0,
       itemsku: '110609',
     },
@@ -363,7 +363,7 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Fórmula con proteína 100% vegetal de alta calidad, libre de ingredientes modificados genéticamente, que combina propiedades de soya, chícharo/ arveja y trigo. Naturalmente libre de lactosa, grasas saturadas y colesterol.',
       img: 'assets/img/LAS/Protein.png',
       emailImg: this.ruta + 'assets/img/LAS/Protein.png',
-      linkBuy:'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&line=G&NavM=N&BC=110415&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=Proteina_Vegetal',
+      linkBuy:'https://www.amway.com.mx/product/proteina-vegetal/110415MX&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Proteina_Vegetal',
       count: 0,
       itemsku: '110415',
     },
@@ -373,9 +373,9 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Suplemento alimenticio/dietario fuente de ácidos grasos Omega 3 esenciales, EPA y DHA, que junto con el ejercicio regular y una alimentación balanceada puede contribuir a mantener la salud cardiovascular.',
       img: 'assets/img/LAS/Omega.png',
       emailImg: this.ruta + 'assets/img/LAS/Omega.png',
-      linkBuy:'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&line=G&NavM=N&BC=122173&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=Omega3',
+      linkBuy:'https://www.amway.com.mx/product/triple-omega-3/126130MX&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Omega3',
       count: 0,
-      itemsku: '122173',
+      itemsku: '126130',
     },
     {
       id: 5,
@@ -383,7 +383,7 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Suplemento alimenticio/dietario que contiene 12 Vitaminas, 10 Minerales y 22 Concentrados de Plantas (fitonutrientes) que ayudan a complementar tu alimentación, utilizando mejor la energía de los alimentos para mantener las exigencias del ritmo de vida diario.',
       img: 'assets/img/LAS/Double_X.png',
       emailImg: this.ruta + 'assets/img/LAS/Double_X.png',
-      linkBuy:'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&line=G&NavM=N&BC=120843&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=DoubleX',
+      linkBuy:'https://www.amway.com.mx/product/double-x/120843MX&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=double_x',
       count: 0,
       itemsku: '120843',
     },
@@ -393,7 +393,7 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Suplemento alimenticio/dietario/alimento a base de tres fuentes de fibra soluble: maltodextrina, raíz de chicoria/ achicoria y goma guar. Fórmula libre de lactosa y colorantes artificiales que ayuda a reducir el azúcar y el colesterol en sangre y a su vez a disminuir la sensación de hambre.',
       img: 'assets/img/LAS/Fibra.png',
       emailImg: this.ruta + 'assets/img/LAS/Fibra.png',
-      linkBuy:'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&line=G&NavM=N&BC=102736&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=Fibra_polvo',
+      linkBuy:'https://www.amway.com.mx/product/fibra-en-polvo/102736MX&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Fibra_polvo',
       count: 0,
       itemsku: '102736',
     },
@@ -403,9 +403,9 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Esta solución contribuye en el buen funcionamiento y mantenimiento del sistema circulatorio. Daily Plus aporta vitaminas y minerales como la vitamina B1, B2, B6, ácido fólico, vitamina C, hierro, cobre y zinc que contribuyen a la salud del corazón, apoyan el funcionamiento normal de los vasos sanguíneos, ayudan a formar y mantener las células sanguíneas y a la hemoglobina. Los Omega 3 EPA y DHA, contribuyen al funcionamiento normal del corazón.',
       img: 'assets/img/LAS/Daily/Equilibra_tu_vida.png',
       emailImg: this.ruta + 'assets/img/LAS/Daily/Equilibra_tu_vida.png',
-      linkBuy:'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&line=X&NavM=N&BC=321299&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=equilibra_tu_vida',
+      linkBuy:'https://www.amway.com.mx/product/Daily1-Equilibra-tu-Vida/321245&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=equilibra_tu_vida ',
       count: 0,
-      itemsku: '321299',
+      itemsku: '321245',
     },
     {
       id: 8,
@@ -413,7 +413,7 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Suplemento alimenticio/dietario que tiene la capacidad de liberar lentamente la vitamina C en el cuerpo, fortaleciendo las defensas y permitiendo que sus propiedades se aprovechen mejor.',
       img: 'assets/img/LAS/C_Plus.png',
       emailImg: this.ruta +'assets/img/LAS/C_Plus.png',
-      linkBuy:'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&line=G&NavM=N&BC=109741&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=C_Plus',
+      linkBuy:'https://www.amway.com.mx/product/c-plus/109741MX&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=C_Plus',
       count: 0,
       itemsku: '109741',
     },
@@ -423,7 +423,7 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Aporta 8 vitaminas del complejo B que se liberan de forma gradual durante 8 horas gracias a su tecnología bicapa de doble acción. Las vitaminas B2 y B12 se liberan de inmediato, mientras que las vitaminas B1, B3, B5, B6, B7 y B9 se liberan de forma gradual, lenta y constantemente durante 8 horas. Las vitaminas del complejo B  ayudan a obtener la energía a partir de los alimentos. Si consume  B Plus y Daily Plus el mismo día, deje una ventana de 8 horas. Ej: Desayuno: Daily Plus y Cena: B Plus.',
       img: 'assets/img/LAS/B_Plus.png',
       emailImg: this.ruta +'assets/img/LAS/B_Plus.png',
-      linkBuy:'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&line=G&NavM=N&BC=110170&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=B_Plus',
+      linkBuy:'https://www.amway.com.mx/product/b-plus/110170MX&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=B_Plus',
       count: 0,
       itemsku: '110170',
     },
@@ -433,7 +433,7 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Suplemento alimenticio/dietario rico en fitonutrientes. Aporta tres fuentes de hierro, ácido fólico y vitamina C la cual ayuda a una mejor absorción del hierro.',
       img: 'assets/img/LAS/Tri-Iron_Folic.png',
       emailImg: this.ruta +'assets/img/LAS/Tri-Iron_Folic.png',
-      linkBuy:'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&line=G&NavM=N&BC=102046&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=Tri_iron_folic',
+      linkBuy:'https://www.amway.com.mx/product/tri-iron-folic/102046MX&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Tri_iron_folic',
       count: 0,
       itemsku: '102046',
     },
@@ -443,7 +443,7 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Bebida en polvo baja en grasa y carbohidratos. Proporciona 9 g de proteína, además de vitaminas, minerales y fibra.',
       img: 'assets/img/LAS/Shake_Plus.png',
       emailImg: this.ruta +'assets/img/LAS/Shake_Plus.png',
-      linkBuy:'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdsList&Brand=GL&NC=BodyKey&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=Bodykey',
+      linkBuy:'https://www.amway.com.mx/brands/bodykey&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Bodykey',
       count: 0,
       itemsku: '',
     },
@@ -453,9 +453,9 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Esta combinación aporta vitaminas del complejo B que junto con la vitamina C, el magnesio y el manganeso, son nutrientes necesarios para liberar la energía de los alimentos para que el organismo pueda utilizarla en sus funciones diarias como movimiento, mantenimiento de la temperatura corporal, metabolismo, defensas, entre otras. Se recomienda consumir ambos suplementos con una diferencia de 8 horas. Ej: Desayuno: Daily Plus y Cena: B Plus.',
       img: 'assets/img/LAS/Daily/Prende_tu_dia.png',
       emailImg: this.ruta +'assets/img/LAS/Daily/Prende_tu_dia.png',
-      linkBuy:'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&line=G&NavM=N&BC=321276&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=Prende_tu_dia',
+      linkBuy:'https://www.amway.com.mx/product/Daily1-Prende-tu-día/321227&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Prende_tu_dia',
       count: 0,
-      itemsku: '321276',
+      itemsku: '321227',
     },
     {
       id: 13,
@@ -463,9 +463,9 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Esta combinación de la mano de hábitos saludables como el ejercicio, una alimentación equilibrada y el descanso, aporta variedad de nutrientes como vitamina C, D, E, A, B6, selenio y zinc que pueden contribuir para que el sistema de defensas funcione apropiadamente, protegiendo el organismo de multitud de agresores como virus y bacterias.',
       img: 'assets/img/LAS/Daily/Respuesta_optima.png',
       emailImg: this.ruta +'assets/img/LAS/Daily/Respuesta_optima.png',
-      linkBuy:'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&line=G&NavM=N&BC=321288&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=Respuesta_optima',
+      linkBuy:'https://www.amway.com.mx/product/Daily1-Respuesta-Óptima/321237&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Respuesta_optima',
       count: 0,
-      itemsku: '321288',
+      itemsku: '321237',
     },
     {
       id: 14,
@@ -473,9 +473,9 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Para ayudar a mantener huesos y músculos fuertes y resistentes, que nos permitan movilizarnos con facilidad, realizar trabajos de fuerza y potencia, junto con hábitos saludables, requerimos de nutrientes como proteína, calcio, vitamina C y vitamina D, presentes en esta solución.',
       img: 'assets/img/LAS/Daily/Mueevete_libre.png',
       emailImg: this.ruta +'assets/img/LAS/Daily/Mueevete_libre.png',
-      linkBuy:'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&line=G&NavM=N&BC=321291&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=Muevete_libre',
+      linkBuy:'https://www.amway.com.mx/product/Daily1-Muévete-Libre/321242&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Muevete_libre',
       count: 0,
-      itemsku: '321291',
+      itemsku: '321242',
     },
     {
       id: 15,
@@ -483,7 +483,7 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Suplemento alimenticio/dietario masticable con vitamina E y lecitina, tiene un agradable sabor a miel y nuez de arce. La Vitamina E es antioxidante, ayuda a disminuir el daño celular ocasionado por los radicales libres.',
       img: 'assets/img/LAS/LecithinE.png',
       emailImg: this.ruta +'assets/img/LAS/LecithinE.png',
-      linkBuy:'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&line=G&NavM=N&BC=122174&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=Lecitina',
+      linkBuy:'https://www.amway.com.mx/product/lecitina-e/122174MX&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Lecitina',
       count: 0,
       itemsku: '122174',
     },
@@ -493,7 +493,7 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Suplemento alimenticio/dietario aporta alfa y betacarotenos, luteína y zeaxantina. Los alfa y betacarotenos se transforman en vitamina A en el organismo después de ser consumidos. Importante para la protección de las células contra el daño ocasionado por los radicales libres y para el mantenimiento de la visión.Si consume Multicaroteno y Daily Plus el mismo día, deje una ventana de 8 horas. Ej: Desayuno: Daily  y Cena: Multicaroteno.',
       img: 'assets/img/LAS/Multicaroteno.png',
       emailImg: this.ruta +'assets/img/LAS/Multicaroteno.png',
-      linkBuy:'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&line=G&NavM=N&BC=109536&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=Multicaroteno',
+      linkBuy:'https://www.amway.com.mx/product/multicaroteno-natural/109536MX&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Multicaroteno',
       count: 0,
       itemsku: '109536',
     },
@@ -503,9 +503,9 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Esta combinación junto con una alimentación equilibrada aporta nutrientes como la vitamina C que ayuda a formar el colágeno, proteína que da estructura, firmeza y elasticidad a la piel y sus órganos anexos:  cabello y  uñas. Además, vitamina B2, biotina, vitamina A, vitamina E, cobre y selenio que pueden ayudar a tener la piel en adecuadas condiciones (suave, lisa, fresca, tersa), el cabello en condiciones normales, brillante, suave y resistente, así como mantener las uñas saludables, es decir, fuertes y resistentes.',
       img: 'assets/img/LAS/Daily/Luce_radiante.png',
       emailImg: this.ruta +'assets/img/LAS/Daily/Luce_radiante.png',
-      linkBuy:'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=K&BC=321280&C=KR&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=Luce_radiante',
+      linkBuy:'https://www.amway.com.mx/product/Daily-Plus--Lecitina-E-(Línea-de-Comercialización-Nutrilite™)/321230&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Luce_radiante',
       count: 0,
-      itemsku: '321280',
+      itemsku: '321230',
     },
     {
       id: 18,
@@ -513,9 +513,9 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'La función principal del intestino es absorber los nutrientes y el agua; y a la vez eliminar los desechos de la digestión. Cumple otras funciones extraintestinales, relacionadas con la microbiota intestinal. Los prebióticos o fibras vegetales (como la de chicoria/ achicoria), les sirven de alimento a las bacterias buenas, estimula su crecimiento y ayuda a disminuir la absorción de grasas y azúcares de la alimentación. Esta solución apoya el bienestar intestinal aportando vitaminas, minerales y fibra soluble.',
       img: 'assets/img/LAS/Daily/Vive_libre.png',
       emailImg: this.ruta +'assets/img/LAS/Daily/Vive_libre.png',
-      linkBuy:'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=K&BC=321296&C=KR&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=vive_libre',
+      linkBuy:'https://www.amway.com.mxproduct/Daily1-Vive-Libre/321243&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=vive_libre',
       count: 0,
-      itemsku: '321296',
+      itemsku: '321243',
     },
     {
       id: 19,
@@ -523,7 +523,7 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Contiene el ingrediente Alicina y Quercetina. Puede contribuir en la reducción de los niveles altos de grasa en sangre y a prevenir la formación de depósitos de grasa en las arterias. Hipotensor.',
       img: 'assets/img/LAS/Ajo_Concentrado.png',
       emailImg: this.ruta +'assets/img/LAS/Ajo_Concentrado.png',
-      linkBuy:'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=K&BC=100566&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=ajo_concentrado',
+      linkBuy:'https://www.amway.com.mx/product/ajo-concentrado/100566MX&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=ajo_concentrado',
       count: 0,
       itemsku: '100566',
     }
@@ -1002,22 +1002,22 @@ const recommended = this.recommendedProducts;
         this.recommendedProducts[i].name = 'Triple Omega-3';
         this.recommendedProducts[i].img = 'assets/img/LAS/TripleOmega3_v2.png';
         this.recommendedProducts[i].emailImg = this.ruta +'assets/img/LAS/TripleOmega3_v2.png';
-        this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=K&BC=126130&C=KH&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=Omega3';
+        this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/product/triple-omega-3/126130MX&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Omega3';
         this.recommendedProducts[i].itemsku = '126130';
         }
         // LinkBuy Equilibra Tu Vida
         if(this.recommendedProducts[i].id == 7){
         this.recommendedProducts[i].img = 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
         this.recommendedProducts[i].emailImg = this.ruta + 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
-        this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=X&BC=327950&C=XC&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=equilibra_tu_vida';
-        this.recommendedProducts[i].itemsku = '327950';
+        this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/product/Daily1-Equilibra-tu-Vida/321245&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=equilibra_tu_vida';
+        this.recommendedProducts[i].itemsku = '321245';
         }
         // LinkBuy Multicaroteno
         if(this.recommendedProducts[i].id == 16){
         this.recommendedProducts[i].img = 'assets/img/LAS/Multicaroteno_MX.png';
         this.recommendedProducts[i].emailImg = this.ruta + 'assets/img/LAS/Daily/Multicaroteno_MX.png';
-        this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/Store/Catalogue.aspx?show=PrdDetail&NavM=N&line=K&BC=124321&C=KH&Brand=&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_es_site_recomendador&utm_content=cta_comprar&utm_term=Multicarotene';
-        this.recommendedProducts[i].itemsku = '124321';
+        this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/product/multicaroteno-natural/109536MX&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Multicaroteno';
+        this.recommendedProducts[i].itemsku = '109536';
         }
       }
       else if(country == 'co'){
