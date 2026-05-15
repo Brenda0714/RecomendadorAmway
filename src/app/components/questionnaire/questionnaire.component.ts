@@ -403,9 +403,9 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Esta solución contribuye en el buen funcionamiento y mantenimiento del sistema circulatorio. Daily Plus aporta vitaminas y minerales como la vitamina B1, B2, B6, ácido fólico, vitamina C, hierro, cobre y zinc que contribuyen a la salud del corazón, apoyan el funcionamiento normal de los vasos sanguíneos, ayudan a formar y mantener las células sanguíneas y a la hemoglobina. Los Omega 3 EPA y DHA, contribuyen al funcionamiento normal del corazón.',
       img: 'assets/img/LAS/Daily/Equilibra_tu_vida.png',
       emailImg: this.ruta + 'assets/img/LAS/Daily/Equilibra_tu_vida.png',
-      linkBuy:'https://www.amway.com.mx/product/Daily1-Equilibra-tu-Vida/321245&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=equilibra_tu_vida ',
+      linkBuy:'https://www.amway.com.mx/product/nutrilite-triple-omega-3-45-cap-nutrilite-daily-plus-45-tbs/327950&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=equilibra_tu_vida',
       count: 0,
-      itemsku: '321245',
+      itemsku: '327950',
     },
     {
       id: 8,
@@ -453,9 +453,9 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Esta combinación aporta vitaminas del complejo B que junto con la vitamina C, el magnesio y el manganeso, son nutrientes necesarios para liberar la energía de los alimentos para que el organismo pueda utilizarla en sus funciones diarias como movimiento, mantenimiento de la temperatura corporal, metabolismo, defensas, entre otras. Se recomienda consumir ambos suplementos con una diferencia de 8 horas. Ej: Desayuno: Daily Plus y Cena: B Plus.',
       img: 'assets/img/LAS/Daily/Prende_tu_dia.png',
       emailImg: this.ruta +'assets/img/LAS/Daily/Prende_tu_dia.png',
-      linkBuy:'https://www.amway.com.mx/product/Daily1-Prende-tu-día/321227&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Prende_tu_dia',
+      linkBuy:'https://www.amway.com.mx/product/nutrilite-b-plus-60-tbs-nutrilite-daily-plus-45-tbs/321276&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Prende_tu_dia',
       count: 0,
-      itemsku: '321227',
+      itemsku: '321276',
     },
     {
       id: 13,
@@ -463,9 +463,9 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Esta combinación de la mano de hábitos saludables como el ejercicio, una alimentación equilibrada y el descanso, aporta variedad de nutrientes como vitamina C, D, E, A, B6, selenio y zinc que pueden contribuir para que el sistema de defensas funcione apropiadamente, protegiendo el organismo de multitud de agresores como virus y bacterias.',
       img: 'assets/img/LAS/Daily/Respuesta_optima.png',
       emailImg: this.ruta +'assets/img/LAS/Daily/Respuesta_optima.png',
-      linkBuy:'https://www.amway.com.mx/product/Daily1-Respuesta-Óptima/321237&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Respuesta_optima',
+      linkBuy:'https://www.amway.com.mx/product/nutrilite-c-plus-60tbs-nutrilite-daily-plus-45-tbs/321288&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Respuesta_optima',
       count: 0,
-      itemsku: '321237',
+      itemsku: '321288',
     },
     {
       id: 14,
@@ -473,9 +473,9 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Para ayudar a mantener huesos y músculos fuertes y resistentes, que nos permitan movilizarnos con facilidad, realizar trabajos de fuerza y potencia, junto con hábitos saludables, requerimos de nutrientes como proteína, calcio, vitamina C y vitamina D, presentes en esta solución.',
       img: 'assets/img/LAS/Daily/Mueevete_libre.png',
       emailImg: this.ruta +'assets/img/LAS/Daily/Mueevete_libre.png',
-      linkBuy:'https://www.amway.com.mx/product/Daily1-Muévete-Libre/321242&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Muevete_libre',
+      linkBuy:'https://www.amway.com.mx/product/nutrilite-proteina-vegetal-nutrilite-daily-plus-90-tbs/321291&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Muevete_libre',
       count: 0,
-      itemsku: '321242',
+      itemsku: '321291',
     },
     {
       id: 15,
@@ -503,9 +503,9 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'Esta combinación junto con una alimentación equilibrada aporta nutrientes como la vitamina C que ayuda a formar el colágeno, proteína que da estructura, firmeza y elasticidad a la piel y sus órganos anexos:  cabello y  uñas. Además, vitamina B2, biotina, vitamina A, vitamina E, cobre y selenio que pueden ayudar a tener la piel en adecuadas condiciones (suave, lisa, fresca, tersa), el cabello en condiciones normales, brillante, suave y resistente, así como mantener las uñas saludables, es decir, fuertes y resistentes.',
       img: 'assets/img/LAS/Daily/Luce_radiante.png',
       emailImg: this.ruta +'assets/img/LAS/Daily/Luce_radiante.png',
-      linkBuy:'https://www.amway.com.mx/product/Daily-Plus--Lecitina-E-(Línea-de-Comercialización-Nutrilite™)/321230&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Luce_radiante',
+      linkBuy:'https://www.amway.com.mx/product/nutrilite-leticina-e-60-cap-nutrilite-daily-plus-45-tab/321280&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=Luce_radiante',
       count: 0,
-      itemsku: '321230',
+      itemsku: '321280',
     },
     {
       id: 18,
@@ -513,9 +513,9 @@ export class QuestionnaireComponent implements OnInit {
       whyIsRecommended: 'La función principal del intestino es absorber los nutrientes y el agua; y a la vez eliminar los desechos de la digestión. Cumple otras funciones extraintestinales, relacionadas con la microbiota intestinal. Los prebióticos o fibras vegetales (como la de chicoria/ achicoria), les sirven de alimento a las bacterias buenas, estimula su crecimiento y ayuda a disminuir la absorción de grasas y azúcares de la alimentación. Esta solución apoya el bienestar intestinal aportando vitaminas, minerales y fibra soluble.',
       img: 'assets/img/LAS/Daily/Vive_libre.png',
       emailImg: this.ruta +'assets/img/LAS/Daily/Vive_libre.png',
-      linkBuy:'https://www.amway.com.mxproduct/Daily1-Vive-Libre/321243&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=vive_libre',
+      linkBuy:'https://www.amway.com.mx/product/nutrilite-fibra-en-polvo-nutrilite-daily-plus-90/321296&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=vive_libre',
       count: 0,
-      itemsku: '321243',
+      itemsku: '321296',
     },
     {
       id: 19,
@@ -1009,8 +1009,6 @@ const recommended = this.recommendedProducts;
         if(this.recommendedProducts[i].id == 7){
         this.recommendedProducts[i].img = 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
         this.recommendedProducts[i].emailImg = this.ruta + 'assets/img/LAS/Daily/Equilibra_tu_vida_v2.png';
-        this.recommendedProducts[i].linkBuy = 'https://www.amway.com.mx/product/Daily1-Equilibra-tu-Vida/321245&utm_source=recomendador&utm_medium=recommendations&utm_campaign=mx_site_recomendador&utm_content=cta_comprar&utm_term=equilibra_tu_vida';
-        this.recommendedProducts[i].itemsku = '321245';
         }
         // LinkBuy Multicaroteno
         if(this.recommendedProducts[i].id == 16){
